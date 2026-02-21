@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo APIs | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">CONCEITO FUNDAMENTAL</span>
+                    <h1>Entendendo <span id="current-step-title">APIs</span> <i class="fa-brands fa-node-js" style="color: #68a063;"></i></h1>
+                    <div class="progress-wrapper" style="width: 100%; background: #e9ecef; height: 8px; border-radius: 20px; margin-top: 15px; overflow: hidden;">
+                        <div id="progress-bar" style="width: 25%; background: #007bff; height: 100%; transition: 0.4s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container" style="min-height: 500px; position: relative;">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Laptop">
+                        </div>
+                        <div class="card-text">
+                            <h2>O que é uma API?</h2>
+                            <p>API significa <strong>Application Programming Interface</strong>.</p>
+                            <p>É uma ponte que permite que dois softwares conversem de maneira organizada e padronizada.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h2>A Analogia do Garçom</h2>
+                    <p>No restaurante do desenvolvimento:</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-user"></i> <strong>Você:</strong> O cliente (Front-end).</li>
+                        <li><i class="fa-solid fa-bell-concierge"></i> <strong>Garçom:</strong> A API (Leva o pedido).</li>
+                        <li><i class="fa-solid fa-kitchen-set"></i> <strong>Cozinha:</strong> O Servidor (Processa os dados).</li>
+                    </ul>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-rotate"></i></div>
+                    <h2>Request & Response</h2>
+                    <p>O ciclo de vida de uma API:</p>
+                    <div class="info-box-blue">
+                        <p><strong>1. Request:</strong> O app pede algo (ex: lista de produtos).</p>
+                        <p><strong>2. Response:</strong> O servidor responde (ex: JSON com os preços).</p>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>API com Node.js</h2>
+                    <div class="terminal">
+                        <pre><code>
+<span class="text-code">const</span> http = <span class="text-info">require</span>('http');
+<span class="text-code">const</span> server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ status: "Rodando" }));
+});
+server.listen(3000);
+                        </code></pre>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">            
+            <div class="d-flex-row justify-evenly p-10">  
+                <div>
+                    <h1 class="text-white">Coders</h1>
+                </div>              
+                <div>
+                    <h3>Início</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="trilhas.html">Trilhas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Equipe</h3>
+                    <ul class="footer-links">
+                        <li><a href="team_scrum.html">Team Scrum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Desafios</h3>
+                    <ul class="footer-links">
+                        <li><a href="hackathon.html">Hackathon</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

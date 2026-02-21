@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos: Front-End | Coders</title>
+    <title>Window Location | Coders</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -15,8 +15,8 @@
                 <nav>
                     <ul class="nav-links">
                         <li><a href="../index.html">Início</a></li>
-                        <li><a href="trilhas.html">Trilhas</a></li>
-                        <li><a href="projetos.html" class="active">Projetos</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -25,11 +25,11 @@
         <main class="content-wrapper">
             <section class="lesson-hero">
                 <div class="lesson-header">
-                    <span class="badge">CARREIRA & TECH</span>
-                    <h1>O Universo <span id="current-step-title">Front-End</span> <i class="fa-brands fa-html5" style="color: #e34c26;"></i></h1>
+                    <span class="badge">AULA FRONT-END</span>
+                    <h1>Dominando <span id="current-step-title">Window Location</span> <i class="fa fa-code-branch" style="color: #3498db;"></i></h1>
                     
                     <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
-                        <div id="progress-bar" style="width: 0%; height: 100%; background: #e34c26; border-radius: 5px; transition: 0.3s ease;"></div>
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #3498db; border-radius: 5px; transition: 0.3s ease;"></div>
                     </div>
                 </div>
             </section>
@@ -38,63 +38,68 @@
                 
                 <section class="learning-card step-card active" data-step="1">
                     <div class="card-grid">
-                        <div class="card-image">
-                            <img src="../public/images/front-undraw.svg" alt="Desenvolvimento Front-End">
-                        </div>
+                        <div class="card-image"><img src="../public/images/student.png" alt="URL Concept"></div>
                         <div class="card-text">
-                            <h2>O que é Front-End?</h2>
-                            <p>É a parte do código com a qual o usuário interage diretamente. Envolve a construção da interface gráfica, layouts e a interatividade de um site ou aplicativo.</p>
-                            <p>O desenvolvedor front-end transforma designs estáticos em experiências digitais vivas.</p>
+                            <h2>Anatomia da URL</h2>
+                            <p>URL é o endereço que identifica um recurso na rede. No JavaScript, o objeto <code>window.location</code> contém todas as informações do endereço atual.</p>
+                            
                         </div>
                     </div>
                 </section>
 
                 <section class="learning-card step-card" data-step="2" style="display: none;">
-                    <div class="card-header-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <h2>A Tríade Fundamental</h2>
-                    <p>Toda interface moderna é construída sobre três pilares:</p>
-                    <ul class="check-list">
-                        <li><i class="fa-brands fa-html5"></i> <strong>HTML:</strong> A estrutura e o conteúdo da página.</li>
-                        <li><i class="fa-brands fa-css3-alt"></i> <strong>CSS:</strong> O estilo, cores, fontes e posicionamento.</li>
-                        <li><i class="fa-brands fa-js"></i> <strong>JavaScript:</strong> A lógica e o comportamento dinâmico.</li>
-                    </ul>
+                    <h2>Navegação via Script</h2>
+                    <p>Podemos forçar o navegador a mudar de página sem que o usuário clique em um link, útil após um login bem-sucedido, por exemplo:</p>
+                    <div class="terminal">
+                        <code>window.location.href = "painel.html";</code>
+                    </div>
+                    <p class="mt-10">Isso substitui o endereço atual e redireciona o usuário instantaneamente.</p>
                 </section>
 
                 <section class="learning-card step-card" data-step="3" style="display: none;">
-                    <div class="card-header-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h2>UX e UI Design</h2>
-                    <p>Não basta apenas codar, é preciso projetar para pessoas:</p>
+                    <h2>Passando Dados via URL</h2>
+                    <p>O símbolo <strong>?</strong> inicia a <em>Query String</em>. É assim que passamos informações de uma página para outra.</p>
                     <div class="info-box-blue">
-                        <p><strong>UI (User Interface):</strong> O visual. É o que o usuário vê (botões, cores, tipografia).</p>
-                        <p><strong>UX (User Experience):</strong> O sentimento. É como o usuário se sente ao navegar (facilidade, fluidez).</p>
+                        <p><strong>Exemplo:</strong> <code>produtos.html?id=123</code></p>
                     </div>
+                    <p class="mt-10">Aqui, estamos dizendo à página de produtos que queremos visualizar especificamente o item 123.</p>
                 </section>
 
                 <section class="learning-card step-card" data-step="4" style="display: none;">
-                    <h2>Dê vida à interface</h2>
-                    <p>O objetivo principal é oferecer a melhor experiência possível, garantindo acessibilidade e performance em qualquer dispositivo.</p>
-                    <div class="mt-10 text-center">
-                        <a href="../public/pdf/whats-is-frontend.pdf" target="_blank" class="btn-main" style="display: inline-block; text-decoration: none;">
-                            Baixar Guia Front-End <i class="fa-solid fa-cloud-download"></i>
-                        </a>
+                    <h2>Capturando o Parâmetro</h2>
+                    <p>Para ler o que veio depois do <strong>?</strong>, usamos o <code>location.search</code>.</p>
+                    <div class="terminal">
+                        <code>
+                            var query = location.search; <br>
+                            var cleanId = query.replace('?', '');
+                        </code>
                     </div>
+                    <p class="mt-10">O método <code>replace</code> é usado para remover o ponto de interrogação e deixar apenas o valor puro para sua lógica.</p>
                 </section>
 
                 <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <h2>Por que usar isso?</h2>
+                    <p>Imagine um site de notícias. Você não cria 1.000 páginas HTML. Você cria uma página <code>noticia.html</code> que carrega o texto baseado no ID que vem pela URL!</p>
+                    <div class="mt-10 text-center">
+                        <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank" class="btn-main" style="display: inline-block; text-decoration: none;">Documentação Completa <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="6" style="display: none;">
                     <div class="quiz-container">
-                        <div class="card-header-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                        <h2>Desafio de Carreira</h2>
-                        <p class="font-20">Qual tecnologia é responsável por definir o <strong>comportamento e a lógica</strong> de interação em uma página web?</p>
+                        <div class="card-header-icon"><i class="fa-solid fa-terminal"></i></div>
+                        <h2>Desafio JavaScript</h2>
+                        <p class="font-20">Se a URL atual é <code>coders.com/aula.html?tema=js</code>, o que o comando <code>location.search</code> retornará?</p>
                         
                         <div class="quiz-options">
                             <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
-                                <span>A</span> HTML
-                            </button>
-                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
-                                <span>B</span> CSS
+                                <span>A</span> coders.com
                             </button>
                             <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
-                                <span>C</span> JavaScript
+                                <span>B</span> ?tema=js
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> js
                             </button>
                         </div>
                         <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
@@ -128,12 +133,12 @@
             if (isCorrect) {
                 button.style.backgroundColor = "#2ecc71";
                 button.style.color = "white";
-                feedback.innerHTML = "🎯 Exato! O JavaScript é o cérebro que processa as ações do usuário.";
+                feedback.innerHTML = "Excelente! 🎯 O search pega tudo a partir do '?' inclusive.";
                 feedback.style.color = "#2ecc71";
             } else {
                 button.style.backgroundColor = "#e74c3c";
                 button.style.color = "white";
-                feedback.innerHTML = "Quase! HTML é estrutura e CSS é estilo. A lógica fica com o JS.";
+                feedback.innerHTML = "Ops! Lembre-se que o search traz o pacote completo: do sinal de interrogação em diante.";
                 feedback.style.color = "#e74c3c";
             }
         }

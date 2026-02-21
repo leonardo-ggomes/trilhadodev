@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">AULA FRONT-END</span>
+                    <h1>Introdução ao <span id="current-step-title">DOM API</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image"><img src="../public/images/student.png" alt="DOM Concept"></div>
+                        <div class="card-text">
+                            <h2>O que é o DOM?</h2>
+                            <p>DOM significa <strong>Document Object Model</strong>. É a ponte que permite ao JavaScript "conversar" com o seu HTML.</p>
+                            <p>Através dele, podemos alterar textos, cores e até criar novos elementos dinamicamente.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>A Árvore de Elementos</h2>
+                    <p>O navegador transforma seu HTML em uma árvore de objetos. Cada tag vira um <strong>nó</strong>.</p>
+                    
+                    <div class="info-box-blue mt-10">
+                        <p><i class="fa-solid fa-circle-info"></i> O objeto raiz de tudo no seu site é o <code>document</code>.</p>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Como selecionar?</h2>
+                    <p>Para o JS agir, ele precisa localizar o elemento. O método mais eficaz é usar o ID:</p>
+                    <div class="terminal">
+                        <code>
+                            // HTML: &lt;h1 id="titulo"&gt;Olá&lt;/h1&gt; <br><br>
+                            const h1 = document.getElementById("titulo");
+                        </code>
+                    </div>
+                    <p class="mt-10">A variável <code>h1</code> agora dá controle total sobre aquela tag específica.</p>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>Alterando a Página</h2>
+                    <p>Depois de selecionar, você pode mudar o conteúdo ou o estilo visual via código:</p>
+                    <div class="terminal">
+                        <code>
+                            h1.innerHTML = "Bem-vindo ao DOM!"; <br>
+                            h1.style.color = "blue"; <br>
+                            h1.classList.add("destaque");
+                        </code>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <h2>Eventos do Usuário</h2>
+                    <p>O DOM permite reagir a cliques, movimentos de mouse e teclas digitadas usando o <strong>addEventListener</strong>.</p>
+                    <div class="text-center mt-10">
+                        <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" class="btn-main" style="display: inline-block; text-decoration: none;">
+                            Guia de Métodos <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="6" style="display: none;">
+                    <div class="quiz-container">
+                        <div class="card-header-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h2>Desafio de Seleção</h2>
+                        <p class="font-20">Qual método você usaria para selecionar um único elemento que possui o atributo <code>id="botao-enviar"</code>?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> document.querySelector(".botao-enviar")
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> document.getElementById("botao-enviar")
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> document.getElementsByTagName("id")
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "Correto! 🎯 O ID é a forma mais rápida e específica de encontrar um elemento único.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Não foi dessa vez. Lembre-se: IDs são únicos, por isso usamos 'Element' no singular.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

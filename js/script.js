@@ -2,10 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Definição das trilhas (Títulos de cada passo por página)
     const trackData = {
         'how-create-node-server.html': ["Conceito", "Estrutura", "Portas", "Finalização"],
+        'nodejs.html': ["Conceito", "Estrutura", "Finalização"],
+        'backend.html': ["Conceito", "Estrutura","Linguagens", "Finalização"],
         'npm-lesson.html': ["O que é?", "Iniciar", "Instalar", "Gerenciar", "Resumo"],
         'mvc.html': ["Introdução", "Model", "View", "Controller", "Estrutura", "Conclusão"],
         'api.html': ["Definição", "Analogia", "Fluxo", "Código"],
+        'ides.html': ["Definição", "Tripé", "Comparativo", "Instalação","Extensões"],
         'json.html': ["Conceito", "Vantagens", "Sintaxe", "Exemplo"],
+        'react.html': ["Conceito", "Componente", "JSX", "SPA","Material de Apoio"],
         'debug.html': ["Conceito", "Uso", "Recurso", "Exemplo"],
         'arquitetura.html': ["Conceito", "Metáfora", "Vantagens", "Protocolos", "Stateless", "Tipos", "Mapa", "Desafio"],
         'banco_dados.html': ["Definição", "O SGBD", "Tabelas", "SQL", "Persistência", "Quiz"],
@@ -17,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'flexbox.html': ["Conceito", "Pai & Filhos", "Os Eixos", "Propriedades", "Quiz"],
         'logica_while.html': ["Conceito", "Fluxo", "Sintaxe", "Loop Infinito", "Quiz"],
         'logica_do_while.html': ["Conceito", "Comparativo", "Sintaxe", "Desafio"],
+        'switch.html': ["Conceito", "Sintaxe", "Exemplo", "Break","Aprendizado"],
+        'function.html': ["Conceito", "Sintaxe", "Retorno", "Exemplo","Aprendizado"],
+        'variaveis.html': ["Conceito", "Sintaxe", "Tipos de Dados", "Regras","Aprendizado"],
+        'array.html': ["Conceito", "Indíce", "Exemplo", "Loops","Aprendizado"],
         'logica_for.html': ["O Loop Organizado", "Anatomia", "Na Prática", "Desafio Final"],
         'logica_git.html': ["GitHub", "Conceitos Git", "Configuração", "Ciclo Local", "Fluxo Remoto", "Desafio"],    };
 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica: Do-While | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>Estrutura <span id="current-step-title">Do-While</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Desenvolvimento">
+                        </div>
+                        <div class="card-text">
+                            <h2>Atire primeiro, pergunte depois!</h2>
+                            <p>Diferente do <code>while</code> comum, o <strong>Do-While</strong> garante que o bloco de código seja executado <strong>pelo menos uma vez</strong> antes de testar a condição.</p>
+                            <div class="info-box-blue mt-10">
+                                <p><i class="fa-solid fa-bolt"></i> Útil quando você precisa que uma ação ocorra (como exibir um menu) antes de verificar se ela deve se repetir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>While vs Do-While</h2>
+                    <p>Entenda a ordem de execução:</p>
+                    
+                    
+
+                    <div class="concept-grid mt-10" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="p-10 border-blue">
+                            <strong>While:</strong> Teste &rarr; Execução
+                        </div>
+                        <div class="p-10 border-blue">
+                            <strong>Do-While:</strong> Execução &rarr; Teste
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Como escrever</h2>
+                    <div class="terminal">
+                        <span style="color: #c586c0;">do</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #6a9955;">// código executado primeiro</span><br>
+                        &nbsp;&nbsp;i++;<br>
+                        } <span style="color: #c586c0;">while</span> (i < 5);
+                    </div>
+                    <p class="mt-10">Note o ponto e vírgula <code>;</code> após o <code>while</code> — ele é obrigatório nesta estrutura!</p>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio de Fluxo</h2>
+                        <p class="font-20">Se definirmos <code>let x = 10;</code> e criarmos um <code>do-while</code> com a condição <code>x < 5</code>, o que acontecerá?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> O código nunca será executado.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> O código executará exatamente 1 vez.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> O código entrará em loop infinito.
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Exato! Como o 'do' vem primeiro, ele roda uma vez e só depois vê que 10 não é menor que 5.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Ops! Lembre-se: o Do-While executa primeiro para depois testar.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

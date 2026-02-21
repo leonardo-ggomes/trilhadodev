@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padrão MVC | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">AULA 03</span>
+                    <h1>Arquitetura <span id="current-step-title">MVC</span> <i class="fa fa-network-wired" style="color: #007bff;"></i></h1>
+                    <div class="progress-wrapper" style="width: 100%; background: #e9ecef; height: 8px; border-radius: 20px; margin-top: 15px; overflow: hidden;">
+                        <div id="progress-bar" style="width: 16%; background: #007bff; height: 100%; transition: 0.4s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container" style="min-height: 500px; position: relative;">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Arquitetura MVC">
+                        </div>
+                        <div class="card-text">
+                            <h2>O que é MVC?</h2>
+                            <p>O padrão <strong>Model-View-Controller</strong> é uma forma de organizar seu código dividindo-o em três camadas independentes. </p>
+                            <p>Pense nisso como a cozinha de um restaurante: cada um tem seu papel definido para que o prato chegue perfeito à mesa.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-database"></i></div>
+                    <h2>1. Model (O Cérebro)</h2>
+                    <p>O <strong>Model</strong> cuida dos dados e da lógica de negócios. Ele sabe como salvar um usuário no banco de dados ou como calcular o preço total de um carrinho.</p>
+                    <div class="info-box-blue">
+                        <strong>Exemplo:</strong> <code>usuarioModel.js</code> - Contém o esquema da tabela e as regras de validação.
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h2>2. View (A Cara)</h2>
+                    <p>A <strong>View</strong> é o que o usuário vê. São os arquivos HTML, CSS e as respostas visuais do sistema.</p>
+                    <div class="info-box-blue">
+                        <strong>Exemplo:</strong> <code>perfil.html</code> - Mostra os dados que o Model forneceu, mas formatados para o humano ler.
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h2>3. Controller (O Garçom)</h2>
+                    <p>O <strong>Controller</strong> é o intermediário. Ele recebe o clique do usuário na View, pede a informação para o Model e devolve a resposta para a View.</p>
+                    <div class="info-box-blue">
+                        <strong>Exemplo:</strong> <code>userController.js</code> - Recebe a rota <code>/login</code> e decide o que fazer.
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <h2>Estrutura no Node.js</h2>
+                    <p>Veja como seu projeto deve ficar organizado visualmente:</p>
+                    <div class="folder-structure">
+                        <ul>
+                            <li><i class="fa-solid fa-folder"></i> src/
+                                <ul class="ml-10">
+                                    <li class="text-info"><i class="fa-solid fa-folder"></i> models/ <small>(Lógica de Dados)</small></li>
+                                    <li class="text-white"><i class="fa-solid fa-folder"></i> views/ <small>(Interfaces)</small></li>
+                                    <li class="text-mark"><i class="fa-solid fa-folder"></i> controllers/ <small>(Regras de Fluxo)</small></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="6" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>Por que usar?</h2>
+                            <ul class="check-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Manutenção:</strong> É fácil achar erros.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Escalabilidade:</strong> O projeto pode crescer sem virar bagunça.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Equipe:</strong> Um dev mexe no CSS enquanto outro mexe no Banco.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <p><i class="fa-solid fa-mug-hot"></i> 2024 Coders | Leonardo Garcia</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando Flexbox | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">CSS LAYOUT</span>
+                    <h1>CSS <span id="current-step-title">Flexbox</span> <i class="fa-brands fa-css3-alt" style="color: #264de4;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #264de4; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/front-undraw.svg" alt="Layout Flexível">
+                        </div>
+                        <div class="card-text">
+                            <h2>O que é Flexbox?</h2>
+                            <p>É um sistema de layout unidimensional para CSS que permite organizar elementos em linhas ou colunas de forma automática e inteligente.</p>
+                            <div class="info-box-blue">
+                                <p><i class="fa-solid fa-lightbulb"></i> A mágica acontece quando você usa <code>display: flex;</code> no elemento pai!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>O Pai e os Filhos</h2>
+                    <p>O Flexbox trabalha com dois níveis hierárquicos:</p>
+                    <div class="concept-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div class="p-10 border-blue">
+                            <h3>Flex Container</h3>
+                            <p>O elemento pai. Ele define as regras de alinhamento para seus filhos.</p>
+                        </div>
+                        <div class="p-10 border-blue">
+                            <h3>Flex Items</h3>
+                            <p>Os filhos diretos. Eles se ajustam conforme as regras do pai.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Entendendo os Eixos</h2>
+                    <p>O segredo do Flexbox está em entender os dois eixos invisíveis:</p>
+                    
+                    <ul class="check-list mt-10">
+                        <li><strong>Main Axis (Eixo Principal):</strong> Onde os itens são distribuídos (Horizontal por padrão).</li>
+                        <li><strong>Cross Axis (Eixo Transversal):</strong> O eixo perpendicular ao principal (Vertical por padrão).</li>
+                    </ul>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>Propriedades Essenciais</h2>
+                    <div class="terminal">
+                        <code>
+                            justify-content: center; /* Alinha no eixo principal */ <br>
+                            align-items: center;     /* Alinha no eixo transversal */ <br>
+                            flex-direction: column;  /* Muda o eixo para vertical */ <br>
+                            gap: 20px;               /* Espaço entre os itens */
+                        </code>
+                    </div>
+                    <p class="mt-10">Quer praticar jogando? Conheça o <strong>Flexbox Froggy</strong>:</p>
+                    <a href="https://flexboxfroggy.com/" target="_blank" class="btn-secondary" style="display: inline-block; text-decoration: none;">
+                        <img src="https://flexboxfroggy.com/images/frog-green.svg" style="width: 20px; vertical-align: middle;"> Jogar Agora
+                    </a>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <div class="quiz-container">
+                        <div class="card-header-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <h2>Desafio de Layout</h2>
+                        <p class="font-20">Qual propriedade você usaria para centralizar os itens <strong>horizontalmente</strong> em uma linha padrão (row)?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> align-items
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> justify-content
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> flex-wrap
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Boa! 'justify-content' cuida do alinhamento no eixo principal (main axis).";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Quase! 'align-items' cuida do eixo transversal (cross axis). No 'row', o horizontal é controlado pelo justify-content.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

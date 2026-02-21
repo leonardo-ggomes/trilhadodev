@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software e IDE | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html">Trilhas</a></li>
+                        <li><a href="projetos.html" class="active">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">AULA 01 - FERRAMENTAS</span>
+                    <h1>Ambiente de <span id="current-step-title">Desenvolvimento</span> <i class="fa fa-laptop-code" style="color: #3498db;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #3498db; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image"><img src="../public/images/laptop.png" alt="IDE Concept"></div>
+                        <div class="card-text">
+                            <h2>O que é uma IDE?</h2>
+                            <p>Sigla para <strong>Integrated Development Environment</strong> (Ambiente de Desenvolvimento Integrado).</p>
+                            <p>É como uma "oficina completa" para o programador, reunindo tudo o que ele precisa para escrever, testar e rodar o código em um só lugar.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>O Tripé da IDE</h2>
+                    <p>Para ser considerada uma IDE completa, o software geralmente possui:</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <p><strong>Editor:</strong> Onde o texto é escrito (com cores!).</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-gears"></i>
+                            <p><strong>Compilador:</strong> Transforma o código em algo que o PC entende.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-bug-slash"></i>
+                            <p><strong>Debugger:</strong> Ferramenta para caçar erros no código.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>IDE vs Editor de Código</h2>
+                    <div class="metaphor-box">
+                        <p><strong>Editor (ex: Notepad++):</strong> É como um bloco de notas com cores. Leve e rápido, mas você precisa fazer o resto "na mão".</p>
+                        <hr>
+                        <p><strong>IDE (ex: Visual Studio/Eclipse):</strong> É como uma fábrica automatizada. Mais pesada, porém faz quase tudo por você.</p>
+                    </div>
+                    <p class="font-18 text-center mt-10">O <strong>VS Code</strong> está no meio termo: é um editor que "vira" IDE com extensões.</p>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>A Estrela: Visual Studio Code</h2>
+                    <p>O queridinho do mercado por ser leve e extremamente customizável.</p>
+                    <div class="terminal" style="background: #1e1e1e; color: #fff; padding: 15px; border-radius: 8px; font-family: monospace;">
+                        <i class="fa-solid fa-download"></i> Download em: code.visualstudio.com
+                    </div>
+                    <div class="mt-10 text-center">
+                        <a href="https://code.visualstudio.com/" target="_blank" class="btn-main" style="display: inline-block; text-decoration: none;">Baixar Agora</a>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <h2>O Poder das Extensões</h2>
+                    <p>O VS Code brilha porque você pode adicionar "superpoderes" a ele:</p>
+                    <ul class="simple-list">
+                        <li><i class="fa-solid fa-language"></i> <strong>Portuguese (Brazil):</strong> Deixa a interface em português.</li>
+                        <li><i class="fa-solid fa-palette"></i> <strong>Themes:</strong> Muda as cores para não cansar a vista.</li>
+                        <li><i class="fa-solid fa-bolt"></i> <strong>Live Server:</strong> Abre o site e atualiza sozinho ao salvar.</li>
+                    </ul>
+                </section>
+
+                <section class="learning-card step-card" data-step="6" style="display: none;">
+                    <div class="quiz-container">
+                        <div class="card-header-icon"><i class="fa-solid fa-clipboard-question"></i></div>
+                        <h2>Desafio de Ferramentas</h2>
+                        <p class="font-20">Qual desses itens é a principal vantagem de usar uma <strong>IDE</strong> em vez de um editor de texto simples (como o Bloco de Notas)?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> Ocupar menos espaço na memória RAM.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> Ter ferramentas integradas como depurador e automação.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> Ser mais difícil de aprender para iniciantes.
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "Boa! A integração de ferramentas é o que define o 'I' de Integrated na IDE.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Quase lá! Lembre-se: IDEs são 'pesadas' justamente por terem muitas ferramentas inclusas.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

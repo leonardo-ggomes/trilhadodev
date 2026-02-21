@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos: Front-End | Coders</title>
+    <title>Estrutura If/Else | Coders</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -15,8 +15,8 @@
                 <nav>
                     <ul class="nav-links">
                         <li><a href="../index.html">Início</a></li>
-                        <li><a href="trilhas.html">Trilhas</a></li>
-                        <li><a href="projetos.html" class="active">Projetos</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -25,11 +25,11 @@
         <main class="content-wrapper">
             <section class="lesson-hero">
                 <div class="lesson-header">
-                    <span class="badge">CARREIRA & TECH</span>
-                    <h1>O Universo <span id="current-step-title">Front-End</span> <i class="fa-brands fa-html5" style="color: #e34c26;"></i></h1>
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>Estruturas <span id="current-step-title">Condicionais</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
                     
                     <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
-                        <div id="progress-bar" style="width: 0%; height: 100%; background: #e34c26; border-radius: 5px; transition: 0.3s ease;"></div>
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
                     </div>
                 </div>
             </section>
@@ -38,63 +38,74 @@
                 
                 <section class="learning-card step-card active" data-step="1">
                     <div class="card-grid">
-                        <div class="card-image">
-                            <img src="../public/images/front-undraw.svg" alt="Desenvolvimento Front-End">
-                        </div>
+                        <div class="card-image"><img src="../public/images/laptop.png" alt="Lógica If Else"></div>
                         <div class="card-text">
-                            <h2>O que é Front-End?</h2>
-                            <p>É a parte do código com a qual o usuário interage diretamente. Envolve a construção da interface gráfica, layouts e a interatividade de um site ou aplicativo.</p>
-                            <p>O desenvolvedor front-end transforma designs estáticos em experiências digitais vivas.</p>
+                            <h2>O que é If/Else?</h2>
+                            <p>É uma estrutura que permite ao seu código tomar decisões. Ele executa um bloco de comandos <strong>se</strong> uma condição for verdadeira, e outro <strong>caso contrário</strong>.</p>
+                            <div class="info-box-blue mt-10">
+                                <p><i class="fa-solid fa-circle-info"></i> Pense nisso como uma bifurcação na estrada: você só segue um caminho por vez.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <section class="learning-card step-card" data-step="2" style="display: none;">
-                    <div class="card-header-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <h2>A Tríade Fundamental</h2>
-                    <p>Toda interface moderna é construída sobre três pilares:</p>
-                    <ul class="check-list">
-                        <li><i class="fa-brands fa-html5"></i> <strong>HTML:</strong> A estrutura e o conteúdo da página.</li>
-                        <li><i class="fa-brands fa-css3-alt"></i> <strong>CSS:</strong> O estilo, cores, fontes e posicionamento.</li>
-                        <li><i class="fa-brands fa-js"></i> <strong>JavaScript:</strong> A lógica e o comportamento dinâmico.</li>
-                    </ul>
+                    <h2>Sintaxe Básica</h2>
+                    <p>A condição fica entre parênteses e o código a ser executado entre chaves:</p>
+                    <div class="terminal">
+                        <code>
+                            if (condicao) { <br>
+                            &nbsp; // código se for verdadeiro <br>
+                            } else { <br>
+                            &nbsp; // código se for falso <br>
+                            }
+                        </code>
+                    </div>
+                    
                 </section>
 
                 <section class="learning-card step-card" data-step="3" style="display: none;">
-                    <div class="card-header-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h2>UX e UI Design</h2>
-                    <p>Não basta apenas codar, é preciso projetar para pessoas:</p>
-                    <div class="info-box-blue">
-                        <p><strong>UI (User Interface):</strong> O visual. É o que o usuário vê (botões, cores, tipografia).</p>
-                        <p><strong>UX (User Experience):</strong> O sentimento. É como o usuário se sente ao navegar (facilidade, fluidez).</p>
+                    <h2>Exemplo de Uso</h2>
+                    <p>Vamos verificar se um herói é o Hulk:</p>
+                    <div class="terminal">
+                        <code>
+                            var heroi = "Hulk"; <br><br>
+                            if (heroi === "Thor") { <br>
+                            &nbsp; console.log("Dominante"); <br>
+                            } else if (heroi === "Hulk") { <br>
+                            &nbsp; console.log("Introvertido!"); <br>
+                            } else { <br>
+                            &nbsp; console.log("Fraco"); <br>
+                            }
+                        </code>
                     </div>
                 </section>
 
                 <section class="learning-card step-card" data-step="4" style="display: none;">
-                    <h2>Dê vida à interface</h2>
-                    <p>O objetivo principal é oferecer a melhor experiência possível, garantindo acessibilidade e performance em qualquer dispositivo.</p>
-                    <div class="mt-10 text-center">
-                        <a href="../public/pdf/whats-is-frontend.pdf" target="_blank" class="btn-main" style="display: inline-block; text-decoration: none;">
-                            Baixar Guia Front-End <i class="fa-solid fa-cloud-download"></i>
-                        </a>
-                    </div>
+                    <h2>Refinando a Condição</h2>
+                    <p>Você pode combinar múltiplas verificações usando operadores lógicos:</p>
+                    <ul class="check-list">
+                        <li><code>&&</code> (E): Todas as condições devem ser verdadeiras.</li>
+                        <li><code>||</code> (OU): Pelo menos uma deve ser verdadeira.</li>
+                        <li><code>!</code> (NÃO): Inverte o valor booleano.</li>
+                    </ul>
                 </section>
 
                 <section class="learning-card step-card" data-step="5" style="display: none;">
                     <div class="quiz-container">
-                        <div class="card-header-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                        <h2>Desafio de Carreira</h2>
-                        <p class="font-20">Qual tecnologia é responsável por definir o <strong>comportamento e a lógica</strong> de interação em uma página web?</p>
+                        <div class="card-header-icon"><i class="fa-solid fa-code-branch"></i></div>
+                        <h2>Desafio de Lógica</h2>
+                        <p class="font-20">Qual bloco de código será executado se a condição dentro do <code>if</code> resultar em <code>false</code>?</p>
                         
                         <div class="quiz-options">
                             <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
-                                <span>A</span> HTML
-                            </button>
-                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
-                                <span>B</span> CSS
+                                <span>A</span> O próprio bloco if
                             </button>
                             <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
-                                <span>C</span> JavaScript
+                                <span>B</span> O bloco else
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> Nenhum código será executado
                             </button>
                         </div>
                         <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
@@ -128,12 +139,12 @@
             if (isCorrect) {
                 button.style.backgroundColor = "#2ecc71";
                 button.style.color = "white";
-                feedback.innerHTML = "🎯 Exato! O JavaScript é o cérebro que processa as ações do usuário.";
+                feedback.innerHTML = "Correto! 🎯 O 'else' é o nosso plano B para quando a condição falha.";
                 feedback.style.color = "#2ecc71";
             } else {
                 button.style.backgroundColor = "#e74c3c";
                 button.style.color = "white";
-                feedback.innerHTML = "Quase! HTML é estrutura e CSS é estilo. A lógica fica com o JS.";
+                feedback.innerHTML = "Incorreto. O 'if' só roda no true. No false, o caminho é o 'else'.";
                 feedback.style.color = "#e74c3c";
             }
         }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica: Arrays | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">ESTRUTURA DE DADOS</span>
+                    <h1>JavaScript <span>Arrays</span> <i class="fa-solid fa-layer-group" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>O Problema da Escala</h2>
+                            <p>Imagine que você precisa guardar o nome de 300 filmes. Criar 300 variáveis (<code>filme1, filme2...</code>) seria um pesadelo, certo?</p>
+                            <div class="terminal mt-10">
+                                <span style="color: #6a9955;">// Jeito errado e cansativo:</span><br>
+                                <span style="color: #c586c0;">let</span> filme1 = <span style="color: #ce9178;">"Batman"</span>;<br>
+                                <span style="color: #c586c0;">let</span> filme2 = <span style="color: #ce9178;">"Barbie"</span>;<br>
+                                <span style="color: #c586c0;">let</span> filme3 = <span style="color: #ce9178;">"Top Gun"</span>;
+                            </div>
+                            <p class="mt-10"><strong>O Array resolve isso!</strong> Ele é uma lista única que guarda tudo junto.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="../public/svg/undraw_access_denied_re_awnf.svg" alt="Problema de escala">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Como funciona o Índice?</h2>
+                    <p>No JavaScript, os Arrays são **indexados**. Isso significa que cada item tem um endereço numérico, e o mais importante: <strong>A contagem começa no ZERO.</strong></p>
+                    
+                    
+
+                    <div class="info-box-white mt-20">
+                        <p>Para acessar o "Batman", você chama o índice <code>[0]</code>. Para o "Barbie", o índice <code>[1]</code>, e assim por diante.</p>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Declarando seu primeiro Array</h2>
+                    <p>Usamos colchetes <code>[ ]</code> e separamos os itens por vírgulas.</p>
+                    
+                    <div class="terminal mt-20">
+                        <span style="color: #c586c0;">const</span> filmes = [<span style="color: #ce9178;">"Batman"</span>, <span style="color: #ce9178;">"Barbie"</span>, <span style="color: #ce9178;">"Top Gun"</span>];<br><br>
+                        <span style="color: #6a9955;">// Lendo um valor:</span><br>
+                        console.<span style="color: #dcdcaa;">log</span>(filmes[<span style="color: #b5cea8;">1</span>]); <span style="color: #6a9955;">// Saída: "Barbie"</span><br><br>
+                        <span style="color: #6a9955;">// Alterando um valor:</span><br>
+                        filmes[<span style="color: #b5cea8;">0</span>] = <span style="color: #ce9178;">"Spider-Man"</span>;
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/svg/undraw_programming_re_kg9v.svg" alt="Looping através de array">
+                        </div>
+                        <div class="card-text">
+                            <h2>Arrays + Loops = ❤️</h2>
+                            <p>A verdadeira magia acontece quando usamos um loop para percorrer a lista inteira automaticamente.</p>
+                            <div class="terminal mt-10">
+                                <span style="color: #c586c0;">for</span>(<span style="color: #c586c0;">let</span> i = <span style="color: #b5cea8;">0</span>; i < filmes.length; i++) {<br>
+                                &nbsp;&nbsp;console.<span style="color: #dcdcaa;">log</span>(filmes[i]);<br>
+                                }
+                            </div>
+                            <p class="mt-10 font-14"><em>Dica: <code>.length</code> retorna o tamanho total do array.</em></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio do Índice</h2>
+                        <p class="font-20">Se eu tenho <code>let cores = ["Azul", "Verde", "Vermelho"]</code>, como eu acesso a cor <strong>Verde</strong>?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkArrayAnswer(this, false)">
+                                <span>A</span> <code>cores[0]</code>
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkArrayAnswer(this, true)">
+                                <span>B</span> <code>cores[1]</code>
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkArrayAnswer(this, false)">
+                                <span>C</span> <code>cores[2]</code>
+                            </button>
+                        </div>
+                        <div id="array-quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2024 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function checkArrayAnswer(button, isCorrect) {
+            const feedback = document.getElementById('array-quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "✅ Exato! Como o índice começa em 0, o segundo item é o [1].";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "❌ Quase! Lembre-se que o primeiro item é sempre o 0.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

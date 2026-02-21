@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug: Caçando Erros | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">SOFT SKILL & TÉCNICA</span>
+                    <h1>Processo de <span id="current-step-title">Debug</span> <i class="fa-solid fa-bug-slash" style="color: #e74c3c;"></i></h1>
+                    <div class="progress-wrapper" style="width: 100%; background: #e9ecef; height: 8px; border-radius: 20px; margin-top: 15px; overflow: hidden;">
+                        <div id="progress-bar" style="width: 0%; background: #e74c3c; height: 100%; transition: 0.4s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container" style="min-height: 500px; position: relative;">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Debugging concept">
+                        </div>
+                        <div class="card-text">
+                            <h2>O que é Debug?</h2>
+                            <p>É o processo de identificar, analisar e remover <strong>bugs</strong> (falhas) do seu código.</p>
+                            <p>Mais do que apenas consertar erros, debugar é uma investigação para entender por que o programa não está se comportando como esperado.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h2>Como Investigar?</h2>
+                    <p>Existem várias formas de encontrar o problema:</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-terminal"></i> <strong>Console Log:</strong> Imprimir valores para ver o que acontece em tempo real.</li>
+                        <li><i class="fa-solid fa-circle"></i> <strong>Breakpoints:</strong> Pausar o código em uma linha específica.</li>
+                        <li><i class="fa-solid fa-shoe-prints"></i> <strong>Step-by-Step:</strong> Avançar linha por linha na execução.</li>
+                    </ul>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h2>Ferramentas de IDE</h2>
+                    <p>IDEs modernas como o <strong>VS Code</strong> possuem painéis de debug que mostram:</p>
+                    <div class="info-box-blue">
+                        <p><strong>Variables:</strong> O valor atual de cada variável.</p>
+                        <p><strong>Call Stack:</strong> A ordem das funções que foram chamadas.</p>
+                        <p><strong>Watch:</strong> Monitoramento de expressões específicas.</p>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>Visualizando o Erro</h2>
+                    <p>O ponto vermelho (breakpoint) indica onde a execução vai parar:</p>
+                    <div class="terminal">
+                        <br>
+                        <span style="color: #e74c3c;">●</span> 1 <span class="text-info">function</span> calcularTotal(preco, qtd) { <br>
+                        &nbsp;&nbsp; 2 &nbsp;&nbsp; <span class="text-code">const</span> imposto = 0.15; <br>
+                        &nbsp;&nbsp; 3 &nbsp;&nbsp; <span class="text-comment">// Debugger para aqui na linha 1</span> <br>
+                        &nbsp;&nbsp; 4 &nbsp;&nbsp; <span class="text-code">return</span> (preco * qtd) * imposto; <br>
+                        &nbsp;&nbsp; 5 }
+                    </div>
+                    <p style="margin-top: 15px;">Debugar antes da produção evita "incêndios" no sistema final!</p>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="bg-footer">            
+            <div class="d-flex-row justify-evenly p-10">  
+                <div><h1 class="text-white">Coders</h1></div>              
+                <div>
+                    <h3>Início</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="trilhas.html">Trilhas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Equipe</h3>
+                    <ul class="footer-links">
+                        <li><a href="team_scrum.html">Team Scrum</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Desafios</h3>
+                    <ul class="footer-links">
+                        <li><a href="hackathon.html">Hackathon</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

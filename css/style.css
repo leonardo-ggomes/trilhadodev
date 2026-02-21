@@ -183,6 +183,7 @@ body {
 .section-banner.logic { background: linear-gradient(135deg, #ff9d00, #ffb900); }
 .section-banner.front { background: linear-gradient(135deg, #1cb0f6, #00cdff); }
 .section-banner.back { background: linear-gradient(135deg, #58cc02, #23ad5c); }
+.section-banner.data { background: linear-gradient(135deg, #490581, #210263); }
 
 .section-banner h2 { font-weight: 900; margin-bottom: 5px; }
 .section-banner p { opacity: 0.9; font-weight: 600; }
