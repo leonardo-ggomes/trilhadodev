@@ -1,220 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lógica: Estrutura Switch | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Estrutura <br> <strong>Switch <i class="fa-brands fa-square-js"></i> </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>Estrutura <span id="current-step-title">Switch</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Conceito Switch">
                         </div>
-                        <div class="subtitle">
-                            Lógica &#x25CF; Condicional
+                        <div class="card-text">
+                            <h2>O Escolhedor de Caminhos</h2>
+                            <p>O <strong>Switch</strong> é uma instrução condicional que executa diferentes ações baseadas em múltiplos casos possíveis. É uma alternativa elegante ao <code>if...else if</code> quando temos muitas opções.</p>
+                            <ul class="feature-list mt-10">
+                                <li>Compara um valor com vários <strong>casos</strong>.</li>
+                                <li>Executa o bloco se houver correspondência.</li>
+                                <li>Usa um caminho <strong>padrão</strong> (default) se nada coincidir.</li>
+                            </ul>
                         </div>
-                    </article>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Anatomia do Switch</h2>
+                    <p>Veja como organizar os blocos de verificação:</p>
+                    
+                    <div class="terminal mt-10">
+                        <span style="color: #c586c0;">switch</span>(<span style="color: #569cd6;">expressao</span>) {<br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">case</span> x:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6a9955;">// código aqui</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c586c0;">break</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">case</span> y:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6a9955;">// código aqui</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c586c0;">break</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">default</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6a9955;">// se nenhum bater</span><br>
+                        }
+                    </div>
+                    
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Exemplo Real: Escolha de Filme</h2>
+                    <div class="terminal">
+                        <span style="color: #569cd6;">let</span> filme = <span style="color: #ce9178;">"batman"</span>;<br><br>
+                        <span style="color: #c586c0;">switch</span>(filme) {<br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">case</span> <span style="color: #ce9178;">"spiderman"</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(<span style="color: #ce9178;">"Vai teia!"</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c586c0;">break</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">case</span> <span style="color: #ce9178;">"batman"</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(<span style="color: #ce9178;">"Eu sou a vingança!"</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c586c0;">break</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">default</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(<span style="color: #ce9178;">"Filme não encontrado."</span>);<br>
+                        }
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>A Importância do Break</h2>
+                            <p>A palavra-chave <span class="grif">break</span> é vital. Sem ela, o JavaScript continua executando os casos abaixo mesmo que eles não correspondam ao valor!</p>
+                            <div class="warning-box mt-10">
+                                <p><i class="fa-solid fa-circle-exclamation"></i> O <strong>default</strong> não precisa de break, pois ele é sempre a última opção do bloco.</p>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <img src="../public/images/programmer.png" alt="Atenção">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio Switch</h2>
+                        <p class="font-20">Se o <code>break</code> for omitido em um caso que foi atendido, o que acontece?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> O código gera um erro fatal.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> Ele executa o próximo caso automaticamente.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> O switch para de funcionar imediatamente.
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
                 </section>
             </div>
 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre o <span class="text-white">Switch</span> </h1>
-                    <blockquote
-                        cite="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else"
-                        class="font-30 text-justify">
-                        &nbsp;Switch é uma instrução condicional que pode executar diferentes ações 
-                        dependendo da condição<br>
-
-                    </blockquote>
-                    <ul class="p-10">
-                        <li>O valor é comparado com o valor de cada <span class="grif">caso</span></li>         
-                        <li>Se houver uma correspondência, o bloco de código associado será executado.</li>                                   
-                        <li>Se não houver correspondência, o bloco de código padrão será executado.</li>                                   
-                    </ul>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Estrutura do Switch</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Exemplo de como declarar um bloco <code>switch</code>.<br>
-                    </p>
-
-                    <div class="terminal">
-                        <span class="text-code">switch(<code class="text-white">expressao</code>){</span> <br>
-                            <code class="text-mark"> &nbsp; case x:</code> <br>
-                            <span>&nbsp;&nbsp;&nbsp;Seu código aqui</span> <br>
-                            <span class="text-mark">&nbsp;&nbsp;&nbsp;break;</span><br>
-                            <code class="text-mark"> &nbsp; case y:</code> <br>
-                            <span>&nbsp;&nbsp;&nbsp;Seu código aqui</span> <br>
-                            <span class="text-mark">&nbsp;&nbsp;&nbsp;break;</span><br>
-                            <code class="text-mark"> &nbsp; default:</code> <br>
-                            <span>&nbsp;&nbsp;&nbsp;Seu código aqui</span> <br>
-                        <span class="text-code">}</span>
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="https://www.w3schools.com/js/js_switch.asp"
-                            target="_blank">
-                            <img src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/programmer.png" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Exemplo do bloco <code class="grif">switch</code></h1>
-
-                    <div class="terminal">
-                        <p>
-                            <code class="text-mark"> var <span class="text-info">filmeEscolhido</span>  = "batman";</code> <br>
-                            <br>
-
-                            <code>
-                                <span class="text-code">switch(<code class="text-info">filmeEscolhido</code>){</span> <br>
-                                    <code class="text-mark"> &nbsp; case <span class="grif text-white">"spiderman"</span>:</code> <br>
-                                    <span>&nbsp;&nbsp;&nbsp;console.log("Vai teia!")</span> <br>
-                                    <span class="text-mark">&nbsp;&nbsp;&nbsp;break;</span><br>
-                                    <code class="text-mark"> &nbsp; case <span class="grif text-white">"batman"</span>:</code> <br>
-                                    <span>&nbsp;&nbsp;&nbsp;console.log("Te peguei, Coringa!")</span> <br>
-                                    <span class="text-mark">&nbsp;&nbsp;&nbsp;break;</span><br>
-                                    <code class="text-mark"> &nbsp; default:</code> <br>
-                                    <span>&nbsp;&nbsp;&nbsp;console.log("Nenhum filme escolhido.")</span> <br>
-                                <span class="text-code">}</span>
-                            </code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/coding.png" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Switch</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;Lembre-se que a palavra <span class="grif">break</span> interrompe  
-                        a execução do código e sai da instrução switch, então
-                        se você omitir a instrução break, o próximo caso será 
-                        executado mesmo que a avaliação não corresponda ao caso. <br>
-                        O bloco <code class="grif"> &nbsp;Default </code>é executado quando nenhuma verificação caso for satisfeita.
-                    </p>
-                </div>
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2024 - 2026. Leonardo Garcia.
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Exato! Isso é chamado de 'fall-through' (atravessamento).";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Errado! Sem o break, o JS 'escorrega' para o próximo caso.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>

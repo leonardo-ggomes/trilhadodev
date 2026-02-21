@@ -3,238 +3,189 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lógica: Variáveis | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            JavaScript <br> <strong>Variáveis <i class="fa-brands fa-square-js"></i> </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>JavaScript <span id="current-step-title">Variáveis</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Conceito Variáveis">
                         </div>
-                        <div class="subtitle">
-                            Lógica &#x25CF; Dados
+                        <div class="card-text">
+                            <h2>O que é uma Variável?</h2>
+                            <p>Uma <strong>variável</strong> é um espaço na memória do computador destinado a guardar informações. Pense nela como uma caixa etiquetada onde você guarda um valor para usar depois.</p>
+                            <ul class="feature-list mt-10">
+                                <li><strong>Identificação:</strong> Cada caixa tem um nome único.</li>
+                                <li><strong>Atribuição:</strong> Usamos o sinal <code>=</code> para colocar algo na caixa.</li>
+                                <li><strong>Mutabilidade:</strong> O conteúdo pode mudar (exceto em constantes).</li>
+                            </ul>
                         </div>
-                    </article>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Formas de Declarar</h2>
+                    <p>No JavaScript moderno, focamos principalmente em <code>let</code> e <code>const</code>:</p>
+                    
+                    <div class="card-grid-small mt-20">
+                        <div class="info-box-white">
+                            <h3><span class="grif">let</span></h3>
+                            <p>Para valores que <strong>podem mudar</strong> durante o programa. Tem escopo local.</p>
+                        </div>
+                        <div class="info-box-white">
+                            <h3><span class="grif">const</span></h3>
+                            <p>Para valores <strong>fixos</strong>. Uma vez definida, você não pode alterar o valor.</p>
+                        </div>
+                    </div>
+
+                    <div class="terminal mt-20">
+                        <span style="color: #c586c0;">let</span> preco = <span style="color: #b5cea8;">29.90</span>; <span style="color: #6a9955;">// Pode mudar</span><br>
+                        <span style="color: #c586c0;">const</span> taxaFixa = <span style="color: #b5cea8;">0.05</span>; <span style="color: #6a9955;">// Erro se tentar mudar</span>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Tipos de Dados Primitivos</h2>
+                    <p>As variáveis podem guardar diferentes "espécies" de informação:</p>
+                    
+                    
+
+                    <div class="table-container mt-10">
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Exemplo</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>String</strong></td>
+                                    <td><code>"Olá"</code></td>
+                                    <td>Textos (sempre entre aspas).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Number</strong></td>
+                                    <td><code>10</code> ou <code>5.5</code></td>
+                                    <td>Números inteiros ou decimais.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Boolean</strong></td>
+                                    <td><code>true</code> / <code>false</code></td>
+                                    <td>Valores lógicos (Sim/Não).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>Regras de Ouro 🏆</h2>
+                            <ul class="feature-list">
+                                <li><strong>Camel Case:</strong> Use <code>nomeCompleto</code> em vez de <code>nome_completo</code>.</li>
+                                <li><strong>Sem espaços:</strong> Nunca use espaços ou acentos nos nomes.</li>
+                                <li><strong>Sem números no início:</strong> <code>1item</code> é proibido; use <code>item1</code>.</li>
+                                <li><strong>Semântica:</strong> O nome deve dizer o que a variável faz. Evite <code>let x = 10;</code>.</li>
+                            </ul>
+                        </div>
+                        <div class="card-image">
+                            <img src="../public/images/coding.png" alt="Boas Práticas">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio de Variáveis</h2>
+                        <p class="font-20">Qual das declarações abaixo está <strong>errada</strong> seguindo as regras do JavaScript?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> <code>let usuarioAtivo = true;</code>
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> <code>let 2nome = "Ana";</code>
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> <code>const _token = "xyz123";</code>
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
                 </section>
             </div>
 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre <span class="text-white">variáveis</span> </h1>
-                    <blockquote
-                        cite="https://www.w3schools.com/js/js_functions.asp"
-                        class="font-30 text-justify">
-                        &nbsp;Variáveis é um espaço em memória, destinado ao armazenamento de dados.<br>
-
-                    </blockquote>
-                    <ul class="p-10">
-                        <li>Variável em javascript pode ser declarada de 4 formas 
-                            <span class="grif">automática</span>,
-                            <span class="grif">let</span>, 
-                            <span class="grif">var</span> ou 
-                            <span class="grif">const</span>.
-                        </li>  
-                        <li class="mt-10">
-                            Váriavel <span class="grif">automática</span> é declarada no primeiro uso.
-                        </li>       
-                        <li class="mt-10">
-                            Váriavel <span class="grif">const</span> não pode ser alterada depois de inciada.
-                        </li>                                   
-                        <li class="mt-10">
-                            Váriavel <span class="grif">let</span> tem visiblidade local.
-                        </li>   
-                        <li class="mt-10">
-                            Váriavel <span class="grif">var</span> tem visiblidade global.
-                        </li>  
-                        <li class="mt-10">
-                            Não declare variáveis com acento, caracter especial, começando com número e espaço entre palavras.
-                        </li>  
-                        <li class="mt-10">
-                            Use o padrão <span class="grif">cammelCase</span> na hora de declarar variáveis. Veja <code>let nomeCompleto</code>.
-                        </li>                                      
-                        <li class="mt-10">
-                            É permitido <span class="grif">_</span> no começo.
-                        </li>  
-                        <li class="mt-10">
-                            O nome da variável deve fazer sentido.
-                        </li>                                     
-                    </ul>
-                </div>
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Declaração de Variável</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Exemplo de como declarar uma <code>variável</code>. O sinal 
-                       <span class="grif">=</span> é um operador de atribuição, isso significa
-                       que o valor a esquerda está sendo passado para a variável a direita. Não confunda
-                       com a igualdade.<br>
-                    </p>
-
-                    <div class="terminal">
-                        <span class="text-mark">let</span> assunto = "variável javascript" <br>
-                        <span class="text-mark">let</span> dolarCanadense = 3.75 <br>    
-                        <span class="text-mark">let</span> qtdePessoas = 10 <br> 
-                        <span class="text-mark">let</span> status = true <br>                  
-                        <span class="text-mark">const</span> PI = 3.1416
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="https://www.w3schools.com/js/js_variables.asp"
-                            target="_blank">
-                            <img src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Tipo de dados</h1>
-                    <blockquote
-                        cite="https://www.w3schools.com/js/js_functions.asp"
-                        class="font-30 text-justify">
-                        &nbsp;O javascript suporta alguns tipos de dados, que inclusive são iguais
-                        em outras linguagem de programação.<br>
-
-                    </blockquote>
-                    <ul class="p-10">
-                        <li> 
-                            <span class="grif">string</span> é um tipo de dados textual, use
-                            <span class="grif">" "</span>. 
-                        </li>  
-                        <li class="mt-10">
-                            <span class="grif">number</span> é um tipo númerico para inteiro 1,2,3,4...., ou decimal 1.1, 2.4, 2.5. 
-                        </li>       
-                        <li class="mt-10">
-                            <span class="grif">boolean</span> é tipo que tem duas possibilidades
-                            <span class="grif">true</span> ou <span class="grif">false</span>.
-                        </li>                                   
-                        <li class="mt-10">
-                            <span class="grif">object</span> é um tipo declarado com { } e contém propriedades.
-                        </li>   
-                        <li class="mt-10">
-                            <span class="grif">array</span> é um tipo que permite armazenar um coleção de dados separados por
-                            <span  class="grif">,</span> entre colchetes <span  class="grif">[ ]</span>.
-                        </li>   
-                        <li class="mt-10">
-                            <span class="grif">null</span> é do tipo vazio, que representa uma variável sem valor.
-                        </li>  
-                        <li class="mt-10">
-                            <span class="grif">undefined</span> é um tipo que representa que a variável é sem tipo definido, ou valor.
-                        </li>                                       
-                    </ul>
-                </div>
-            </div>
-        
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2024 - 2026. Leonardo Garcia.
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Boa! Variáveis não podem começar com números.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Ops! Esta opção está correta tecnicamente. Tente achar a inválida!";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>

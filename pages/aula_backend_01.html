@@ -3,247 +3,117 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Aula 01 - Node.js | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Introdução <br> <strong>ao Node.js <i class="fa-brands fa-node-js"></i> </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">AULA 01</span>
+                    <h1>Node.js: <span id="current-step-title">O Início</span></h1>
+
+                    <div class="progress-wrapper"
+                        style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 20px; margin-top: 20px; overflow: hidden;">
+                        <div id="progress-bar"
+                            style="width: 33%; background: var(--primary); height: 100%; transition: 0.4s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container" style="min-height: 400px; position: relative;">
+
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Nodejs">
                         </div>
-                        <div class="subtitle">
-                           Aula 01
+                        <div class="card-text">
+                            <h2>O que é o Node?</h2>
+                            <p>O Node.js® é um ambiente que permite executar JavaScript <strong>fora do
+                                    navegador</strong>. Ele é o motor por trás de grandes sistemas como Netflix e
+                                LinkedIn.</p>
+                            <ul class="feature-list" style="margin-top: 15px;">
+                                <li><i class="fa-solid fa-bolt"></i> Ultra veloz</li>
+                                <li><i class="fa-solid fa-microchip"></i> Single Thread</li>
+                            </ul>
                         </div>
-                    </article>                    
-                </section>     
-            </div>   
+                    </div>
+                </section>
 
-            
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre o Node.js</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;Node.js® é um ambiente de tempo de execução JavaScript multiplataforma e de código aberto. <br>
-                      
-                    </p>
-                    <ul class="p-10">
-                        <li>Assíncrono</li>
-                        <li>Orientado a Eventos</li>
-                        <li>Ecalonável</li>
-                        <li>Single Thread</li>
-                        <li>I/O não bloqueante </li>
-                    </ul>                 
-                </div>
-            </div>  
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Instalação</h2>
+                    <p>Para começar, instale a versão <strong>LTS</strong> (Long Term Support). Após instalar, abra seu
+                        terminal e digite:</p>
 
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-              
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Instalação do Node.js</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Acesse o site oficial para ter acesso a última versão do instalador. <br>
-                        &nbsp; Use a <code>versão LTS</code>. Caso você tenha o Node.js na sua máquina, execute o comando
-                        abaixo no terminal para verificar a versão instalada.               
-                    </p>      
-                    
-                    <div class="terminal">
-                        <span>C:\Users></span> <span> node -v</span> 
+                    <div class="modern-terminal" style="margin: 20px 0;">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <code><span class="prompt">C:\Users></span> node -v</code>
+                        </div>
                     </div>
 
-                    <div class="mt-10">
-                        <a href="https://nodejs.org/en" target="_blank">
-                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>                       
+                    <a href="https://nodejs.org/en" target="_blank" class="btn-primary" style="display: inline-block;">
+                        <i class="fa-solid fa-download"></i> Ir para Site Oficial
+                    </a>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-grid reverse">
+                        <div class="card-image">
+                            <img src="../public/images/coding.png" alt="Coding">
+                        </div>
+                        <div class="card-text">
+                            <h2>Seu primeiro código</h2>
+                            <p>Crie um arquivo <code>app.js</code> e escreva:</p>
+                            <div class="code-block"
+                                style="background: #2d2d2d; color: #fff; padding: 15px; border-radius: 8px;">
+                                <pre><code>console.log("Servidor iniciado!");</code></pre>
+                            </div>
+                            <p class="mt-10">Execute no terminal com: <strong>node app.js</strong></p>
+                        </div>
                     </div>
-                </div>
-            </div>  
+                </section>
 
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/coding.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Test-drive</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Crie no VS Code um arquivo <code>hello.js </code>e implemente o código abaixo.    
-                        Para executá-lo, basta rodar o comando <code>node hello.js</code>. <br><br>
-                    </p>      
-                    
-                    <div class="terminal">
-                        <p>                            
-                            <code>
-                                 console.log("Hello World")
-                            </code>
-                        </p>
-                    </div>      
-                  
-                    <div class="mt-10">
-                        <a href="https://nodejs.org/docs/latest-v19.x/api/synopsis.html" target="_blank" class="a-custom">Documentação Node.js <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                  
-                </div>
-            </div>  
+            </div>
 
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_programming_re_kg9v.svg" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Criando o primeiro servidor...</h1>
-                                       
-                    <div class="terminal">
-                        <p> 
-                            <code>
-                                const http = require('node:http'); <br>
-
-                                const hostname = '127.0.0.1';<br>
-                                const port = 3000;<br><br>
-
-                                const server = http.createServer((req, res) => {<br>
-                                    &nbsp;res.statusCode = 200;<br>
-                                    &nbsp;res.setHeader('Content-Type', 'text/plain');<br>
-                                    &nbsp;res.end('Hello, World!\n');<br>
-                                });<br><br>
-
-                                server.listen(port, hostname, () => {<br>
-                                &nbsp;console.log(`Server running at http://${hostname}:${port}/`);<br>
-                                }); 
-                            </code>                            
-                        </p>
-                    </div>      
-                  
-                </div>
-            </div>      
-            
-            
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/computer_io.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Na prática</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Acesse o repositório para ter acesso ao código fonte da aula. <br>     
-                    </p>      
-                    
-                    <div class="terminal">
-                        <span><i class="fa-solid fa-lock"></i> https://github.com/leonardo-ggomes/reserva-backend</span> 
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="https://github.com/leonardo-ggomes/reserva-backend" target="_blank">
-                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>                       
-                    </div>
-                  
-                </div>
-            </div>      
+            <div class="carousel-controls"
+                style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; padding: 0 10px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-arrow-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <p><i class="fa-solid fa-mug-hot"></i> 2024 Coders | Leonardo Garcia</p>
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
     <script src="../js/script.js"></script>
 </body>
-
 </html>

@@ -1,199 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lógica: Do-While | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Estrutura <br> <strong>Do-While <i class="fa-brands fa-square-js"></i> </strong> <br>
-                        </div>
-                        <div class="subtitle">
-                           Lógica &#x25CF; Loop
-                        </div>
-                    </article>                    
-                </section>     
-            </div>   
-
-            
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre o <span class="text-white">Do-While</span> </h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;A instrução do-while repetirá até que a condição especificada seja falsa.<br>
-                      
-                    </p>
-                    <ul class="p-10">
-                        <li>Repetir uma lógica quantas vezes quiser até que seja falsa.</li>
-                        <li>Executar ao menos uma vez até que a condição seja testada.</li>                        
-                    </ul>                 
-                </div>
-            </div>  
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-              
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Estrutura do Do-While</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Exemplo de como declarar o Do-While no seu código. 
-                    </p>      
-                                    
-                    <div class="terminal">                    
-                        <span>do{</span> <br>
-                        <span> &nbsp; coloque seu código aqui...</span> <br>
-                        <span>}</span> <br>
-                        <span>while(condicao)</span>
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">
-                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>                       
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>Estrutura <span id="current-step-title">Do-While</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
                     </div>
                 </div>
-            </div>  
-        
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/front-undraw.svg" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Exemplo de uso:</h1>
-                                       
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Desenvolvimento">
+                        </div>
+                        <div class="card-text">
+                            <h2>Atire primeiro, pergunte depois!</h2>
+                            <p>Diferente do <code>while</code> comum, o <strong>Do-While</strong> garante que o bloco de código seja executado <strong>pelo menos uma vez</strong> antes de testar a condição.</p>
+                            <div class="info-box-blue mt-10">
+                                <p><i class="fa-solid fa-bolt"></i> Útil quando você precisa que uma ação ocorra (como exibir um menu) antes de verificar se ela deve se repetir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>While vs Do-While</h2>
+                    <p>Entenda a ordem de execução:</p>
+                    
+                    
+
+                    <div class="concept-grid mt-10" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="p-10 border-blue">
+                            <strong>While:</strong> Teste &rarr; Execução
+                        </div>
+                        <div class="p-10 border-blue">
+                            <strong>Do-While:</strong> Execução &rarr; Teste
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Como escrever</h2>
                     <div class="terminal">
-                        <p>         
-                            <code>
-                                 <span>var i = 0</span><br><br>
-                                 <span class="text-info">do {</span><br>
-                                     &nbsp; i += 1;  <br>
-                                     &nbsp; console.log(i)  <br>
-                                 <span class="text-info">}</span>
-                                 <span class="text-info">while(contador &lt; 5)</span>
-                            </code>
-                        </p>
-                    </div>                            
-                </div>
-            </div>             
+                        <span style="color: #c586c0;">do</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #6a9955;">// código executado primeiro</span><br>
+                        &nbsp;&nbsp;i++;<br>
+                        } <span style="color: #c586c0;">while</span> (i < 5);
+                    </div>
+                    <p class="mt-10">Note o ponto e vírgula <code>;</code> após o <code>while</code> — ele é obrigatório nesta estrutura!</p>
+                </section>
 
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/coding.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Do-While</h1>
-                    <p class="font-30 text-justify">
-                       &nbsp;Lembre-se que a condição será executada pelo menos uma vez antes de ser testada. Em outras
-                       palavras, primeiro o <code>Do</code> e depois o <code>while</code>.
-                    </p>   
-                </div>
-            </div>          
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio de Fluxo</h2>
+                        <p class="font-20">Se definirmos <code>let x = 10;</code> e criarmos um <code>do-while</code> com a condição <code>x < 5</code>, o que acontecerá?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> O código nunca será executado.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> O código executará exatamente 1 vez.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> O código entrará em loop infinito.
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Exato! Como o 'do' vem primeiro, ele roda uma vez e só depois vê que 10 não é menor que 5.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Ops! Lembre-se: o Do-While executa primeiro para depois testar.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>

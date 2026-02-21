@@ -1,284 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Padrão MVC | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Padrão <br> <strong> MVC <i class="fa fa-network-wired"></i> </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">AULA 03</span>
+                    <h1>Arquitetura <span id="current-step-title">MVC</span> <i class="fa fa-network-wired" style="color: #007bff;"></i></h1>
+                    <div class="progress-wrapper" style="width: 100%; background: #e9ecef; height: 8px; border-radius: 20px; margin-top: 15px; overflow: hidden;">
+                        <div id="progress-bar" style="width: 16%; background: #007bff; height: 100%; transition: 0.4s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container" style="min-height: 500px; position: relative;">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Arquitetura MVC">
                         </div>
-                        <div class="subtitle">
-                            Back-End &#x25CF; Node.js
+                        <div class="card-text">
+                            <h2>O que é MVC?</h2>
+                            <p>O padrão <strong>Model-View-Controller</strong> é uma forma de organizar seu código dividindo-o em três camadas independentes. </p>
+                            <p>Pense nisso como a cozinha de um restaurante: cada um tem seu papel definido para que o prato chegue perfeito à mesa.</p>
                         </div>
-                    </article>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-database"></i></div>
+                    <h2>1. Model (O Cérebro)</h2>
+                    <p>O <strong>Model</strong> cuida dos dados e da lógica de negócios. Ele sabe como salvar um usuário no banco de dados ou como calcular o preço total de um carrinho.</p>
+                    <div class="info-box-blue">
+                        <strong>Exemplo:</strong> <code>usuarioModel.js</code> - Contém o esquema da tabela e as regras de validação.
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h2>2. View (A Cara)</h2>
+                    <p>A <strong>View</strong> é o que o usuário vê. São os arquivos HTML, CSS e as respostas visuais do sistema.</p>
+                    <div class="info-box-blue">
+                        <strong>Exemplo:</strong> <code>perfil.html</code> - Mostra os dados que o Model forneceu, mas formatados para o humano ler.
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h2>3. Controller (O Garçom)</h2>
+                    <p>O <strong>Controller</strong> é o intermediário. Ele recebe o clique do usuário na View, pede a informação para o Model e devolve a resposta para a View.</p>
+                    <div class="info-box-blue">
+                        <strong>Exemplo:</strong> <code>userController.js</code> - Recebe a rota <code>/login</code> e decide o que fazer.
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <h2>Estrutura no Node.js</h2>
+                    <p>Veja como seu projeto deve ficar organizado visualmente:</p>
+                    <div class="folder-structure">
+                        <ul>
+                            <li><i class="fa-solid fa-folder"></i> src/
+                                <ul class="ml-10">
+                                    <li class="text-info"><i class="fa-solid fa-folder"></i> models/ <small>(Lógica de Dados)</small></li>
+                                    <li class="text-white"><i class="fa-solid fa-folder"></i> views/ <small>(Interfaces)</small></li>
+                                    <li class="text-mark"><i class="fa-solid fa-folder"></i> controllers/ <small>(Regras de Fluxo)</small></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="6" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>Por que usar?</h2>
+                            <ul class="check-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Manutenção:</strong> É fácil achar erros.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Escalabilidade:</strong> O projeto pode crescer sem virar bagunça.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Equipe:</strong> Um dev mexe no CSS enquanto outro mexe no Banco.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
             </div>
 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="laptop">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">
-                    <h1>O que é  <span class="text-white">MVC </span> ?</h1> <br>
-                    <p class="font-30 text-justify">
-                        &nbsp;
-                        O padrão MVC (Model-View-Controller) é uma maneira organizada de construir aplicativos, 
-                        incluindo aqueles feitos com o Node.js. Ele divide as diferentes partes do aplicativo 
-                        para facilitar o desenvolvimento, a manutenção e a colaboração entre os desenvolvedores.
-                        <br>                      
-                    </p> <br>                                       
-                </div>
-            </div>
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_dev_productivity_re_fylf.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">
-                    <h1>Sobre cada parte do MVC:</h1> <br>
-                    <p class="font-30 text-justify">
-                        <span class="grif">1 &#8250;</span> <strong>Model (Modelo):</strong>
-                        O "Model" lida com a lógica de negócios e a manipulação dos dados.
-                        Ele representa a estrutura subjacente dos dados do aplicativo. 
-                        No contexto do Node.js, o Model pode ser representado por funções ou 
-                        classes que interagem com um banco de dados, acessam informações e executam 
-                        operações de manipulação de dados.
-                        <br>                      
-                    </p><br>                                       
-                </div>
-            </div>
-            
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_join_re_w1lh.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">
-                    <h1>Views</h1> <br>                   
-                    <p class="font-30 p-10 text-justify">                       
-                       <span class="grif">2 &#8250;</span> <strong>View (Visão):</strong> 
-                       A "View" trata da apresentação visual dos dados ao usuário. 
-                       É a parte que exibe informações e interage com os usuários. 
-                       No Node.js, a View normalmente seria composta por arquivos HTML, 
-                       CSS e às vezes um pouco de JavaScript para criar a interface do usuário.
-                    </p>                                                                        
-                </div>                
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_experience_design_re_dmqq.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center "> 
-                    <h1>Controller</h1> <br>   
-                    <p class="font-30 p-10 text-justify">                      
-                        <span class="grif">3 &#8250;</span> <strong>Controller (Controlador):</strong> 
-                        O "Controller" atua como um intermediário entre o Model e a View. 
-                        Ele recebe as solicitações do usuário, processa a lógica necessária e 
-                        decide como os dados devem ser apresentados. No Node.js, o 
-                        Controller pode ser implementado usando rotas e controladores para lidar 
-                        com as diferentes ações que o usuário pode realizar.
-                    </p>                                                                   
-                </div>                
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_personal_data_re_ihde.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">   
-                    <h1>Como essas partes se encaixam ao usar o Node.js e o padrão MVC</h1>
-                    <ul class="p-10 font-20 text-justify">     
-                       <li>
-                            Quando um usuário faz uma solicitação em um aplicativo Node.js 
-                            (como acessar uma página em um site), essa solicitação 
-                            é roteada para o Controller apropriado.
-                        </li>
-                        <br>
-                        <li>
-                            O Controller processa a solicitação, realiza a lógica de negócios necessária e interage com o Model para buscar ou modificar dados.
-                        </li>
-                        <br>
-                        <li>
-                            Uma vez que o Model conclui suas operações, o Controller decide qual View deve ser exibida ao usuário com base nas informações processadas.
-                        </li>
-                        <br>
-                        <li>
-                            A View recebe os dados do Controller e cria a interface do usuário apropriada para o usuário final.
-                        </li>
-                    </ul>                                                                          
-                </div>                
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_team_up_re_84ok.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">   
-                    <p class="font-30 p-10 text-justify">     
-                        &nbsp;Em resumo, o <strong class="text-info">padrão MVC</strong>  é uma abordagem de design que ajuda a 
-                        dividir um aplicativo Node.js em partes lógicas distintas <span class="text-mark"> (Model, 
-                        View e Controller)</span>, tornando o desenvolvimento e a manutenção mais 
-                        organizados e eficientes. Cada parte desempenha um papel específico e 
-                        trabalha em conjunto para criar uma experiência de aplicativo coesa e funcional.
-                    </p>                                                                          
-                </div>                
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_dev_productivity_re_fylf.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center font-30">  
-                    <ul>
-                        <li><span><i class="fa-solid fa-folder"></i> Meu Projeto</span> </li>                           
-                        <ul class="ml-10">
-                            <li>
-                                <span class="text-info">
-                                    <i class="fa-solid fa-folder"></i> Models
-                                </span>
-                                <ul class="ml-10 list-type-none text-info font-20">
-                                    <li>
-                                        <i class="fa-solid fa-file"></i> LivroModel.js
-                                    </li><hr>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="text-white">
-                                    <i class="fa-solid fa-folder"></i> Views
-                                </span>
-                                <ul class="ml-10 list-type-none text-white font-20">
-                                    <li>
-                                        <i class="fa-solid fa-file"></i> LivroView.html
-                                    </li> <hr>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="text-mark">
-                                    <i class="fa-solid fa-folder"></i> Controllers
-                                </span> 
-                                <ul class="ml-10 list-type-none text-mark font-20">
-                                    <li>
-                                        <i class="fa-solid fa-file"></i> LivroController.js
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </ul>                                                                 
-                </div>                
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <p><i class="fa-solid fa-mug-hot"></i> 2024 Coders | Leonardo Garcia</p>
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
     <script src="../js/script.js"></script>
 </body>
-
 </html>

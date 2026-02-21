@@ -1,196 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JSON: O Formato de Dados | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                           <br> <strong> JSON { } </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">BACK-END</span>
+                    <h1>Entendendo o <span id="current-step-title">JSON</span> <i class="fa-solid fa-code" style="color: #f1c40f;"></i></h1>
+                    <div class="progress-wrapper" style="width: 100%; background: #e9ecef; height: 8px; border-radius: 20px; margin-top: 15px; overflow: hidden;">
+                        <div id="progress-bar" style="width: 0%; background: #f1c40f; height: 100%; transition: 0.4s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container" style="min-height: 500px; position: relative;">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="JSON Concept">
                         </div>
-                        <div class="subtitle">
-                            Back-End &#x25CF; Node.js
+                        <div class="card-text">
+                            <h2>O que é JSON?</h2>
+                            <p><strong>JavaScript Object Notation</strong> é um formato leve para troca de dados.</p>
+                            <p>Embora tenha "JavaScript" no nome, ele é independente de linguagem e usado por quase todas as tecnologias modernas para enviar informações entre servidor e navegador.</p>
                         </div>
-                    </article>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h2>Por que usar JSON?</h2>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-check"></i> <strong>Leve:</strong> Arquivos pequenos que carregam rápido.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Legível:</strong> Fácil para humanos lerem e computadores processarem.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Universal:</strong> Funciona em Python, Java, PHP, Node.js, etc.</li>
+                    </ul>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-header-icon"><i class="fa-solid fa-brackets-curly"></i></div>
+                    <h2>Chave e Valor</h2>
+                    <p>A estrutura básica do JSON é composta por pares de <strong>"chave": "valor"</strong> dentro de chaves <code>{ }</code>.</p>
+                    <div class="info-box-blue">
+                        <pre style="margin:0;"><code>{
+  "nome": "Leonardo",
+  "idade": 25
+}</code></pre>
+                    </div>
+                    <p style="margin-top:10px;">As chaves devem estar sempre entre aspas duplas!</p>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>Tipos de Dados no JSON</h2>
+                    <p>JSON aceita strings, números, booleanos, arrays e até outros objetos:</p>
+                    <div class="terminal">
+                        <pre><code>{
+  <span class="text-info">"titulo"</span>: <span class="text-mark">"O Pequeno Príncipe"</span>,
+  <span class="text-info">"ano"</span>: <span class="text-mark">1943</span>,
+  <span class="text-info">"eFiccao"</span>: <span class="text-mark">true</span>,
+  <span class="text-info">"generos"</span>: [<span class="text-mark">"Novela", "Infantil"</span>]
+}</code></pre>
+                    </div>
                 </section>
             </div>
 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="laptop">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">
-                    <h1>O que é  <span class="text-white">JSON </span> ?</h1> <br>
-                    <p class="font-30 text-justify">
-                        &nbsp;
-                        JSON significa "JavaScript Object Notation" (Notação de Objeto JavaScript). 
-                        É um <span class="grif">formato leve</span> e fácil de ler para representar e trocar dados entre diferentes 
-                        partes de um programa ou entre aplicativos. JSON é amplamente usado para transmitir
-                        informações em APIs da web, armazenar configurações e trocar dados entre o 
-                        navegador e um servidor.                        
-                        <br>                      
-                    </p> <br>                                       
-                </div>
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_dev_productivity_re_fylf.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">  
-                    <h1>Como funciona: </h1> <br>                 
-                    <p class="font-30 text-justify">                       
-                        &nbsp;Pense no <span class="text-info grif">JSON </span> como uma maneira de escrever informações em um formato que 
-                        tanto humanos quanto computadores possam entender. É como escrever uma lista 
-                        de compras usando uma linguagem que um amigo seu também pode entender.
-                        <br>                      
-                    </p><br>                                       
-                </div>
-            </div>
-            
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_search_app_oso2.svg" class="h-50" alt="image">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">
-                    <h1>JSON</h1> <br>                   
-                    <p class="font-30 p-10 text-justify">       
-                       &nbsp; A notação JSON possui chave e valor. <br><br>
-                       <span class="text-white">
-                        { 
-                          <br>
-                           <span class="text-info"> &nbsp; &nbsp;"chave"</span>:<span class="text-mark">"valor"</span> 
-                          <br>
-                        } 
-                       </span>
-                    </p>                                                                        
-                </div>                
-            </div>          
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_server_status_re_n8ln.svg" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Exemplo simples de JSON</h1> <br> 
-                    <div class="terminal"> 
-                        <br>                       
-                        {    <br>   
-                            &nbsp; <span class="text-info">"titulo"</span>:<span class="text-mark"> "O Pequeno Príncipe",</span> <br>   
-                            &nbsp; <span class="text-info">"autor"</span>:<span class="text-mark"> "Antoine de Saint-Exupéry",</span> <br>   
-                            &nbsp; <span class="text-info">"ano"</span>:<span class="text-mark"> 1943,</span><br>   
-                            &nbsp; <span class="text-info">"eFiccao"</span>:<span class="text-mark"> true,</span> <br>   
-                            &nbsp; <span class="text-info">"genero"</span>:<span class="text-mark"> ["Novela", "Filosófico", "Infantil"]</span> <br>   
-                        }
-                    </div>    
-                </div>
-            </div>          
         </main>
-         <footer class="bg-footer">            
+
+        <footer class="bg-footer">            
             <div class="d-flex-row justify-evenly p-10">  
+                <div><h1 class="text-white">Coders</h1></div>              
                 <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3>Início</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="trilhas.html">Trilhas</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="team_scrum.html">Team Scrum</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="hackathon.html">Hackathon</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2026. Leonardo Garcia.
             </div>
-           
         </footer>
     </div>
 
     <script src="../js/script.js"></script>
 </body>
-
 </html>

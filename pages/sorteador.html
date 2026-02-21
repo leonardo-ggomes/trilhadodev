@@ -2,281 +2,355 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Scrum</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Team Scrum | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
+    
     <style>
-
-        #sala{
-            padding: 50px;
-            background-color: white;
+        :root {
+            --primary-blue: #127894;
+            --dark-blue: #2c3e50;
+            --bg-gray: #e9ecef;
+            --mesa-bg: #ffffff;
         }
 
-        #sala div{
-            width: calc(100%); 
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif; }
+        body { background-color: var(--bg-gray); color: var(--dark-blue); min-height: 100vh; display: flex; flex-direction: column; }
+
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .lugar{          
-            height: 120px;
-            margin: 5px;
-            background-size: contain;           
-        }
+        .logo { font-size: 1.5rem; font-weight: 900; color: var(--dark-blue); text-decoration: none; }
+        .logo span { color: var(--primary-blue); }
 
-        .lugar-texto{         
+        .scrum-container { padding: 40px 20px; flex: 1; display: flex; flex-direction: column; align-items: center; }
+
+        /* Painel de Controle */
+        .control-panel {
+            background: white;
+            padding: 20px;
             border-radius: 15px;
-            margin-top: -36px;
-            color: #ffffff;
-            background-color: black;
-            font-size: 13px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            align-items: flex-end;
             justify-content: center;
         }
 
-        .button-sorteador{
-            width: 100px;
-            font-size: 14px;
-            color: #00aeff;
-            background-color: transparent;
-            margin-bottom: 4px;
-            border-radius: 5px;
-            border: 1px solid #00aeff;
-            padding: 10px;
-            cursor: pointer;
+        .input-group { display: flex; flex-direction: column; gap: 5px; }
+        .input-group label { font-size: 11px; font-weight: bold; text-transform: uppercase; color: #7f8c8d; }
+
+        .btn {
+            padding: 10px 18px; border: none; border-radius: 8px; cursor: pointer;
+            font-weight: bold; display: flex; align-items: center; gap: 8px;
+            transition: 0.2s; color: white;
         }
-  
-        .numero-sorteador{
-            color: #00aeff;
-            font-size: 37px;
-            margin: 0 10px;
+        .btn-import { background: #7f8c8d; }
+        .btn-draw { background: #2980b9; }
+        .btn-teams { background: var(--primary-blue); }
+        .btn-reset { background: #e67e22; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .input-num { padding: 10px; border: 2px solid #ddd; border-radius: 8px; width: 65px; font-weight: bold; }
+
+        /* Estação do Professor */
+        .instructor-area { width: 100%; max-width: 1100px; margin-bottom: 25px; }
+        .professor-desk {
+            background: var(--dark-blue); color: white; padding: 15px 25px;
+            border-radius: 12px; display: inline-flex; align-items: center; gap: 15px;
+            border-left: 8px solid var(--primary-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Grid e Bancadas */
+        .room-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 100px; width: 100%; max-width: 1100px;
+        }
+
+        .bancada-linear {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 15px; margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.3); /* Fundo da fileira */
+            padding: 15px; border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* A MESA */
+        .mesa-slot {
+            height: 110px;
+            background: var(--mesa-bg);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 2px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        /* Ícone de Computador no fundo da mesa */
+        .mesa-slot::before {
+            content: "\f108"; /* fa-desktop */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 25px;
+            font-size: 30px;
+            color: #ecf0f1;
+            z-index: 0;
+        }
+
+        .mesa-slot.drag-over {
+            border: 2px dashed var(--primary-blue);
+            background-color: #e0f7fa;
+            transform: scale(1.05);
+        }
+
+        /* NÚMERO DO LUGAR - Agora bem visível */
+        .mesa-id {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 12px;
+            font-weight: 900;
+            color: white;
+            background: #95a5a6;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        /* ETIQUETA DO ALUNO */
+        .aluno-label {
+            color: white;
+            font-size: 11px;
+            padding: 6px 4px;
+            border-radius: 6px;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+            background-color: var(--dark-blue);
+            cursor: grab;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .aluno-label:active { cursor: grabbing; }
+
+        .slot-vazio { 
+            background: #f8f9fa; 
+            border: 2px dashed #ccc;
+            box-shadow: none;
+        }
+        .slot-vazio::before { color: #eee; }
+        .slot-vazio .mesa-id { background: #ddd; color: #7f8c8d; }
+
+        /* Legenda de Equipes */
+        .legend-teams {
+            margin-top: 20px; display: flex; gap: 10px;
+            flex-wrap: wrap; justify-content: center; padding: 20px;
+        }
+        .team-badge {
+            padding: 8px 16px; border-radius: 20px;
+            color: white; font-size: 12px; font-weight: 900;
+            text-transform: uppercase; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-footer {
+            background: var(--dark-blue); color: white;
+            padding: 20px; text-align: center; font-size: 13px; margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="navbar">
-          <div>
-            <a href="../index.html" class="link-none text-blue">Coders</a>
-          </div>
-          <div class="bar-links">
-            <div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                    </li>
-                    <li>
-                        <a href="projetos.html" class="dropdown-menu"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                    </li>
-                    <li>
-                        <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                    </li>
-                 </ul>
-            </div>
-            <div>
-                <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>               
-            </div>
-            
-          </div>
-        </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            <span>Sorteador</span> <br>#Dev!
-                        </div>
-                        <div class="subtitle">
-                            Randômico
-                        </div>
-                    </article>
-                </section>
-                <section>
-                    <div class="d-flex-row justify-between">
-                        <button onclick="alterNumero('-')" class="button-sorteador">-</button>
-                        <span id="numero-sorteador" class="numero-sorteador">34</span>
-                        <button onclick="alterNumero('+')" class="button-sorteador">+</button>
-                    </div>                 
-                    <div>
-                        <a onclick="sortear()" class="card-link">Sortear</a>
-                    </div>
-                </section>                
-            </div>    
-            
-            <div id="sala" class="w-100 h-100 d-flex-row justify-between items"> 
-                  <div id="lado-direito"></div>
-                  <div id="lado-esquerdo"></div>
-            </div>  
-        </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+    <header class="navbar">
+        <a href="#" class="logo">Coders<span>.</span></a>
+        <div style="font-weight: bold; color: var(--primary-blue);">LAYOUT DA SALA</div>
+    </header>
+
+    <main class="scrum-container">
+        
+        <div class="control-panel">
+            <button onclick="importarAlunos()" class="btn btn-import"><i class="fa-solid fa-users"></i> 1. Nomes</button>
+            <button onclick="distribuirLugares()" class="btn btn-draw"><i class="fa-solid fa-shuffle"></i> 2. Sortear</button>
+            <div class="input-group">
+                <label>Membros/Eq</label>
+                <input type="number" id="team-size" class="input-num" value="4" min="1" max="32">
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
+            <button onclick="criarEquipes()" class="btn btn-teams"><i class="fa-solid fa-people-group"></i> 3. Equipes</button>
+            <button onclick="resetarCores()" class="btn btn-reset"><i class="fa-solid fa-eraser"></i> Limpar</button>
+        </div>
+
+        <div class="instructor-area">
+            <div class="professor-desk">
+                <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+                <strong>ESTAÇÃO DO INSTRUTOR</strong>
             </div>
-           
-        </footer>
-    </div>
+        </div>
+
+        
+
+        <div class="room-grid">
+            <div id="col-esq"></div>
+            <div id="col-dir"></div>
+        </div>
+
+        <div id="equipes-legenda" class="legend-teams"></div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p><i class="fa-solid fa-mug-hot"></i> 2026 Coders | Leonardo Garcia</p>
+    </footer>
 
     <script>
+        let listaAlunos = [];
+        let salaEstado = new Array(32).fill(null);
+        let dragSourceIndex = null;
+        
+        const coresEquipes = ['#e74c3c', '#2ecc71', '#3498db', '#f39c12', '#9b59b6', '#d35400', '#1abc9c', '#2c3e50'];
+        const nomesEquipes = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Sigma", "Omega"];
 
-        let listaNomes = [];
-        let lugares = 34;
-
-        function alterNumero(input){
-            const numero = document.getElementById("numero-sorteador")
-
-            if(input == "+"){
-                lugares += 1;
-            }
-            else{
-                lugares -= 1;
-            }
-          
-            numero.innerText = lugares;
-        }
-
-        async function preencherNomes(){
-
+        async function importarAlunos() {
             const { value: text } = await Swal.fire({
+                title: 'Gerenciar Alunos',
                 input: 'textarea',
-                inputLabel: 'Lista de nomes',
-                inputPlaceholder: 'Separado por vírgula',
-                inputAttributes: {
-                  'aria-label': 'Coloque os nomes aqui'
-                },
+                inputPlaceholder: 'Nome1, Nome2, Nome3...',
                 showCancelButton: true
-              })
-              
-              if (text) {
-               listaNomes = String(text).trim().split(',')
-              }
-
+            });
+            if (text) {
+                listaAlunos = text.split(',').map(n => n.trim()).filter(n => n !== "");
+                Swal.fire('OK!', `${listaAlunos.length} alunos cadastrados.`, 'success');
+            }
         }
 
-   
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
 
-        function sortear(){    
-          
-            const sala = document.getElementById("sala");
-            const ladoDireito = document.getElementById("lado-direito");
-            const ladoEsquerdo = document.getElementById("lado-esquerdo");
-            ladoDireito.innerHTML = ""
-            ladoEsquerdo.innerHTML = ""
-          
-            sala.style.backgroundColor ="#127894" //"#00aeff" //#50acc5
+        function distribuirLugares() {
+            if (listaAlunos.length === 0) return Swal.fire('Aviso', 'Defina os nomes primeiro.', 'warning');
+            salaEstado.fill(null);
+            const alunosEme = shuffle([...listaAlunos]);
+            let indices = shuffle(Array.from({length: 32}, (_, i) => i));
+            alunosEme.forEach((aluno, i) => {
+                salaEstado[indices[i]] = { nome: aluno, cor: null };
+            });
+            renderizarSala();
+        }
 
-            Swal.fire({
-                title: 'Informar nomes ?',
-                showCancelButton: true,
-                confirmButtonText: 'Sim',
-                cancelButtonText: 'Não',
-              }).then(async (result) => {
-                /* Read more about isConfirmed, isDenied below */
-                if (result.isConfirmed) {
-                    await preencherNomes()
-                } 
-                espalhar()
-              })  
+        function criarEquipes() {
+            let presentes = salaEstado.filter(s => s !== null);
+            if (presentes.length === 0) return;
+            const size = parseInt(document.getElementById('team-size').value) || 4;
+            
+            // Atribui grupos baseado na ordem atual que estão sentados
+            let count = 0;
+            salaEstado.forEach((aluno, idx) => {
+                if(aluno) {
+                    const groupIdx = Math.floor(count / size);
+                    salaEstado[idx].cor = coresEquipes[groupIdx % coresEquipes.length];
+                    count++;
+                }
+            });
+            renderizarSala();
+        }
 
-              function espalhar(){
-                    let listaOrdenada = listaNomes
-                    .map(value => ({ value, sort: Math.random() }))
-                    .sort((a, b) => a.sort - b.sort)
-                    .map(({ value }) => value)                
-                
-                    for(let contar = 0; contar < lugares; contar++){
-                        const lugar = document.createElement("div");
-                        const texto = document.createElement("div");
-                        texto.classList.add("lugar-texto");
-                        // texto.style.transform = "rotate(180deg)";
+        function resetarCores() {
+            salaEstado.forEach(s => { if(s) s.cor = null; });
+            renderizarSala();
+        }
 
-                        if(contar < listaOrdenada.length){
-                            texto.innerText = String(listaOrdenada[contar]).trim() 
-                        }
-                   
+        // --- Drag and Drop Logic ---
+        function onDragStart(e, index) { dragSourceIndex = index; }
+        function onDragOver(e, element) { e.preventDefault(); element.classList.add('drag-over'); }
+        function onDragLeave(element) { element.classList.remove('drag-over'); }
+        function onDrop(e, targetIndex) {
+            e.preventDefault();
+            document.querySelectorAll('.mesa-slot')[targetIndex].classList.remove('drag-over');
+            if (dragSourceIndex === null || dragSourceIndex === targetIndex) return;
+            const temp = salaEstado[targetIndex];
+            salaEstado[targetIndex] = salaEstado[dragSourceIndex];
+            salaEstado[dragSourceIndex] = temp;
+            renderizarSala();
+        }
 
-                        lugar.appendChild(texto)
-                        lugar.style.width = "calc(100% / 5)"
-                        lugar.classList.add("lugar")
-                        lugar.style.backgroundImage = "url(../public/svg/desk-svgrepo-book.svg)";
-                        lugar.style.backgroundRepeat = "no-repeat";
-                        lugar.style.backgroundPosition = "center";
-                        // lugar.style.transform = "rotate(180deg)";
-                        lugar.style.display = "flex";
-                        lugar.style.justifyContent = "center";
-                        lugar.style.alignItems = "flex-start";
+        function renderizarSala() {
+            const colEsq = document.getElementById('col-esq');
+            const colDir = document.getElementById('col-dir');
+            colEsq.innerHTML = ''; colDir.innerHTML = '';
 
-                        if(Math.round(lugares / 2) < contar + 1){
-                            ladoEsquerdo.appendChild(lugar);
-                        }
-                        else{
-                            ladoDireito.appendChild(lugar);
+            const montar = (container, offset) => {
+                for (let b = 0; b < 4; b++) {
+                    const bancada = document.createElement('div');
+                    bancada.className = 'bancada-linear';
+                    for (let m = 0; m < 4; m++) {
+                        const idx = offset + (b * 4) + m;
+                        const slot = salaEstado[idx];
                         
+                        const mesaDiv = document.createElement('div');
+                        mesaDiv.className = `mesa-slot ${!slot ? 'slot-vazio' : ''}`;
+                        mesaDiv.innerHTML = `<span class="mesa-id">${idx + 1}</span>`;
+                        
+                        mesaDiv.ondragover = (e) => onDragOver(e, mesaDiv);
+                        mesaDiv.ondragleave = () => onDragLeave(mesaDiv);
+                        mesaDiv.ondrop = (e) => onDrop(e, idx);
+
+                        if (slot) {
+                            const label = document.createElement('div');
+                            label.className = 'aluno-label';
+                            label.draggable = true;
+                            label.innerText = slot.nome;
+                            if (slot.cor) label.style.backgroundColor = slot.cor;
+                            label.ondragstart = (e) => onDragStart(e, idx);
+                            mesaDiv.appendChild(label);
                         }
+                        bancada.appendChild(mesaDiv);
                     }
-              }
+                    container.appendChild(bancada);
+                }
+            };
+
+            montar(colEsq, 0);
+            montar(colDir, 16);
+            atualizarLegenda();
         }
 
-    </script>
+        function atualizarLegenda() {
+            const legenda = document.getElementById('equipes-legenda');
+            legenda.innerHTML = '';
+            const coresUsadas = [...new Set(salaEstado.filter(s => s && s.cor).map(s => s.cor))];
+            coresUsadas.forEach((cor, i) => {
+                const badge = document.createElement('span');
+                badge.className = 'team-badge';
+                badge.style.backgroundColor = cor;
+                badge.innerText = `Equipe ${nomesEquipes[coresEquipes.indexOf(cor)] || i+1}`;
+                legenda.appendChild(badge);
+            });
+        }
 
-    <script src="../js/script.js"></script>
+        window.onload = renderizarSala;
+    </script>
 </body>
 </html>

@@ -1,197 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lógica: Estrutura For | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Estrutura <br> <strong>For <i class="fa-brands fa-square-js"></i> </strong> <br>
-                        </div>
-                        <div class="subtitle">
-                           Lógica &#x25CF; Loop
-                        </div>
-                    </article>                    
-                </section>     
-            </div>   
-
-            
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre o <span class="text-white">For</span> </h1>
-                    <p class="font-30 text-justify">
-                        <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for">
-                           &nbsp; A instrução <code class="grif"> for</code> cria um loop que consiste em três expressões opcionais, 
-                            dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma 
-                            sequência de declarações executadas em sequência.
-                        </blockquote><br>
-                    </p>
-                    <ul class="p-10">
-                        <li>Repetir uma lógica quantas vezes quiser até que seja falsa.</li>
-                        <li>Declarar todo o controle do loop no início.</li>                        
-                    </ul>                 
-                </div>
-            </div>  
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-              
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Estrutura do For</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Exemplo de como declarar o For no seu código. 
-                    </p>      
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>Estrutura <span id="current-step-title">For</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
                     
-                    <div class="terminal">
-                        <span>for ([expressaoInicial]; [condicao]; [incremento]){</span> <br><br>
-                            <span> &nbsp; coloque seu código aqui...</span> <br><br>
-                        <span>}</span> <br>
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for" target="_blank">
-                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>                       
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
                     </div>
                 </div>
-            </div>  
-        
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/programmer.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Exemplo de uso:</h1>
-                                       
-                    <div class="terminal">
-                        <p>         
-                            <code>                                
-                                 <span>for (var i = 0; i &lt; 10; i++) {</span><br>                                   
-                                 <span class="text-info"> &nbsp; console.log(i)  <br></span>
-                                 <span>}</span>                               
-                            </code>
-                        </p>
-                    </div>                            
-                </div>
-            </div>             
+            </section>
 
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/coding.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>For</h1>
-                    <p class="font-30 text-justify">
-                       &nbsp;Lembre-se que todas as três expressões na condição do loop <span class="grif">for</span>  são opcionais.
-                    </p>   
-                </div>
-            </div>          
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/programmer.png" alt="Programador">
+                        </div>
+                        <div class="card-text">
+                            <h2>O Loop Organizado</h2>
+                            <p>Diferente do <code>while</code>, onde as peças ficam espalhadas, o <strong>For</strong> concentra a inicialização, a condição e o incremento em um único lugar.</p>
+                            <div class="info-box-blue mt-10">
+                                <p><i class="fa-solid fa-lightbulb"></i> Use o For sempre que você souber o número total de repetições antecipadamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Anatomia do Comando</h2>
+                    <p>O <code>for</code> se divide em três partes essenciais separadas por ponto e vírgula:</p>
+                    
+                    
+
+                    <div class="terminal mt-10">
+                        <span style="color: #c586c0;">for</span> (
+                        <span style="color: #569cd6;">let i = 0</span>; 
+                        <span style="color: #ce9178;">i < 10</span>; 
+                        <span style="color: #4ec9b0;">i++</span>
+                        ) { ... }
+                    </div>
+                    <ul class="feature-list mt-10">
+                        <li><strong>Início:</strong> Onde o contador começa (roda 1 vez).</li>
+                        <li><strong>Condição:</strong> Enquanto for verdade, o loop continua.</li>
+                        <li><strong>Passo:</strong> Como o contador muda a cada volta.</li>
+                    </ul>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Na Prática</h2>
+                    <p>Veja como imprimir números de 1 a 5 no console de forma elegante:</p>
+                    <div class="terminal">
+                        <span style="color: #6a9955;">// Começa em 1, vai até 5, aumenta de 1 em 1</span><br>
+                        <span style="color: #c586c0;">for</span> (<span style="color: #569cd6;">let</span> i = 1; i <= 5; i++) {<br>
+                        &nbsp;&nbsp;console.log(<span style="color: #ce9178;">"Número: "</span> + i);<br>
+                        }
+                    </div>
+                    <div class="warning-box mt-10">
+                        <p><i class="fa-solid fa-circle-exclamation"></i> Lembre-se: as expressões são opcionais, mas os dois pontos e vírgulas <code>;;</code> são obrigatórios!</p>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio de Lógica</h2>
+                        <p class="font-20">Quantas vezes a mensagem aparecerá no console?<br>
+                        <code>for (let i = 0; i < 3; i++) { console.log("Olá"); }</code></p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> 2 vezes
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> 3 vezes
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> 4 vezes
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2024 - 2026. Leonardo Garcia.
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Perfeito! O loop conta: 0, 1, 2. Quando chega em 3, a condição (3 < 3) torna-se falsa.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Quase! Conte a partir do zero: 0, 1 e 2.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>

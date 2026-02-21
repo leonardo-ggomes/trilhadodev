@@ -1,398 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ferramentas: Git & GitHub | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Introdução <br> <strong>ao Git e Github <i class="fa-brands fa-git-alt"></i> </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">CONTROLE DE VERSÃO</span>
+                    <h1>Git & <span id="current-step-title">GitHub</span> <i class="fa-brands fa-git-alt" style="color: #f05032;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f05032; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="GitHub">
                         </div>
-                        <div class="subtitle">
-                           Versionamento de Código
+                        <div class="card-text">
+                            <h2>Sobre o GitHub</h2>
+                            <p>O <strong>GitHub</strong> é uma plataforma na nuvem que hospeda seus projetos. É como o "Google Drive" dos programadores, mas focado em código e colaboração social.</p>
+                            <div class="info-box-blue mt-10">
+                                <p><i class="fa-solid fa-earth-americas"></i> Ele permite que pessoas do mundo todo contribuam com o seu software.</p>
+                            </div>
                         </div>
-                    </article>                    
-                </section>     
-            </div>   
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre o Github <i class="fa-brands fa-github"></i></h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;Em 2008, foi criado o GitHub, uma aplicação Web que possibilita a hospedagem de repositórios Git, 
-                        além de servir como uma rede social para programadores. <br>                      
-                    </p>                            
-                </div>
-            </div> 
-            
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/desenho-tecnologia.png" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Projetos Hospedados</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;Diversos projetos de código aberto importantes são hospedados no GitHub como jQuery, Node.js, 
-                        Ruby On Rails, Jenkins, Spring, JUnit e muitos outros. <br>                      
-                    </p>                            
-                </div>
-            </div> 
-
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items"> 
-              
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Criação de conta no Github</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Acesse o site oficial e realize o cadastro. <br>                                
-                    </p>      
-                    
-                    <div class="terminal">
-                        <i class="fa-solid fa-lock"></i> <span>https://github.com/</span>
                     </div>
+                </section>
 
-                    <div class="mt-10">
-                        <a href="https://github.com/" target="_blank">
-                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>                       
-                    </div>
-                </div>
-            </div>  
-
-            <div class="w-100 vh-100 d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_make_it_rain_re_w9pc.svg" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre o Git <i class="fa-brands fa-square-git"></i></h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;O Git é um sistema de controle de versão que, pela sua estrutura interna, 
-                        é uma máquina do tempo extremamente rápida e é um robô de integração bem competente. <br>
-                        &nbsp;O Git é bastante utilizado em empresas em todo o mundo, inclusive no Brasil.
-                    </p>                            
-                </div>
-            </div> 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row-reverse justify-between align-center items">                
-                <div class="grow-1 h-100 p-10 d-flex-column align-center justify-center ">
-                    <h1>Curiosidade sobre o <i class="fa-brands fa-git"></i></h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;O Git foi criado em 2005 por <span class="grif">Linus Torvalds</span>, o mesmo criador do Linux, 
-                        e inclusive é o sistema de controle versão utilizado no desenvolvimento do Kernel.
-                    </p>                            
-                </div>
-            </div> 
-
-            <div class="w-100 vh-100 d-flex-row justify-between align-center items">    
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/luz.png" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>           
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Vantagens em usar o Git </h1>
-                    <p class="font-30 text-justify">
-                        <span class="font-35">1</span> Histórico de versão <br>
-                        <span class="font-35">2</span> Compartilhamento de códigos com a equipe.<br>
-                        <span class="font-35">3</span> Possibilidade de ramificar um projeto.<br>
-                        <span class="font-35">4</span> Fácil de utilizar <br>                        
-                    </p>                            
-                </div>
-            </div> 
-          
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items"> 
-              
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Instalação do Git</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Acesse o site oficial e realize o download. Depois de baixado é só instalar
-                        na máquina seguindo os passos. <br>                                
-                    </p>      
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Conceitos Git</h2>
+                    <p>O <strong>Git</strong> é a ferramenta que você instala no PC. Ele funciona como uma "Máquina do Tempo" para o seu código.</p>
+                    <ul class="feature-list mt-10">
+                        <li><strong>Versionamento:</strong> Salva fotos (commits) do seu projeto em diferentes estados.</li>
+                        <li><strong>Segurança:</strong> Se você errar algo hoje, pode voltar exatamente para o que funcionava ontem.</li>
+                    </ul>
                     
-                    <div class="terminal">
-                        <i class="fa-solid fa-lock"></i> <span>https://git-scm.com/</span>
-                    </div>
+                </section>
 
-                    <div class="mt-10">
-                        <a href="https://git-scm.com/" target="_blank">
-                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>                       
-                    </div>
-                </div>
-            </div>  
-
-            <div class="w-100 vh-100 d-flex-row justify-between align-center items"> 
-                <div class="h-100  p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Configuração Básica </h1><br>
-
-                    <h3>Git Config - user.name</h3> 
-                    <p class="text-justify">                      
-                        Comando para adicionar uma identificação ao repositório.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git config --global user.name "Fulano da Silva"</span>
-                    </div> <br>      
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Configuração Inicial</h2>
+                    <p>No seu terminal, você deve definir quem é o autor das alterações:</p>
                     
-                    <h3>Git Config - user.email</h3> 
-                    <p class="text-justify">                      
-                        Comando para adicionar uma identificação ao repositório.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git config --global user.email seuemail@email.com</span>
-                    </div> <br>      
-                </div>
-            </div> 
-
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items"> 
-              
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Inicalizar repositório Git</h1> <br>
-                    <div class="w-75">
-                        <p class="font-30 text-justify">
-                            No diretório do seu projeto digite o seguinte comando. <br>                                
-                        </p><br>   
-                        <h3>Git Init</h3> 
-                        <p class="text-justify">                      
-                            Comando para inicializar um repositório git local.<br>                                
-                        </p>   
-                        <div class="terminal">
-                            <span>$ git init</span>
-                        </div> 
+                    <div class="terminal mt-10">
+                        <span style="color: #6a9955;">// Identifique-se para o sistema</span><br>
+                        <span style="color: #569cd6;">$ git config</span> --global user.name <span style="color: #ce9178;">"Seu Nome"</span><br>
+                        <span style="color: #569cd6;">$ git config</span> --global user.email <span style="color: #ce9178;">"seu@email.com"</span>
                     </div>
-                   
-                </div>
-            </div>  
+                    <div class="warning-box mt-10">
+                        <p><i class="fa-solid fa-circle-info"></i> Essa configuração só precisa ser feita uma vez por computador.</p>
+                    </div>
+                </section>
 
-             <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100  p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_dev_productivity_re_fylf.svg" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Ao criar um repositório Git </h1><br>
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>O Ciclo Local</h2>
+                    <p>Sempre que terminar uma tarefa, você segue este fluxo no terminal:</p>
+                    <div class="terminal mt-10">
+                        <span style="color: #6a9955;"># 1. Prepara os arquivos modificados</span><br>
+                        <span style="color: #c586c0;">$ git add .</span><br><br>
+                        <span style="color: #6a9955;"># 2. Salva a versão com uma mensagem explicativa</span><br>
+                        <span style="color: #c586c0;">$ git commit -m</span> <span style="color: #ce9178;">"ajuste no estilo do cabeçalho"</span>
+                    </div>
+                </section>
 
-                    <h3>Git Remote</h3> 
-                    <p class="text-justify">                      
-                       Comando para adicionar uma conexão remota ao repositório local.<br>                                
-                    </p>    
-                    <div class="terminal w-100">
-                        <span>$ git remote add origin https://github.com/seunome/example.git</span>
-                    </div> <br>                         
-                  
-                </div>
-            </div> 
-           
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100  p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_online_stats_0g94.svg" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Para enviar ao Github - Parte 01 </h1><br>
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <h2>Fluxo Remoto</h2>
+                    <p>Para enviar suas alterações locais para o GitHub (nuvem), usamos o comando <strong>Push</strong>:</p>
+                    <div class="terminal mt-10">
+                        <span style="color: #6a9955;"># Envia para o servidor remoto</span><br>
+                        <span style="color: #c586c0;">$ git push</span> origin main
+                    </div>
+                    <p class="mt-10">E para baixar as novidades de outros desenvolvedores:</p>
+                    <div class="terminal mt-10">
+                        <span style="color: #c586c0;">$ git pull</span> origin main
+                    </div>
+                </section>
 
-                    <h3>Git Add</h3> 
-                    <p class="text-justify">                      
-                       Comando para adicionar alteração de um arquivo no commit.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git add &lt;nome_arquivo&gt; </span>
-                    </div> <br>      
-                    
-                    <h3>Git Status</h3> 
-                    <p class="text-justify">                      
-                        Comando para visualizar as alterações.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git status</span>
-                    </div> <br>      
-                </div>
-            </div> 
+                <section class="learning-card step-card" data-step="6" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio de Comandos</h2>
+                        <p class="font-20">Qual comando abaixo é utilizado para <strong>enviar</strong> seus commits locais para o GitHub?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>A</span> $ git pull
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>B</span> $ git push
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> $ git init
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
+                </section>
+            </div>
 
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100  p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_join_re_w1lh.svg" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Para enviar ao Github - Parte 02 </h1><br>
-
-                    <h3>Git Commit</h3> 
-                    <p class="text-justify">                      
-                       Comando para adicionar alteração de um arquivo no commit.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git commit -m "breve descricao"</span>
-                    </div> <br>      
-                    
-                    <h3>Git Push</h3> 
-                    <p class="text-justify">                      
-                        Comando para enviar as alterações ao servidor remoto.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git push origin &lt;nome-do-branch&gt;</span>
-                    </div> <br>      
-                </div>
-            </div> 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100  p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_term_sheet_re_ju7s.svg" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Para obter um repositório remoto</h1><br>
-                    <p>
-                        Uma vez que você já tem um repositório remoto e deseja
-                        obter localmente, execute o seguinte comando.
-                    </p> <br>
-
-                    <h3>Git Clone</h3> 
-                    <p class="text-justify">                      
-                        Comando para baixar o código-fonte do repositório remoto.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git clone &lt;https://link-com-o-nome-do-repositório&gt;</span>
-                    </div> <br> 
-                </div>
-            </div> 
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100  p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/front-undraw.svg" class="h-50" alt="laptop">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Para atualizar um repositório...</h1><br>
-                    <p>
-                        Uma vez que você já tem um repositório local e deseja
-                        obter as novas alterações.
-                    </p> <br>
-
-                    <h3>Git Pull</h3> 
-                    <p class="text-justify">                      
-                        O git pull é usado para obter atualizações do repositório remoto.<br>                                
-                    </p>    
-                    <div class="terminal w-75">
-                        <span>$ git pull</span>
-                    </div> <br> 
-                </div>
-            </div> 
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2024 - 2026. Leonardo Garcia.
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🚀 Excelente! PUSH (empurrar) envia seus dados para o servidor remoto.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Ops! PULL é para baixar, INIT é para iniciar. Tente novamente!";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>

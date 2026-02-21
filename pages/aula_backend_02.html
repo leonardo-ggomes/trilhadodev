@@ -3,131 +3,140 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Introdução ao Back-End | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-2 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            Sobre o <br> <strong>Back-End <i class="fa-solid fa-server"></i> </strong> <br>
-                        </div>
-                        <div class="subtitle">
-                           Aula 01
-                        </div>
-                    </article>                    
-                </section>     
-            </div>   
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">AULA 01</span>
+                    <h1>Back-End: <span id="current-step-title">O Conceito</span></h1>
 
-            
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>                    
+                    <div class="progress-wrapper"
+                        style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 20px; margin-top: 20px; overflow: hidden;">
+                        <div id="progress-bar"
+                            style="width: 25%; background: var(--primary); height: 100%; transition: 0.4s ease;"></div>
+                    </div>
                 </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center ">
-                    <h1>O que é Back-End ?</h1> <br>
-                    <p class="font-30 text-justify">
-                        &nbsp;Classificamos de Back-End a camada que fica <span class="grif">por trás das</span> aplicações. <br>                      
-                    </p> <br> 
-                    
-                    <div class="mt-10">
-                        <a href="../public/pdf/whats-is-backend.pdf" download target="_blank" class="a-custom"> Conteúdo <i class="fa-solid fa-cloud-download"></i></a>
-                    </div>                        
-                </div>
-                
-            </div>           
+            </section>
+
+            <div id="flashcard-container" style="min-height: 450px; position: relative;">
+
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Desenvolvimento Back-end">
+                        </div>
+                        <div class="card-text">
+                            <h2>O que é o Back-End?</h2>
+                            <p>Pense no Back-End como o <strong>cérebro</strong> de um site. Enquanto o Front-End cuida
+                                da beleza, o Back-End cuida da lógica, segurança e do armazenamento de dados.</p>
+                            <p class="mt-10" style="font-style: italic; color: #666;">Sem ele, um botão de "Login" seria
+                                apenas um desenho bonito que não faz nada.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Como a mágica acontece?</h2>
+                    <p>Tudo no Back-End funciona através de um ciclo chamado <strong>Request & Response</strong>:</p>
+
+
+
+                    <div class="flow-container"
+                        style="display: flex; justify-content: space-around; align-items: center; margin: 30px 0; text-align: center; background: #f9f9f9; padding: 20px; border-radius: 15px;">
+                        <div>
+                            <i class="fa-solid fa-laptop-code" style="font-size: 1.5rem; color: var(--secondary);"></i>
+                            <p style="font-size: 0.7rem; font-weight: bold;">1. Cliente envia</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right-long" style="color: #ccc;"></i>
+                        <div>
+                            <i class="fa-solid fa-gears" style="font-size: 1.5rem; color: var(--primary);"></i>
+                            <p style="font-size: 0.7rem; font-weight: bold;">2. Servidor processa</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right-long" style="color: #ccc;"></i>
+                        <div>
+                            <i class="fa-solid fa-database" style="font-size: 1.5rem; color: #ffa500;"></i>
+                            <p style="font-size: 0.7rem; font-weight: bold;">3. Banco responde</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <h2>Caixa de Ferramentas</h2>
+                    <p>Estas são as linguagens que "falam" com o servidor:</p>
+
+                    <div class="tech-stack"
+                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px;">
+                        <div class="tech-item"
+                            style="border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-brands fa-node-js" style="color: #68a063;"></i> <span>Node.js</span>
+                        </div>
+                        <div class="tech-item"
+                            style="border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-brands fa-python" style="color: #3776ab;"></i> <span>Python</span>
+                        </div>
+                        <div class="tech-item"
+                            style="border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-brands fa-php" style="color: #777bb4;"></i> <span>PHP</span>
+                        </div>
+                        <div class="tech-item"
+                            style="border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-leaf" style="color: #6db33f;"></i> <span>Java</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>Parabéns!</h2>
+                            <p>Você completou a introdução ao Back-End. Baixe o guia completo para revisar os conceitos
+                                de segurança e bancos de dados.</p>
+                            <a href="../public/pdf/whats-is-backend.pdf" class="btn-primary"
+                                style="margin-top: 20px; display: inline-block;">
+                                <i class="fa-solid fa-file-pdf"></i> Baixar Guia Back-End
+                            </a>
+                        </div>
+                        <div class="card-image" style="text-align: right;">
+                            <i class="fa-solid fa-trophy" style="font-size: 5rem; color: #ffd700;"></i>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <p><i class="fa-solid fa-mug-hot"></i> 2024 Coders | Leonardo Garcia</p>
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 

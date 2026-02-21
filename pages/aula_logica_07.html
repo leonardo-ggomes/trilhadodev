@@ -1,242 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lógica: Functions | Coders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header class="navbar">
-            <div>
-                <a href="../index.html" class="link-none text-blue">Coders</a>
-            </div>
-            <div class="bar-links">
-                <div>
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Coders<span>.</span></a>
+                <nav>
                     <ul class="nav-links">
-                        <li>
-                            <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
-                        </li>
-                        <li>
-                            <a href="projetos.html"><i class="fa-solid fa-list-check"></i> Projetos</a>
-                        </li>
-                        <li>
-                            <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
-                        </li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
                     </ul>
-                </div>
-                <div>
-                    <a href="trilhas.html" class="a-custom-top">
-                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
-                </a>  
-                </div>
-
+                </nav>
             </div>
         </header>
 
-        <main>
-            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
-                <section>
-                    <article class="d-flex-column justify-center p-10">
-                        <div class="title">
-                            JavaScript <br> <strong>Function <i class="fa-brands fa-square-js"></i> </strong> <br>
+        <main class="content-wrapper">
+            <section class="lesson-hero">
+                <div class="lesson-header">
+                    <span class="badge">LÓGICA DE PROGRAMAÇÃO</span>
+                    <h1>JavaScript <span id="current-step-title">Function</span> <i class="fa-brands fa-square-js" style="color: #f7df1e;"></i></h1>
+                    
+                    <div class="progress-wrapper" style="width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 15px;">
+                        <div id="progress-bar" style="width: 0%; height: 100%; background: #f7df1e; border-radius: 5px; transition: 0.3s ease;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="flashcard-container">
+                
+                <section class="learning-card step-card active" data-step="1">
+                    <div class="card-grid">
+                        <div class="card-image">
+                            <img src="../public/images/laptop.png" alt="Conceito Function">
                         </div>
-                        <div class="subtitle">
-                            Lógica &#x25CF; Função
+                        <div class="card-text">
+                            <h2>O que é uma Função?</h2>
+                            <p>Uma <strong>Function</strong> é um bloco de código projetado para executar uma tarefa específica. Pense nela como uma "receita" que você escreve uma vez e pode usar sempre que precisar.</p>
+                            <ul class="feature-list mt-10">
+                                <li><strong>Reutilização:</strong> Escreva o código uma vez, use várias.</li>
+                                <li><strong>Organização:</strong> Divide problemas grandes em partes menores.</li>
+                                <li><strong>Invocação:</strong> Ela só executa quando você a "chama".</li>
+                            </ul>
                         </div>
-                    </article>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="2" style="display: none;">
+                    <h2>Anatomia da Função</h2>
+                    <p>Para definir uma função, usamos a palavra-chave e um nome seguido de parênteses:</p>
+                    
+                    <div class="terminal mt-20">
+                        <span style="color: #c586c0;">function</span> <span style="color: #dcdcaa;">nomeDaFuncao</span>(<span style="color: #9cdcfe;">parametro1, parametro2</span>) {<br>
+                        &nbsp;&nbsp;<span style="color: #6a9955;">// A lógica fica aqui dentro</span><br>
+                        &nbsp;&nbsp;<span style="color: #c586c0;">return</span> resultado;<br>
+                        }
+                    </div>
+                    <div class="info-box-blue mt-10">
+                        <p><i class="fa-solid fa-circle-info"></i> Os <strong>parâmetros</strong> são como variáveis que a função recebe para trabalhar.</p>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="3" style="display: none;">
+                    <div class="card-grid">
+                        <div class="card-text">
+                            <h2>A palavra Return</h2>
+                            <p>O <code>return</code> para a execução da função e envia um valor de volta para quem a chamou.</p>
+                            <div class="terminal mt-10">
+                                <span style="color: #c586c0;">function</span> <span style="color: #dcdcaa;">somar</span>(a, b) {<br>
+                                &nbsp;&nbsp;<span style="color: #c586c0;">return</span> a + b;<br>
+                                }<br><br>
+                                <span style="color: #569cd6;">let</span> resultado = <span style="color: #dcdcaa;">somar</span>(<span style="color: #b5cea8;">10</span>, <span style="color: #b5cea8;">5</span>); <span style="color: #6a9955;">// resultado será 15</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <img src="../public/svg/undraw_speech_to_text_re_8mtf.svg" alt="Return">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="learning-card step-card" data-step="4" style="display: none;">
+                    <h2>Invocando (Chamando)</h2>
+                    <p>O operador <span class="grif">( )</span> é o que faz a mágica acontecer. Sem ele, você está apenas referenciando a função, não executando-a.</p>
+                    <div class="terminal mt-10">
+                        <span style="color: #6a9955;">// Apenas referência:</span><br>
+                        <span style="color: #569cd6;">let</span> x = minhaFuncao;<br><br>
+                        <span style="color: #6a9955;">// Execução real:</span><br>
+                        <span style="color: #569cd6;">let</span> y = <span style="color: #dcdcaa;">minhaFuncao</span>();
+                    </div>
+                    
+                </section>
+
+                <section class="learning-card step-card" data-step="5" style="display: none;">
+                    <div class="quiz-container">
+                        <h2>Desafio de Funções</h2>
+                        <p class="font-20">O que acontece com o código dentro de uma função após a linha do <code>return</code> ser executada?</p>
+                        
+                        <div class="quiz-options">
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, true)">
+                                <span>A</span> A função para imediatamente e o restante é ignorado.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>B</span> O código continua rodando até fechar as chaves { }.
+                            </button>
+                            <button class="btn-quiz-option" onclick="checkAnswer(this, false)">
+                                <span>C</span> O return só funciona se estiver no final da função.
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></div>
+                    </div>
                 </section>
             </div>
 
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="calculator">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center ">
-                    <h1>Sobre a <span class="text-white">Function</span> </h1>
-                    <blockquote
-                        cite="https://www.w3schools.com/js/js_functions.asp"
-                        class="font-30 text-justify">
-                        &nbsp;Function é um bloco de código que executa uma determinada tarefa.<br>
-
-                    </blockquote>
-                    <ul class="p-10">
-                        <li>As <span class="grif">functions</span> recebem parâmetros.</li>         
-                        <li>Retornam dados.</li>                                   
-                        <li>São executadas somente quando invocadas.</li>   
-                        <li>São reutilizadas.</li>                                      
-                    </ul>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Bloco Function</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; Exemplo de como declarar uma <code>function</code>.<br>
-                    </p>
-
-                    <div class="terminal">
-                        <span class="text-code">function name(<code class="text-white">parametro1,parametro2</code>){</span> <br>
-                            <span>&nbsp;//Seu código aqui</span> <br>   
-                        <span class="text-code">}</span>
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="https://www.w3schools.com/js/js_switch.asp"
-                            target="_blank">
-                            <img src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_programming_re_kg9v.svg" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Exemplo de <code class="grif">function</code></h1>
-                         
-                    <div class="terminal">
-                        <span class="text-code">function <span class="text-info">multiplicar</span>(<code class="text-white">p1,p2</code>){</span> <br>                                                
-                            <code class="text-mark"> &nbsp;return</code>  p1 * p2<br>                        
-                        <span class="text-code">}</span>
-                    </div>                      
-                     
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/coding.png" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Function</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;Para se definir uma fução use a palavra <span class="grif">function</span>  
-                        seguido pelo <span class="grif">nome</span> e o <span class="grif">()</span>. <br>
-                        &nbsp;Entre o par de <span class="grif">{ }</span> coloque sua lógica. Caso queira passar parâmetros,
-                        coloque dentro dos parênteses <span class="grif">(parametro1, parametro2)</span> separdo por vírgula.
-                        
-                    </p>
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/svg/undraw_speech_to_text_re_8mtf.svg" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Return</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;A palavra <span class="grif">return</span> é reponsável por devolver valor e parar
-                        a execução da função.  
-                    </p>
-
-                    <div class="terminal">                        
-                        <span class="text-code">function <span class="text-info">multiplicar</span>(<code class="text-white">p1,p2</code>){</span> <br>                                                
-                            <code class="text-mark"> &nbsp;return</code>  p1 * p2<br>                        
-                        <span class="text-code">}</span> <br><br>
-                        <span class="text-mark">var <span class="text-info">resultado </span> = multiplicar(10,2) <br>
-                    </div>    
-                </div>
-            </div>
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items">
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/programmer.png" class="h-50" alt="desenvolvimento">
-                    </figure>
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Invocando uma função</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp;O operador <span class="grif">( )</span> é reponsável por executar a funcão.  
-                        Você pode chamar funções em eventos, códigos JavaScript ou auto invoca-lás.
-                    </p>
-
-                    <div class="terminal"> 
-                        <span class="text-mark">var <span class="text-info"> x </span> =
-                        <span class="text-comment">algumafuncao() </span> <br>
-                    </div>    
-                </div>
+            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
+                </button>
+                <button id="nextBtn" class="btn-main">
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </main>
-         <footer class="bg-footer">            
-            <div class="d-flex-row justify-evenly p-10">  
-                <div>
-                    <h1 class="text-white">Coders</h1>
-                </div>              
-                <div>
-                    <h3>Inicio</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="../index.html">Index</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="trilhas.html">Trilhas</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="projetos.html">Projetos</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="sorteador.html">Sorteador</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Equipe</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="team_scrum.html">Team Scrum</a>
-                            </li>
-                            <li>
-                                <a class="link-none" href="timeline.html">Timeline</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h3>Desafios</h3>
-                    <div class="mt-10">
-                        <ul>
-                            <li>
-                                <a class="link-none" href="hackathon.html">Hackathon</a>
-                            </li>                                                 
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="bg-footer">
+            <div class="footer-bottom">
+                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2024 - 2026. Leonardo Garcia.
             </div>
-            <div class="d-flex-row font-14 justify-center bg-copyright p-10 mt-10 text-white">
-                <i class="fa-solid fa-mug-hot"></i> &nbsp; 2023 - 2024. Leonardo Garcia.
-            </div>
-           
         </footer>
     </div>
 
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.btn-quiz-option');
+            options.forEach(opt => opt.style.pointerEvents = 'none'); 
+
+            if (isCorrect) {
+                button.style.backgroundColor = "#2ecc71";
+                button.style.color = "white";
+                feedback.innerHTML = "🎯 Exato! O return ejeta você da função com o valor definido.";
+                feedback.style.color = "#2ecc71";
+            } else {
+                button.style.backgroundColor = "#e74c3c";
+                button.style.color = "white";
+                feedback.innerHTML = "Ops! O return é um ponto final. Nada abaixo dele na função será lido.";
+                feedback.style.color = "#e74c3c";
+            }
+        }
+    </script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>
