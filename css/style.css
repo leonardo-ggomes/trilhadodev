@@ -184,6 +184,37 @@ body {
 .section-banner.front { background: linear-gradient(135deg, #1cb0f6, #00cdff); }
 .section-banner.back { background: linear-gradient(135deg, #58cc02, #23ad5c); }
 .section-banner.data { background: linear-gradient(135deg, #490581, #210263); }
+/* Trilha de Ferramentas e Versionamento (Git/GitHub/Terminal) */
+.section-banner.tools { 
+    background: linear-gradient(135deg, #f05032, #ff8a65); 
+}
+
+/* Trilha de Mobile (React Native/Flutter) */
+.section-banner.mobile { 
+    background: linear-gradient(135deg, #a367ff, #7a22ff); 
+}
+
+/* Trilha de Soft Skills e Metodologias Ágeis */
+.section-banner.soft { 
+    background: linear-gradient(135deg, #ff4b81, #ff79b0); 
+}
+
+/* Trilha de Segurança e DevOps */
+.section-banner.devops { 
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); 
+}
+
+/* Trilha de Inteligência Artificial / Machine Learning */
+.section-banner.ai { 
+    background: linear-gradient(135deg, #00f2fe, #4facfe); 
+}
+
+/* Estado de Bloqueado (Para aulas que o usuário ainda não liberou) */
+.section-banner.locked { 
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d); 
+    filter: grayscale(1);
+    opacity: 0.8;
+}
 
 .section-banner h2 { font-weight: 900; margin-bottom: 5px; }
 .section-banner p { opacity: 0.9; font-weight: 600; }
@@ -561,3 +592,21 @@ body {
     }
 }
 
+.step-card {
+    display: none; /* Esconde por padrão */
+}
+.step-card.active {
+    display: block; /* Mostra apenas o ativo */
+}
+
+.quiz-feedback-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 50px;
+    display: none; /* Escondido até o clique */
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
