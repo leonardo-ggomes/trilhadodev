@@ -9,7 +9,7 @@ let aulaData = null;
 
 async function initTemplate() {
     const urlParams = new URLSearchParams(window.location.search);
-    const aulaId = urlParams.get('aula');
+    const aulaId = urlParams.get('track');
     const loadingSpinner = document.getElementById('loading-spinner');
 
     try {
