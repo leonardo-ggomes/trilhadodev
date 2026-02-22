@@ -52,7 +52,7 @@
                     // Lógica para renderizar os itens da trilha
                     const itemsHTML = trilha.items.map(item => `
                         <div class="node-item">
-                            <a href="flashcard_template.html?aula=${item.id}" class="node-btn active">
+                            <a href="flashcard.html?track=${item.id}" class="node-btn active">
                                 <i class="fa-solid ${item.icone || 'fa-code'}"></i>
                             </a>
                             <span class="node-label">${item.title}</span>
