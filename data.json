@@ -13,11 +13,11 @@
                     "flashcards": [
                         {
                             "ordem": 1,
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/logic_intro.png' alt='Lógica de Programação'></div><div class='card-text'><h2>O que é Lógica?</h2><p>A <strong>Lógica de Programação</strong> é a organização coerente de pensamentos para atingir um objetivo. É a técnica de encadear pensamentos para resolver um problema.</p><ul class='feature-list mt-10'><li><strong>Sequência:</strong> Passos ordenados.</li><li><strong>Instrução:</strong> Comandos claros para a máquina.</li><li><strong>Resultado:</strong> A solução do problema original.</li></ul></div></div>"
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/desenho-tecnologia.png' alt='Lógica de Programação'></div><div class='card-text'><h2>O que é Lógica?</h2><p>A <strong>Lógica de Programação</strong> é a organização coerente de pensamentos para atingir um objetivo. É a técnica de encadear pensamentos para resolver um problema.</p><ul class='feature-list mt-10'><li><strong>Sequência:</strong> Passos ordenados.</li><li><strong>Instrução:</strong> Comandos claros para a máquina.</li><li><strong>Resultado:</strong> A solução do problema original.</li></ul></div></div>"
                         },
                         {
                             "ordem": 2,
-                            "html": "<h2>Quem trouxe esse conceito? 📜</h2><p>Embora a lógica exista desde a Grécia Antiga com Aristóteles, a lógica aplicada à computação deve muito a:</p><div class='card-grid-small mt-20'><div class='info-box-white'><h3>Ada Lovelace</h3><p>Considerada a <strong>primeira programadora</strong> do mundo. Criou o primeiro algoritmo para ser processado por uma máquina.</p></div><div class='info-box-white'><h3>George Boole</h3><p>Criador da <strong>Álgebra Booleana</strong> (Verdadeiro ou Falso), que é a base de toda a eletrônica digital e programação.</p></div></div>"
+                            "html": "<h2>Quem trouxe esse conceito? </h2><p>Embora a lógica exista desde a Grécia Antiga com Aristóteles, a lógica aplicada à computação deve muito a:</p><div class='card-grid-small mt-20'><div class='info-box-white'><h3>Ada Lovelace</h3><p>Considerada a <strong>primeira programadora</strong> do mundo. Criou o primeiro algoritmo para ser processado por uma máquina.</p></div><div class='info-box-white'><h3>George Boole</h3><p>Criador da <strong>Álgebra Booleana</strong> (Verdadeiro ou Falso), que é a base de toda a eletrônica digital e programação.</p></div></div>"
                         },
                         {
                             "ordem": 3,
@@ -25,7 +25,7 @@
                         },
                         {
                             "ordem": 4,
-                            "html": "<h2>O Algoritmo 🤖</h2><p>O resultado da sua lógica é o <strong>Algoritmo</strong>. Ele é como uma 'receita de bolo' que o computador segue cegamente.</p><div class='info-box-white mt-20'><h4>Características de um bom algoritmo:</h4><ul class='feature-list'><li><strong>Finito:</strong> Deve ter um fim.</li><li><strong>Definido:</strong> Sem ambiguidades (passos claros).</li><li><strong>Eficaz:</strong> Deve realmente resolver o problema proposto.</li></ul></div>"
+                            "html": "<h2>O Algoritmo </h2><p>O resultado da sua lógica é o <strong>Algoritmo</strong>. Ele é como uma 'receita de bolo' que o computador segue cegamente.</p><div class='info-box-white mt-20'><h4>Características de um bom algoritmo:</h4><ul class='feature-list'><li><strong>Finito:</strong> Deve ter um fim.</li><li><strong>Definido:</strong> Sem ambiguidades (passos claros).</li><li><strong>Eficaz:</strong> Deve realmente resolver o problema proposto.</li></ul></div>"
                         },
                         {
                             "ordem": 5,
@@ -33,7 +33,7 @@
                         },
                         {
                             "ordem": 6,
-                            "html": "<h2>Lógica vs. Sintaxe 🛠️</h2><p>Muitos iniciantes confundem os dois, mas são coisas bem diferentes:</p><div class='card-grid-small mt-20'><div style='border-left:4px solid #1cb0f6; padding-left:10px;'><h4>Lógica</h4><p>É o <strong>O QUE</strong> fazer. O raciocínio puro. Independe da língua.</p></div><div style='border-left:4px solid #58cc02; padding-left:10px;'><h4>Sintaxe</h4><p>É o <strong>COMO</strong> escrever. As regras da linguagem (JavaScript, Python, etc).</p></div></div>"
+                            "html": "<h2>Lógica vs. Sintaxe </h2><p>Muitos iniciantes confundem os dois, mas são coisas bem diferentes:</p><div class='card-grid-small mt-20'><div style='border-left:4px solid #1cb0f6; padding-left:10px;'><h4>Lógica</h4><p>É o <strong>O QUE</strong> fazer. O raciocínio puro. Independe da língua.</p></div><div style='border-left:4px solid #58cc02; padding-left:10px;'><h4>Sintaxe</h4><p>É o <strong>COMO</strong> escrever. As regras da linguagem (JavaScript, Python, etc).</p></div></div>"
                         },
                         {
                             "ordem": 7,
@@ -73,7 +73,7 @@
                     "flashcards": [
                         {
                             "ordem": 1,
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/flowchart_intro.png' alt='O que é fluxograma'></div><div class='card-text'><h2>O que é um Fluxograma?</h2><p>Um <strong>fluxograma</strong> é a representação visual de um processo ou algoritmo. Ele utiliza símbolos geométricos para descrever o passo a passo de uma solução.</p><ul class='feature-list mt-10'><li><strong>Clareza:</strong> Facilita o entendimento de processos complexos.</li><li><strong>Padronização:</strong> Usa símbolos mundiais.</li><li><strong>Lógica:</strong> Ajuda a identificar erros antes de escrever o código.</li></ul></div></div>"
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/computer_io.png' alt='O que é fluxograma'></div><div class='card-text'><h2>O que é um Fluxograma?</h2><p>Um <strong>fluxograma</strong> é a representação visual de um processo ou algoritmo. Ele utiliza símbolos geométricos para descrever o passo a passo de uma solução.</p><ul class='feature-list mt-10'><li><strong>Clareza:</strong> Facilita o entendimento de processos complexos.</li><li><strong>Padronização:</strong> Usa símbolos mundiais.</li><li><strong>Lógica:</strong> Ajuda a identificar erros antes de escrever o código.</li></ul></div></div>"
                         },
                         {
                             "ordem": 2,
@@ -121,6 +121,422 @@
                                 "descricao": "Losango",
                                 "correta": true,
                                 "feedback": "Exato! O losango representa decisões e desvios condicionais (Sim ou Não)."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "intro-c",
+                    "item_ordem": 3,
+                    "title": "História e Conceitos",
+                    "icone": "fa-solid fa-microchip",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='História do C'></div><div class='card-text'><h2>A Mãe das Linguagens Modernas</h2><p>Criada em 1972 por <strong>Dennis Ritchie</strong> nos Laboratórios Bell, a Linguagem C foi desenvolvida para criar o sistema operacional Unix.</p><ul class='feature-list mt-10'><li><strong>Nível Médio:</strong> Combina o poder do Baixo Nível (Hardware) com a facilidade do Alto Nível.</li><li><strong>Performática:</strong> Extremamente rápida e eficiente.</li><li><strong>Portável:</strong> O código pode rodar em diferentes máquinas com poucas mudanças.</li></ul></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Compilação: Como C funciona?</h2><p>Diferente do JavaScript, o C é uma linguagem <strong>Compilada</strong>. O computador não entende o seu código direto.</p><div class='concept-grid mt-10' style='display: grid; grid-template-columns: 1fr 0.2fr 1fr; align-items: center; text-align: center;'><div class='p-10 border-blue' style='border: 1px solid #3498db; border-radius: 5px;'><strong>Código Fonte</strong><br>(arquivo.c)</div><div><i class='fa-solid fa-arrow-right'></i></div><div class='p-10 border-blue' style='border: 1px solid #2ecc71; border-radius: 5px;'><strong>Binário/Executável</strong><br>(Processador entende)</div></div><p class='mt-10'>O <strong>Compilador</strong> (como o GCC) faz essa tradução.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Introdução",
+                        "descricao": "Qual é a principal função do compilador na linguagem C?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Executar o código linha por linha em tempo real.",
+                                "correta": false,
+                                "feedback": "Isso é o que um interpretador faz (como no JS). O C precisa ser traduzido antes de rodar."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Traduzir o código fonte para linguagem de máquina (binário).",
+                                "correta": true,
+                                "feedback": " Exato! Sem a compilação, o hardware não saberia o que fazer com seu código .c"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-vars",
+                    "item_ordem": 4,
+                    "title": "Tipagem e Variáveis",
+                    "icone": "fa-solid fa-box-archive",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Tipagem Estática e Forte</h2><p>Em C, o tipo de uma variável deve ser declarado explicitamente e não pode ser alterado durante a execução. Isso permite que o compilador otimize o uso da memória RAM.</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Tipo</th><th>Tamanho</th><th>Uso Comum</th></tr></thead><tbody><tr><td><code>int</code></td><td>4 bytes</td><td>Números inteiros (ex: count, id).</td></tr><tr><td><code>float</code></td><td>4 bytes</td><td>Decimais simples (ex: preço).</td></tr><tr><td><code>double</code></td><td>8 bytes</td><td>Decimais de alta precisão.</td></tr><tr><td><code>char</code></td><td>1 byte</td><td>Letras ou símbolos ASCII.</td></tr></tbody></table></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Sintaxe de Declaração</h2><p>A declaração segue o padrão: <code>tipo nome = valor;</code>. Lembre-se que C é <strong>case-sensitive</strong> (diferencia maiúsculas de minúsculas).</p><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> pontos = <span style='color: #b5cea8;'>100</span>;<br><span style='color: #569cd6;'>double</span> pi = <span style='color: #b5cea8;'>3.14159265</span>;<br><span style='color: #569cd6;'>char</span> grau = <span style='color: #ce9178;'>'A'</span>;<br><br><span style='color: #6a9955;'>// Múltiplas variáveis do mesmo tipo</span><br><span style='color: #569cd6;'>int</span> x = <span style='color: #b5cea8;'>1</span>, y = <span style='color: #b5cea8;'>2</span>, z = <span style='color: #b5cea8;'>3</span>;</div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Modificadores: signed e unsigned</h2><p>Podemos modificar como os tipos armazenam valores. O modificador <code>unsigned</code> remove o sinal negativo, permitindo armazenar números positivos maiores no mesmo espaço.</p><div class='info-box-white mt-10'><ul><li><strong>signed int:</strong> De -2,147,483,648 a 2,147,483,647</li><li><strong>unsigned int:</strong> De 0 a 4,294,967,295</li></ul></div><p class='mt-10'>Útil para IDs, contadores e tamanhos de arquivos que nunca serão negativos.</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Constantes com #define e const</h2><p>Se um valor não deve mudar, use constantes para evitar erros de lógica e melhorar a legibilidade.</p><div class='terminal mt-10'><span style='color: #6a9955;'>// Pré-processador (Escopo Global)</span><br>#define TAXA_LIMITE <span style='color: #b5cea8;'>0.15</span><br><br><span style='color: #6a9955;'>// Qualificador const (Escopo Local)</span><br><span style='color: #569cd6;'>const int</span> DIAS_NA_SEMANA = <span style='color: #b5cea8;'>7</span>;</div>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Regras de Nomenclatura (Identifiers)</h2><p>Para o código compilar, o nome das variáveis deve seguir estas regras:</p><ul class='feature-list'><li>Deve começar com letra ou underscore (<code>_</code>).</li><li>Não pode começar com números.</li><li>Não pode conter espaços ou caracteres especiais (exceto <code>_</code>).</li><li>Não pode usar palavras reservadas da linguagem (ex: <code>int</code>, <code>if</code>, <code>return</code>).</li></ul>"
+                        },
+                        {
+                            "ordem": 6,
+                            "html": "<h2>Lixo de Memória</h2><p>Ao declarar uma variável sem atribuir um valor inicial, ela conterá 'lixo'.</p><div class='info-box-blue mt-10'><p>O <strong>Lixo de Memória</strong> são restos de dados de programas anteriores que ocupavam aquele endereço físico na memória RAM. Sempre inicialize suas variáveis: <code>int soma = 0;</code></p></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Tipagem e Memória",
+                        "descricao": "Qual é a principal diferença entre um `float` e um `double` em C?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "O float é para números inteiros e o double para decimais.",
+                                "correta": false,
+                                "feedback": "Incorreto. Ambos são para números decimais (ponto flutuante)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "O double possui o dobro da precisão e utiliza o dobro de memória (8 bytes) em comparação ao float (4 bytes).",
+                                "correta": true,
+                                "feedback": "Exato! Double vem de 'double precision'. Use float para economizar memória e double para cálculos científicos ou financeiros."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "O float só aceita números positivos.",
+                                "correta": false,
+                                "feedback": "Incorreto. Floats podem ser positivos ou negativos."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-operators",
+                    "item_ordem": 5,
+                    "title": "Operadores e Expressões",
+                    "icone": "fa-solid fa-calculator",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Operadores Aritméticos</h2><p>São usados para realizar cálculos matemáticos básicos. Em C, temos um operador especial para o resto da divisão.</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Operador</th><th>Ação</th><th>Exemplo</th></tr></thead><tbody><tr><td><code>+</code> , <code>-</code></td><td>Soma e Subtração</td><td>10 + 5 = 15</td></tr><tr><td><code>*</code> , <code>/</code></td><td>Multiplicação e Divisão</td><td>10 / 4 = 2</td></tr><tr><td><code>%</code></td><td>Módulo (Resto)</td><td>10 % 3 = 1</td></tr></tbody></table></div><p class='mt-10'>Note que na <strong>divisão de inteiros</strong>, a parte decimal é descartada. Para obter 2.5, pelo menos um dos números deve ser <code>float</code>.</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Incremento e Decremento</h2><p>C possui operadores compactos para somar ou subtrair 1 de uma variável. São exaustivamente usados em estruturas de repetição.</p><div class='terminal mt-10'>int x = 10;<br>x++; <span style='color: #6a9955;'>// x agora é 11</span><br>x--; <span style='color: #6a9955;'>// x volta a ser 10</span></div><p class='mt-10'>Existem as formas <strong>pré-fixadas</strong> (<code>++x</code>) e <strong>pós-fixadas</strong> (<code>x++</code>). Na pré-fixada, o valor é alterado antes de ser usado na expressão atual.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Operadores Relacionais</h2><p>Servem para comparar dois valores. O resultado de uma comparação em C é sempre 1 (verdadeiro) ou 0 (falso).</p><ul class='feature-list'><li><code>==</code>  Igual a</li><li><code>!=</code>  Diferente de</li><li><code>></code> e <code><</code>  Maior e Menor</li><li><code>>=</code> e <code><=</code>  Maior ou igual / Menor ou igual</li></ul><div class='info-box-blue'><strong>Atenção:</strong> Não confunda <code>=</code> (atribuição) com <code>==</code> (comparação). Este é um dos erros mais comuns em C.</div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Operadores Lógicos</h2><p>Permitem combinar múltiplas expressões relacionais para criar condições complexas.</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Operador</th><th>Nome</th><th>Lógica</th></tr></thead><tbody><tr><td><code>&&</code></td><td>AND (E)</td><td>Verdadeiro se AMBOS forem verdade.</td></tr><tr><td><code>||</code></td><td>OR (OU)</td><td>Verdadeiro se UM for verdade.</td></tr><tr><td><code>!</code></td><td>NOT (NÃO)</td><td>Inverte o estado lógico.</td></tr></tbody></table></div>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Precedência de Operadores</h2><p>Assim como na matemática, C segue uma ordem de prioridade para resolver expressões. Se não houver parênteses, a ordem é:</p><ol><li>Parênteses <code>()</code></li><li>Incremento <code>++</code> e Decremento <code>--</code></li><li>Multiplicação, Divisão e Módulo <code>* / %</code></li><li>Soma e Subtração <code>+ -</code></li><li>Relacionais e depois Lógicos</li></ol>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Operadores",
+                        "descricao": "Qual será o valor da variável 'resultado' após a execução do código: `int resultado = 7 % 2;`?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "3",
+                                "correta": false,
+                                "feedback": "Incorreto. 3 seria o resultado da divisão inteira (7 / 2)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "3.5",
+                                "correta": false,
+                                "feedback": "Incorreto. O operador % lida apenas com o resto inteiro."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "1",
+                                "correta": true,
+                                "feedback": "Correto! 7 dividido por 2 é igual a 3 com resto 1. O operador % (módulo) captura esse resto."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-conditionals",
+                    "item_ordem": 6,
+                    "title": "Condições",
+                    "icone": "fa-solid fa-code-branch",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Tomando Decisões em C</h2><p>Assim como na vida, programas precisam <strong>decidir caminhos</strong>. Em C, usamos <code>if</code> e <code>else</code> para isso.</p><p>Pense em uma pergunta do tipo: <strong>\"O usuário é maior de idade?\"</strong></p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Sintaxe Básica</h2><div class='terminal'><code>if (idade >= 18) {<br>&nbsp;&nbsp;printf(\"Acesso permitido\");<br>} else {<br>&nbsp;&nbsp;printf(\"Acesso negado\");<br>}</code></div><p>A condição sempre fica entre <strong>parênteses</strong> e o código entre <strong>chaves</strong>.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Operadores Relacionais</h2><table class='w-100'><tr><th>Operador</th><th>Significado</th></tr><tr><td><code>==</code></td><td>Igual</td></tr><tr><td><code>!=</code></td><td>Diferente</td></tr><tr><td><code>&gt;</code></td><td>Maior</td></tr><tr><td><code>&lt;</code></td><td>Menor</td></tr></table><p><strong>Atenção:</strong> <code>=</code> é atribuição, <code>==</code> é comparação.</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Erro Clássico de Lógica 🚨</h2><div class='terminal'><code>if (idade == 18) {<br>&nbsp;&nbsp;printf(\"Erro!\");<br>}</code></div><p>Aqui o programador <strong>atribui</strong> o valor 18, em vez de comparar. Isso gera bugs difíceis!</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Decisão",
+                        "descricao": "Qual operador deve ser usado para comparar valores em uma condição?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "=",
+                                "correta": false,
+                                "feedback": "Errado. Este operador apenas atribui valores."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "==",
+                                "correta": true,
+                                "feedback": "Correto! Este operador compara dois valores."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-loops",
+                    "item_ordem": 7,
+                    "title": "Repetições",
+                    "icone": "fa-solid fa-repeat",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Por que repetir código?</h2><p>Repetição é quando queremos executar o <strong>mesmo bloco várias vezes</strong>. Em vez de copiar e colar código, usamos laços.</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>While – Enquanto</h2><div class='terminal'><code>int i = 0;<br>while (i < 5) {<br>&nbsp;&nbsp;printf(\"%d\\n\", i);<br>&nbsp;&nbsp;i++;<br>}</code></div><p>Enquanto a condição for verdadeira, o código se repete.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>For – O laço organizado</h2><div class='terminal'><code>for (int i = 0; i < 5; i++) {<br>&nbsp;&nbsp;printf(\"%d\\n\", i);<br>}</code></div><p>O <code>for</code> concentra tudo em uma linha: início, condição e incremento.</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Loop Infinito ⚠️</h2><p>Se a variável de controle nunca muda, a condição nunca fica falsa.</p><div class='terminal'><code>while (1) {<br>&nbsp;&nbsp;printf(\"Travou!\");<br>}</code></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Repetição",
+                        "descricao": "Quantas vezes o código será executado?\nfor (int i = 0; i < 3; i++)",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "2 vezes",
+                                "correta": false,
+                                "feedback": "Começa no 0: 0, 1, 2 → são 3 execuções."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "3 vezes",
+                                "correta": true,
+                                "feedback": "Correto! O loop roda enquanto i < 3."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-arrays",
+                    "item_ordem": 8,
+                    "title": "Vetores",
+                    "icone": "fa-solid fa-list-ol",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<div class='card-grid'><div class='card-text'><h2>O que é um Array?</h2><p>É uma lista de variáveis do <strong>mesmo tipo</strong> organizadas em sequência na memória. Imagine um prédio onde cada apartamento tem um número (índice).</p><div class='info-box-blue mt-10'><p>Índices em C sempre começam no <strong>zero (0)</strong>.</p></div></div><div class='card-image'><img src='../public/images/programmer.png' alt='Arrays'></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Arrays na Prática</h2><p>Para criar um array, definimos o tipo, o nome e o tamanho entre colchetes:</p><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> notas[<span style='color: #b5cea8;'>4</span>] = {<span style='color: #b5cea8;'>8, 7, 10, 9</span>};<br><br><span style='color: #6a9955;'>// Acessando o primeiro elemento</span><br><span style='color: #569cd6;'>int</span> primeiraNota = notas[<span style='color: #b5cea8;'>0</span>];</div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Arrays",
+                        "descricao": "Se declararmos `int valores[5];`, qual é o índice do último elemento disponível?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "5",
+                                "correta": false,
+                                "feedback": "Cuidado! Se o array tem 5 espaços e começa no 0, os índices são 0, 1, 2, 3 e 4."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "4",
+                                "correta": true,
+                                "feedback": " Perfeito! O último índice é sempre 'tamanho - 1'."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-functions",
+                    "item_ordem": 9,
+                    "title": "Funções e Escopo",
+                    "icone": "fa-solid fa-gears",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>O que são Funções?</h2><p>Funções são blocos de código independentes que realizam uma tarefa específica. Elas ajudam a evitar a repetição de código (princípio DRY - Don't Repeat Yourself) e tornam o programa mais organizado e modular.</p><div class='info-box-white mt-10'><h4>Vantagens:</h4><ul><li><strong>Reutilização:</strong> Escreva uma vez, use em vários lugares.</li><li><strong>Manutenção:</strong> Se houver um erro, você corrige apenas na função.</li><li><strong>Legibilidade:</strong> O programa principal fica mais limpo.</li></ul></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Anatomia de uma Função</h2><p>Uma função em C possui três partes fundamentais: o tipo de retorno, o nome e os parâmetros.</p><div class='terminal mt-10'>tipo_retorno nome(parametros) {<br>  // Corpo da função<br>  return valor;<br>}</div><p class='mt-10'>Se uma função não retorna nada, utilizamos o tipo <code>void</code>. Se ela não recebe dados, os parênteses podem ficar vazios ou conter <code>void</code>.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Exemplo Prático: Soma</h2><p>Veja como declarar e chamar uma função que calcula a soma de dois números inteiros:</p><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> somar(<span style='color: #569cd6;'>int</span> a, <span style='color: #569cd6;'>int</span> b) {<br>  <span style='color: #569cd6;'>return</span> a + b;<br>}<br><br><span style='color: #6a9955;'>// No main:</span><br><span style='color: #569cd6;'>int</span> resultado = somar(<span style='color: #b5cea8;'>10</span>, <span style='color: #b5cea8;'>5</span>);</div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Protótipos de Funções</h2><p>O compilador de C lê o arquivo de cima para baixo. Se você criar uma função abaixo do <code>main()</code> e tentar usá-la, ocorrerá um erro.</p><div class='info-box-blue mt-10'><p>Para resolver isso, usamos <strong>Protótipos</strong>: declaramos apenas a assinatura da função no topo do arquivo (antes do main), e o corpo da função pode ficar em qualquer lugar abaixo.</p></div>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Escopo de Variáveis</h2><p>O local onde uma variável é declarada determina onde ela pode ser acessada:</p><ul><li><strong>Variáveis Locais:</strong> Declaradas dentro de uma função. Só existem enquanto a função está rodando.</li><li><strong>Variáveis Globais:</strong> Declaradas fora de todas as funções. Podem ser lidas e alteradas por qualquer parte do programa.</li></ul><p><strong>Aviso:</strong> O uso excessivo de variáveis globais é considerado uma má prática, pois dificulta o rastreio de erros.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Funções",
+                        "descricao": "O que acontece se uma função for definida com o tipo de retorno `void`?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "A função deve obrigatoriamente retornar um valor inteiro.",
+                                "correta": false,
+                                "feedback": "Incorreto. O tipo 'int' é usado para inteiros; void significa 'vazio'."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "A função executa seu código mas não devolve nenhum valor ao chamador.",
+                                "correta": true,
+                                "feedback": "Correto! Funções void são usadas para ações como imprimir mensagens ou modificar globais sem retornar dados."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-printf",
+                    "item_ordem": 10,
+                    "title": "Saída com printf",
+                    "icone": "fa-solid fa-terminal",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>A Função printf()</h2><p>A função <code>printf</code> (print formatted) pertence à biblioteca padrão <code>stdio.h</code>. Ela envia textos e valores de variáveis formatados para a saída padrão (geralmente o console).</p><div class='terminal mt-10'>printf(\"Texto comum\");</div><p class='mt-10'>Para exibir valores de variáveis, precisamos usar marcadores de posição chamados <strong>especificadores de formato</strong>.</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Especificadores de Formato</h2><p>O compilador precisa saber como traduzir os bits da memória em caracteres legíveis. Cada tipo de dado possui seu próprio código iniciado por <code>%</code>:</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Código</th><th>Tipo de Dado</th></tr></thead><tbody><tr><td><code>%d</code> ou <code>%i</code></td><td>Inteiros (int)</td></tr><tr><td><code>%f</code></td><td>Decimais (float/double)</td></tr><tr><td><code>%c</code></td><td>Um único caractere (char)</td></tr><tr><td><code>%s</code></td><td>Cadeia de caracteres (string)</td></tr></tbody></table></div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Formatando Casas Decimais</h2><p>Por padrão, o <code>%f</code> exibe seis casas decimais. Podemos controlar essa precisão adicionando um ponto e o número de casas desejado entre o sinal de porcentagem e a letra f.</p><div class='terminal mt-10'>float preco = 19.50;<br>printf(\"Valor: %.2f\", preco); <br><span style='color: #6a9955;'>// Resultado: Valor: 19.50</span></div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Sequências de Escape</h2><p>Existem caracteres especiais que não podem ser digitados diretamente no texto, pois servem para formatar a exibição no terminal:</p><ul class='feature-list'><li><code>\\n</code> : Pula para a próxima linha (new line).</li><li><code>\\t</code> : Adiciona um tabulação horizontal (espaço largo).</li><li><code>\\\\</code> : Imprime uma barra invertida.</li><li><code>\\\"</code> : Imprime aspas duplas sem fechar a string do printf.</li></ul>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Ordem dos Argumentos</h2><p>É vital que a ordem dos especificadores na string corresponda exatamente à ordem das variáveis passadas como argumento.</p><div class='terminal mt-10'>int dia = 25;<br>char mes[] = \"Maio\";<br>printf(\"Hoje e %d de %s\", dia, mes);</div><p class='mt-10'>Se você trocar a ordem ou usar o tipo errado, o programa imprimirá valores imprevisíveis ou poderá travar.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Formatação",
+                        "descricao": "Qual seria o comando correto para exibir a variável `altura = 1.832` com apenas duas casas decimais?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "printf('%.2d', altura);",
+                                "correta": false,
+                                "feedback": "Incorreto. O %d é usado para inteiros, o que causaria erro ao tentar ler um número decimal."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "printf('%.2f', altura);",
+                                "correta": true,
+                                "feedback": "Perfeito! O .2 limita a precisão e o f indica que a variável é do tipo float ou double."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "printf('%f.2', altura);",
+                                "correta": false,
+                                "feedback": "Incorreto. A formatação da precisão deve vir antes da letra que define o tipo."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-scanf-detalhado",
+                    "item_ordem": 11,
+                    "title": "Entrada de Dados",
+                    "icone": "fa-solid fa-keyboard",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>O Conceito</h2><p>O <code>scanf</code> é o 'sensor' do seu programa. Ele captura o que vem do teclado.</p><div style='display:flex; justify-content:center; align-items:center; gap:20px; background:#f0f7ff; padding:15px; border-radius:15px;'><i class='fa-solid fa-keyboard' style='font-size:2rem; color:#2196f3;'></i> <i class='fa-solid fa-arrow-right'></i> <i class='fa-solid fa-memory' style='font-size:2rem; color:#4caf50;'></i></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Sintaxe Minimalista</h2><p>A fórmula mágica para ler um dado:</p><div class='terminal' style='text-align:center; font-size:1.2rem;'>scanf(<span style='color:#ce9178;'>\"%tipo\"</span>, <span style='color:#f44336;'>&</span>variavel);</div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>O Papel do &</h2><p>Sem o <code>&</code>, o programa não acha a 'gaveta' na memória.</p><div style='text-align:center; padding:10px;'><span style='font-size:3rem; color:#f44336;'>&</span><br><strong>GPS da Memória</strong></div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Lendo Inteiros</h2><p>Para números inteiros, usamos o <strong>%d</strong>.</p><div class='terminal'>int idade;<br>scanf(<span style='color:#ce9178;'>\"%d\"</span>, &idade);</div>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Lendo Decimais</h2><p>Para números com vírgula, usamos o <strong>%f</strong>.</p><div class='terminal'>float peso;<br>scanf(<span style='color:#ce9178;'>\"%f\"</span>, &peso);</div>"
+                        },
+                        {
+                            "ordem": 6,
+                            "html": "<h2>Lendo Caracteres</h2><p>Para uma única letra, usamos o <strong>%c</strong>.</p><div class='terminal'>char letra;<br>scanf(<span style='color:#ce9178;'>\" %c\"</span>, &letra);</div><p><small>*Note o espaço antes do % para limpar o 'Enter' anterior.</small></p>"
+                        },
+                        {
+                            "ordem": 7,
+                            "html": "<h2>Múltiplas Entradas</h2><p>Você pode ler vários valores de uma vez:</p><div class='terminal'>scanf(<span style='color:#ce9178;'>\"%d %d\"</span>, &x, &y);</div><p>O usuário digita: <code>10 20 [Enter]</code></p>"
+                        },
+                        {
+                            "ordem": 8,
+                            "html": "<h2>O Fluxo Completo</h2><p>A dupla dinâmica do C:</p><div class='info-box-white' style='border-left:5px solid #4caf50;'><p>1. <strong>printf</strong>: Pergunta.</p><p>2. <strong>scanf</strong>: Escuta e guarda.</p></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio Scanf",
+                        "descricao": "Qual destes é o maior erro ao usar o scanf com números?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Usar aspas duplas no %d.",
+                                "correta": false,
+                                "feedback": "Incorreto. As aspas são obrigatórias!"
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Esquecer o símbolo '&' antes da variável.",
+                                "correta": true,
+                                "feedback": "Exato! Sem o &, o programa tenta gravar em um lugar proibido e trava."
                             }
                         ]
                     }
@@ -776,115 +1192,6 @@
         },
         {
             "ordem": 4,
-            "secao": "Linguagem C",
-            "classe_estilo": "logic",
-            "items": [
-                {
-                    "id": "intro-c",
-                    "item_ordem": 1,
-                    "title": "História e Conceitos",
-                    "icone": "fa-solid fa-microchip",
-                    "flashcards": [
-                        {
-                            "ordem": 1,
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='História do C'></div><div class='card-text'><h2>A Mãe das Linguagens Modernas</h2><p>Criada em 1972 por <strong>Dennis Ritchie</strong> nos Laboratórios Bell, a Linguagem C foi desenvolvida para criar o sistema operacional Unix.</p><ul class='feature-list mt-10'><li><strong>Nível Médio:</strong> Combina o poder do Baixo Nível (Hardware) com a facilidade do Alto Nível.</li><li><strong>Performática:</strong> Extremamente rápida e eficiente.</li><li><strong>Portável:</strong> O código pode rodar em diferentes máquinas com poucas mudanças.</li></ul></div></div>"
-                        },
-                        {
-                            "ordem": 2,
-                            "html": "<h2>Compilação: Como C funciona?</h2><p>Diferente do JavaScript, o C é uma linguagem <strong>Compilada</strong>. O computador não entende o seu código direto.</p><div class='concept-grid mt-10' style='display: grid; grid-template-columns: 1fr 0.2fr 1fr; align-items: center; text-align: center;'><div class='p-10 border-blue' style='border: 1px solid #3498db; border-radius: 5px;'><strong>Código Fonte</strong><br>(arquivo.c)</div><div><i class='fa-solid fa-arrow-right'></i></div><div class='p-10 border-blue' style='border: 1px solid #2ecc71; border-radius: 5px;'><strong>Binário/Executável</strong><br>(Processador entende)</div></div><p class='mt-10'>O <strong>Compilador</strong> (como o GCC) faz essa tradução.</p>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Introdução",
-                        "descricao": "Qual é a principal função do compilador na linguagem C?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "Executar o código linha por linha em tempo real.",
-                                "correta": false,
-                                "feedback": "Isso é o que um interpretador faz (como no JS). O C precisa ser traduzido antes de rodar."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "Traduzir o código fonte para linguagem de máquina (binário).",
-                                "correta": true,
-                                "feedback": " Exato! Sem a compilação, o hardware não saberia o que fazer com seu código .c"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "c-vars",
-                    "item_ordem": 2,
-                    "title": "Tipagem e Variáveis",
-                    "icone": "fa-solid fa-box-archive",
-                    "flashcards": [
-                        {
-                            "ordem": 1,
-                            "html": "<h2>Tipagem Estática</h2><p>Em C, você <strong>DEVE</strong> dizer ao computador o tipo exato de dado que a caixa vai guardar. Isso economiza memória!</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Tipo</th><th>Espaço</th><th>Uso</th></tr></thead><tbody><tr><td><code>int</code></td><td>4 bytes</td><td>Números inteiros.</td></tr><tr><td><code>float</code></td><td>4 bytes</td><td>Números decimais.</td></tr><tr><td><code>char</code></td><td>1 byte</td><td>Um único caractere.</td></tr></tbody></table></div>"
-                        },
-                        {
-                            "ordem": 2,
-                            "html": "<h2>Declarando em C</h2><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> idade = <span style='color: #b5cea8;'>25</span>;<br><span style='color: #569cd6;'>float</span> altura = <span style='color: #b5cea8;'>1.75</span>;<br><span style='color: #569cd6;'>char</span> inicial = <span style='color: #ce9178;'>'L'</span>; <span style='color: #6a9955;'>// Aspas simples!</span></div><p class='mt-10'><i class='fa-solid fa-circle-exclamation' style='color: #e74c3c;'></i> No C, esquecer o ponto e vírgula (<code>;</code>) impede o código de compilar!</p>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Tipagem",
-                        "descricao": "Qual destas declarações causaria um erro de compilação em C?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "int pontos = 10;",
-                                "correta": false,
-                                "feedback": "Correto! Tipo int para valor inteiro."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "numero = 5;",
-                                "correta": true,
-                                "feedback": " Acertou! Em C, você é obrigado a declarar o tipo (ex: int numero = 5;)."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "c-arrays",
-                    "item_ordem": 3,
-                    "title": "Vetores",
-                    "icone": "fa-solid fa-list-ol",
-                    "flashcards": [
-                        {
-                            "ordem": 1,
-                            "html": "<div class='card-grid'><div class='card-text'><h2>O que é um Array?</h2><p>É uma lista de variáveis do <strong>mesmo tipo</strong> organizadas em sequência na memória. Imagine um prédio onde cada apartamento tem um número (índice).</p><div class='info-box-blue mt-10'><p>Índices em C sempre começam no <strong>zero (0)</strong>.</p></div></div><div class='card-image'><img src='../public/images/programmer.png' alt='Arrays'></div></div>"
-                        },
-                        {
-                            "ordem": 2,
-                            "html": "<h2>Arrays na Prática</h2><p>Para criar um array, definimos o tipo, o nome e o tamanho entre colchetes:</p><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> notas[<span style='color: #b5cea8;'>4</span>] = {<span style='color: #b5cea8;'>8, 7, 10, 9</span>};<br><br><span style='color: #6a9955;'>// Acessando o primeiro elemento</span><br><span style='color: #569cd6;'>int</span> primeiraNota = notas[<span style='color: #b5cea8;'>0</span>];</div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Arrays",
-                        "descricao": "Se declararmos `int valores[5];`, qual é o índice do último elemento disponível?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "5",
-                                "correta": false,
-                                "feedback": "Cuidado! Se o array tem 5 espaços e começa no 0, os índices são 0, 1, 2, 3 e 4."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "4",
-                                "correta": true,
-                                "feedback": " Perfeito! O último índice é sempre 'tamanho - 1'."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "ordem": 5,
             "secao": "Back-End",
             "classe_estilo": "logic",
             "items": [

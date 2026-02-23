@@ -1,0 +1,277 @@
+:root {
+    --primary-blue: #127894;
+    --dark-blue: #2c3e50;
+    --bg-gray: #e9ecef;
+    --mesa-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: var(--bg-gray);
+    color: var(--dark-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-blue);
+}
+
+.scrum-container {
+    padding: 40px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Painel de Controle */
+.control-panel {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #7f8c8d;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+    color: white;
+}
+
+.btn-import {
+    background: #7f8c8d;
+}
+
+.btn-draw {
+    background: #2980b9;
+}
+
+.btn-teams {
+    background: var(--primary-blue);
+}
+
+.btn-reset {
+    background: #e67e22;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.input-num {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 65px;
+    font-weight: bold;
+}
+
+/* Estação do Professor */
+.instructor-area {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 25px;
+}
+
+.professor-desk {
+    background: var(--dark-blue);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 8px solid var(--primary-blue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid e Bancadas */
+.room-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.bancada-linear {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    /* Fundo da fileira */
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* A MESA */
+.mesa-slot {
+    height: 110px;
+    background: var(--mesa-bg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+/* Ícone de Computador no fundo da mesa */
+.mesa-slot::before {
+    content: "\f108";
+    /* fa-desktop */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 25px;
+    font-size: 30px;
+    color: #ecf0f1;
+    z-index: 0;
+}
+
+.mesa-slot.drag-over {
+    border: 2px dashed var(--primary-blue);
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+/* NÚMERO DO LUGAR - Agora bem visível */
+.mesa-id {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    color: white;
+    background: #95a5a6;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* ETIQUETA DO ALUNO */
+.aluno-label {
+    color: white;
+    font-size: 11px;
+    padding: 6px 4px;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    background-color: var(--dark-blue);
+    cursor: grab;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aluno-label:active {
+    cursor: grabbing;
+}
+
+.slot-vazio {
+    background: #f8f9fa;
+    border: 2px dashed #ccc;
+    box-shadow: none;
+}
+
+.slot-vazio::before {
+    color: #eee;
+}
+
+.slot-vazio .mesa-id {
+    background: #ddd;
+    color: #7f8c8d;
+}
+
+/* Legenda de Equipes */
+.legend-teams {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.team-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer {
+    background: var(--dark-blue);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: auto;
+}
