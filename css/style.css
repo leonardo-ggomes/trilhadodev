@@ -1023,3 +1023,56 @@ body {
         transform: scale(1) translateY(0);
     }
 }
+
+/* 15. Filtro Trilhas */
+
+.filter-container {
+    position: sticky;
+    top: 70px; /* Altura da sua navbar */
+    background: white;
+    z-index: 100;
+    padding: 15px 0;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+
+.filter-scroll {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 20px;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #e5e5e5;
+    border-bottom: 4px solid #e5e5e5; /* Efeito 3D Duolingo */
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #afafaf;
+    cursor: pointer;
+    transition: all 0.1s;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.filter-btn:hover {
+    background: #f7f7f7;
+}
+
+.filter-btn.active {
+    color: #127894;
+    border-color: #127894;
+    border-bottom: 4px solid #127894;
+    background: #e1f5fe;
+    transform: translateY(2px); /* Botão "pressionado" */
+}
+
+/* Ocultar seções que não batem com o filtro */
+.trail-section.hidden {
+    display: none;
+}

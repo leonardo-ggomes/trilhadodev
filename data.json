@@ -2,7 +2,7 @@
     "trilhas": [
         {
             "ordem": 1,
-            "secao": "Fundamentos e Lógica",
+            "secao": "Algoritimo e Lógica com C",
             "classe_estilo": "logic",
             "items": [
                 {
@@ -1704,11 +1704,50 @@
         {
             "ordem": 6,
             "secao": "Banco de Dados",
-            "classe_estilo": "logic",
+            "classe_estilo": "soft",
             "items": [
                 {
+                    "id": "intro-database-concept",
+                    "title": "Banco de Dados",
+                    "icone": "fa-solid fa-database",
+                    "banner_class": "backend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/database.png' alt='Banco de Dados'></div><div class='card-text'><h2>O Coração da Informação</h2><p>Um <strong>Banco de Dados</strong> é um local organizado para armazenar, gerenciar e recuperar informações. Sem ele, todos os dados de um app sumiriam assim que você fechasse a aba.</p><p class='mt-10' style='font-style: italic; color: #666;'>Imagine um Instagram onde você posta uma foto e, ao atualizar a página, ela some. Isso seria um sistema sem banco de dados.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Tipos de Armazenamento</h2><p>Existem duas formas principais de organizar a 'bagunça' dos dados:</p><div class='flow-container' style='display: flex; justify-content: space-around; align-items: stretch; margin: 30px 0; text-align: center; gap: 15px;'> <div style='background: #e3f2fd; padding: 15px; border-radius: 15px; flex: 1;'><i class='fa-solid fa-table' style='font-size: 1.5rem; color: #3498db;'></i><p style='font-size: 0.8rem; font-weight: bold; margin-top: 5px;'>Relacional (SQL)</p><p style='font-size: 0.7rem;'>Dados em tabelas rígidas, como uma planilha Excel.</p></div> <div style='background: #f1f8e9; padding: 15px; border-radius: 15px; flex: 1;'><i class='fa-solid fa-file-json' style='font-size: 1.5rem; color: #4caf50;'></i><p style='font-size: 0.8rem; font-weight: bold; margin-top: 5px;'>Não Relacional (NoSQL)</p><p style='font-size: 0.7rem;'>Flexível, guarda dados como documentos (JSON).</p></div> </div>"
+                        },
+                        {
+                            "html": "<h2>A Linguagem SQL</h2><p>Para conversar com bancos relacionais, usamos o <strong>SQL</strong> (Structured Query Language). Veja os comandos básicos:</p><div class='modern-terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 15px;'><pre style='margin:0;'><code><span style='color: #569cd6;'>SELECT</span> nome <span style='color: #569cd6;'>FROM</span> usuarios;<br><span style='color: #6a9955;'>-- Busca todos os nomes da tabela</span><br><br><span style='color: #569cd6;'>INSERT INTO</span> usuarios (nome) <span style='color: #569cd6;'>VALUES</span> (<span style='color: #ce9178;'>'Leo'</span>);<br><span style='color: #6a9955;'>-- Adiciona um novo usuário</span></code></pre></div>"
+                        },
+                        {
+                            "html": "<h2>O que é um SGBD?</h2><div class='metaphor-box' style='background: #fff8e1; border-left: 5px solid #ffc107; padding: 15px; border-radius: 8px;'><p><strong>SGBD:</strong> Sistema Gerenciador de Banco de Dados.</p><p style='margin-top: 10px;'>Se o banco de dados é o <strong>arquivo físico</strong>, o SGBD é o <strong>bibliotecário</strong> que organiza, protege e busca os livros para você.</p></div><div class='tech-stack' style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px;'><div class='tech-item' style='border: 1px solid #eee; padding: 8px; border-radius: 8px; text-align: center;'><i class='fa-solid fa-database' style='color: #336791;'></i> <span style='font-size: 0.7rem;'>PostgreSQL</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 8px; border-radius: 8px; text-align: center;'><i class='fa-solid fa-leaf' style='color: #4db33d;'></i> <span style='font-size: 0.7rem;'>MongoDB</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 8px; border-radius: 8px; text-align: center;'><i class='fa-solid fa-dolphin' style='color: #00758f;'></i> <span style='font-size: 0.7rem;'>MySQL</span></div></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Check-up Dados",
+                        "descricao": "Qual é a principal diferença entre um banco SQL e um NoSQL?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "SQL é pago e NoSQL é sempre gratuito.",
+                                "correta": false,
+                                "feedback": "Incorreto. Ambos possuem versões gratuitas e pagas."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "SQL usa tabelas fixas; NoSQL usa formatos flexíveis como documentos.",
+                                "correta": true,
+                                "feedback": "Exato! SQL é estruturado em linhas/colunas, enquanto NoSQL permite dados variados no mesmo lugar."
+                            }
+                        ]
+                    },
+                    "item_ordem": 1
+                },
+                {
                     "id": "relational-database-intro",
-                    "title": "Banco de Dados Relacional",
+                    "title": "Conceito: Banco Relacional",
                     "icone": "fa-solid fa-database",
                     "banner_class": "backend",
                     "flashcards": [
@@ -1752,7 +1791,484 @@
                             }
                         ]
                     },
+                    "item_ordem": 2
+                },
+                {
+                    "id": "nosql-database-concept",
+                    "title": "Bancos Não Relacionais",
+                    "icone": "fa-solid fa-leaf",
+                    "banner_class": "backend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/desenho-tecnologia.png' alt='NoSQL Concept'></div><div class='card-text'><h2>O que é NoSQL?</h2><p>Diferente do SQL tradicional, o <strong>NoSQL</strong> (Not Only SQL) não usa tabelas fixas. Ele foi criado para lidar com grandes volumes de dados que mudam o tempo todo.</p><p class='mt-10' style='font-style: italic; color: #666;'>É como trocar uma gaveta de arquivos rígida por uma caixa onde você pode colocar pastas de diferentes formatos.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>O Formato Documento</h2><p>O tipo mais comum de NoSQL guarda os dados como <strong>JSON</strong> (ou BSON). Isso permite que cada registro tenha campos diferentes.</p><div class='modern-terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 15px;'><pre style='margin:0;'><code>{<br>  <span style='color: #9cdcfe;'>\"produto\"</span>: <span style='color: #ce9178;'>\"Teclado Gamer\"</span>,<br>  <span style='color: #9cdcfe;'>\"preco\"</span>: <span style='color: #b5cea8;'>250.00</span>,<br>  <span style='color: #9cdcfe;'>\"rgb\"</span>: <span style='color: #569cd6;'>true</span> <span style='color: #6a9955;'>// Este campo só existe aqui!</span><br>}</code></pre></div>"
+                        },
+                        {
+                            "html": "<h2>Vantagens do NoSQL</h2><div class='benefits-grid' style='display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px;'><div class='benefit-item' style='background: #fdf2f2; padding: 10px; border-radius: 10px; text-align: center;'><i class='fa-solid fa-expand' style='color: #e74c3c;'></i><p style='font-size: 0.8rem;'><strong>Escalabilidade:</strong> Aguenta milhões de acessos distribuídos.</p></div><div class='benefit-item' style='background: #f0f4ff; padding: 10px; border-radius: 10px; text-align: center;'><i class='fa-solid fa-code-branch' style='color: #3498db;'></i><p style='font-size: 0.8rem;'><strong>Flexibilidade:</strong> Você cria campos novos sem derrubar o sistema.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Exemplos de Uso</h2><p>Onde o NoSQL brilha?</p><div class='metaphor-box' style='background: #f4f7f9; padding: 20px; border-radius: 10px; margin-top: 15px;'> <p><i class='fa-solid fa-comments' style='color: #4caf50;'></i> <strong>Chats e Redes Sociais:</strong> Mensagens rápidas e variadas.</p> <p><i class='fa-solid fa-cart-shopping' style='color: #e67e22;'></i> <strong>Carrinhos de Compra:</strong> Dados temporários e dinâmicos.</p> <p><i class='fa-solid fa-bolt' style='color: #f1c40f;'></i> <strong>Big Data:</strong> Análise de milhões de logs por segundo.</p> </div>"
+                        },
+                        {
+                            "html": "<div class='card-grid'><div class='card-text'><h2>Principais Ferramentas</h2><p>Estes são os líderes de mercado para NoSQL:</p><ul class='tech-stack-list' style='list-style: none; padding: 0;'><li style='margin-bottom: 8px;'><i class='fa-solid fa-leaf' style='color: #4db33d;'></i> <strong>MongoDB:</strong> Baseado em documentos.</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-fire' style='color: #ffa000;'></i> <strong>Firebase:</strong> O banco em tempo real do Google.</li><li><i class='fa-solid fa-box-archive' style='color: #a41e11;'></i> <strong>Redis:</strong> Ultra rápido, focado em cache.</li></ul></div><div class='card-image' style='text-align: right;'><i class='fa-solid fa-gears' style='font-size: 5rem; color: #ccc;'></i></div></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio NoSQL",
+                        "descricao": "Qual é a principal razão para escolher um banco NoSQL em vez de um SQL?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Quando os dados são muito simples e nunca mudam.",
+                                "correta": false,
+                                "feedback": "Pelo contrário! Para dados fixos e simples, o SQL costuma ser mais eficiente."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Quando a estrutura dos dados é flexível ou o volume é gigantesco.",
+                                "correta": true,
+                                "feedback": "Exato! NoSQL é a escolha certa para crescimento rápido e dados sem um formato único."
+                            }
+                        ]
+                    },
+                    "item_ordem": 3
+                }
+            ]
+        },
+        {
+            "ordem": 7,
+            "secao": "Mobile",
+            "classe_estilo": "mobile",
+            "items": [
+                {
+                    "id": "kotlin-basics",
+                    "item_ordem": 1,
+                    "title": "Kotlin: A Linguagem",
+                    "icone": "fa-brands fa-android",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Kotlin e Android</h2><p>O Kotlin é a linguagem oficial do Google para Android. É moderna, segura e muito mais curta que o Java.</p><div style='display:flex; justify-content:center; gap:20px; padding:15px;'><i class='fa-brands fa-android' style='font-size:3rem; color:#3DDC84;'></i><i class='fa-solid fa-plus' style='font-size:2rem; align-self:center;'></i><i class='fa-brands fa-kotlin' style='font-size:3rem; color:#7F52FF;'></i></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Variáveis Imutáveis (val)</h2><p>Use <code>val</code> para valores que <strong>não mudam</strong>. É como uma constante.</p><div class='terminal mt-10'><span style='color:#569cd6;'>val</span> nome = <span style='color:#ce9178;'>\"Android\"</span><br><span style='color:#6a9955;'>// nome = \"Google\" (ERRO!)</span></div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Variáveis Mutáveis (var)</h2><p>Use <code>var</code> para valores que <strong>podem mudar</strong> durante o programa.</p><div class='terminal mt-10'><span style='color:#569cd6;'>var</span> pontos = <span style='color:#b5cea8;'>0</span><br>pontos = <span style='color:#b5cea8;'>10</span> <span style='color:#6a9955;'>// OK!</span></div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Inferência de Tipo</h2><p>O Kotlin é inteligente! Ele descobre o tipo pelo valor. Não precisas de escrever <code>String</code> ou <code>Int</code> o tempo todo.</p><div style='background:#f9f9f9; padding:10px; border-radius:8px; border-left:5px solid #7F52FF;'><code>val idade = 25</code><br><small>O Kotlin já sabe que é um Inteiro.</small></div>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Funções Minimalistas</h2><p>Definir uma ação é simples com a palavra <code>fun</code>.</p><div class='terminal mt-10'><span style='color:#569cd6;'>fun</span> saudar() {<br> &nbsp;println(<span style='color:#ce9178;'>\"Olá!\"</span>)<br>}</div>"
+                        },
+                        {
+                            "ordem": 6,
+                            "html": "<h2>Null Safety (?!)</h2><p>O Kotlin evita que o app feche sozinho verificando valores nulos.</p><div style='display:flex; justify-content:space-around; align-items:center; margin-top:10px;'><div style='text-align:center;'><code>String</code><br><small>Nunca nulo</small></div><div style='text-align:center;'><code>String?</code><br><small>Pode ser nulo</small></div></div>"
+                        },
+                        {
+                            "ordem": 7,
+                            "html": "<h2>Template Strings</h2><p>Misturar texto com variáveis é muito visual usando o símbolo <code>$</code>.</p><div class='terminal mt-10'>val user = <span style='color:#ce9178;'>\"Ana\"</span><br>println(<span style='color:#ce9178;'>\"Bem-vinda, $user\"</span>)</div>"
+                        },
+                        {
+                            "ordem": 8,
+                            "html": "<h2>Lambda Functions</h2><p>São funções sem nome passadas como blocos <code>{ }</code>. Essencial para cliques no Compose!</p><div class='terminal mt-10'>button.setOnClickListener {<br> &nbsp;<span style='color:#6a9955;'>// Ação aqui dentro</span><br>}</div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio Kotlin",
+                        "descricao": "Qual é a diferença principal entre `val` e `var`?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "val é para números e var é para texto.",
+                                "correta": false,
+                                "feedback": "Não! O tipo de dado não importa para val ou var."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "val cria uma variável imutável (fixa) e var permite alterar o valor depois.",
+                                "correta": true,
+                                "feedback": "Correto! val vem de 'value' (imutável) e var de 'variable' (mutável)."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "android-studio-intro",
+                    "item_ordem": 2,
+                    "title": "Android Studio",
+                    "icone": "fa-solid fa-laptop-code",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Novo Projeto</h2><p>Ao abrir, escolha <strong>Empty Compose Activity</strong>. É o template moderno que já configura tudo para o Compose.</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>A Interface</h2><ul class='feature-list'><li><strong>Project Panel (Esquerda):</strong> Onde ficam seus arquivos .kt.</li><li><strong>Editor (Centro):</strong> Onde a mágica do código acontece.</li><li><strong>Preview (Direita):</strong> Onde você vê o design em tempo real.</li></ul>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Onde Clicar?</h2><p>Se o design não aparecer, procure pelo botão <strong>Split</strong> ou <strong>Design</strong> no canto superior direito do editor.</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Rodando o App</h2><p>O ícone de 'Play' verde no topo compila e instala o app no seu emulador ou celular real.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Explorando a IDE",
+                        "descricao": "Qual o melhor template para começar um app moderno?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Empty View Activity (XML)",
+                                "correta": false,
+                                "feedback": "Esse é o modo antigo."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Empty Compose Activity",
+                                "correta": true,
+                                "feedback": "Exato! Ele já vem pronto para o Jetpack Compose."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "compose-intro",
+                    "item_ordem": 3,
+                    "title": "Compose",
+                    "icone": "fa-solid fa-wand-magic-sparkles",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>UI Declarativa</h2><p>Você não 'monta' a tela passo a passo. Você <strong>descreve</strong> como ela deve ser. Se os dados mudam, a tela se atualiza sozinha.</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>@Composable</h2><p>Essa anotação diz ao Kotlin: 'Esta função agora é um componente visual'.</p><div class='terminal'>@Composable<br>fun MeuTexto() { ... }</div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Função Text()</h2><p>É o componente básico para exibir texto. Substitui o antigo TextView.</p><div class='terminal'>Text(text = <span style='color:#ce9178;'>\"Olá, Compose!\"</span>)</div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Preview</h2><p>Use <code>@Preview</code> acima de uma função para visualizá-la sem precisar ligar o emulador. Economiza muito tempo!</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio Compose",
+                        "descricao": "Para que serve a anotação @Composable?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Para acelerar o processamento do banco de dados.",
+                                "correta": false,
+                                "feedback": "Nada a ver com banco de dados!"
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Para transformar uma função comum em um componente de interface.",
+                                "correta": true,
+                                "feedback": "Correto! Sem ela, você não consegue desenhar nada na tela."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "compose-layouts",
+                    "item_ordem": 4,
+                    "title": "Containers de Tela",
+                    "icone": "fa-solid fa-boxes-stacked",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Column</h2><p>Empilha itens na <strong>Vertical</strong>. Um embaixo do outro.</p><div style='background:#eee; padding:5px; width:30px; margin:auto; border-radius:4px;'><div style='background:#4285F4; height:10px; margin-bottom:2px;'></div><div style='background:#4285F4; height:10px;'></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Row</h2><p>Organiza itens na <strong>Horizontal</strong>. Um ao lado do outro.</p><div style='background:#eee; padding:5px; display:flex; gap:2px; justify-content:center; border-radius:4px;'><div style='background:#34A853; width:10px; height:10px;'></div><div style='background:#34A853; width:10px; height:10px;'></div></div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Box</h2><p>Empilha itens no <strong>Eixo Z</strong>. Um em cima do outro (sobreposição).</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Alinhamento</h2><p>Use <code>horizontalAlignment</code> em Columns e <code>verticalAlignment</code> em Rows para centralizar itens.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Quiz de Layout",
+                        "descricao": "Qual container usar para colocar uma imagem de fundo com um texto por cima?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Column",
+                                "correta": false,
+                                "feedback": "A Column colocaria o texto abaixo da imagem."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Box",
+                                "correta": true,
+                                "feedback": "Perfeito! A Box permite sobrepor componentes."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "compose-modifiers",
+                    "item_ordem": 5,
+                    "title": "Modifiers",
+                    "icone": "fa-solid fa-palette",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>O que são?</h2><p>São as instruções de estilo. Quase todo componente do Compose aceita um <code>modifier</code>.</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Tamanho e Espaço</h2><div class='terminal'>Modifier<br> &nbsp;.fillMaxWidth() <span style='color:#6a9955;'>// Largura total</span><br> &nbsp;.padding(16.dp) <span style='color:#6a9955;'>// Margem interna</span></div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Cores e Bordas</h2><div class='terminal'>Modifier<br> &nbsp;.background(Color.Blue)<br> &nbsp;.clip(RoundedCornerShape(8.dp))</div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>A Ordem Importa!</h2><p>Aplicar <code>padding</code> antes ou depois do <code>background</code> muda o resultado visual. O Compose lê de cima para baixo.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio Style",
+                        "descricao": "Como deixar um componente ocupando toda a tela?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Modifier.size(max)",
+                                "correta": false,
+                                "feedback": "Comando inexistente."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Modifier.fillMaxSize()",
+                                "correta": true,
+                                "feedback": "Isso! Ele expande o componente para preencher todo o espaço disponível."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "compose-state",
+                    "item_ordem": 6,
+                    "title": "Estado (State)",
+                    "icone": "fa-solid fa-brain",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>O que é Estado?</h2><p>É qualquer valor que pode mudar com o tempo (ex: um contador, o texto de um campo).</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>remember</h2><p>Diz ao Compose: 'Não esqueça este valor quando a tela for redesenhada'.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>mutableStateOf</h2><p>Cria uma variável que, ao mudar, avisa o Compose para atualizar a tela automaticamente (Recomposição).</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Exemplo</h2><div class='terminal'>val count = remember { mutableStateOf(0) }</div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Quiz de Memória",
+                        "descricao": "O que acontece se você mudar uma variável comum (sem state) no Compose?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "O valor muda, mas a tela não se atualiza.",
+                                "correta": true,
+                                "feedback": "Exato! O Compose precisa do 'State' para saber que deve redesenhar a UI."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "O app trava.",
+                                "correta": false,
+                                "feedback": "Não trava, mas o usuário não verá a mudança visual."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "compose-interaction",
+                    "item_ordem": 7,
+                    "title": "Interação",
+                    "icone": "fa-solid fa-hand-pointer",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Button</h2><p>O botão tem dois blocos: o <code>onClick</code> (o que acontece) e o conteúdo (texto ou ícone dentro).</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>TextField</h2><p>Campo para o usuário digitar. Ele precisa estar conectado a um Estado para funcionar.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Exemplo Campo</h2><div class='terminal'>TextField(<br> &nbsp;value = texto,<br> &nbsp;onValueChange = { texto = it }<br>)</div>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Feedback Visual</h2><p>Use <code>ButtonDefaults</code> para mudar cores de botões quando clicados.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Clique",
+                        "descricao": "Onde colocamos o código que deve rodar quando o botão é pressionado?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "No parâmetro text.",
+                                "correta": false,
+                                "feedback": "O text é só para a legenda do botão."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Dentro da lambda onClick { }.",
+                                "correta": true,
+                                "feedback": "Correto! É ali que a lógica de clique reside."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "compose-lists",
+                    "item_ordem": 8,
+                    "title": "Listas Inteligentes",
+                    "icone": "fa-solid fa-list-ul",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>LazyColumn</h2><p>Diferente da Column comum, a LazyColumn só carrega os itens que estão aparecendo na tela. É ultra performática!</p>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>items()</h2><p>Dentro da lista, usamos a função <code>items(minhaLista)</code> para dizer quais dados exibir.</p>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Espaçamento</h2><p>Use <code>verticalArrangement = Arrangement.spacedBy(8.dp)</code> para dar espaço entre os itens automaticamente.</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>LazyRow</h2><p>Funciona igual à LazyColumn, mas para listas que rolam na horizontal.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Performance",
+                        "descricao": "Por que usar LazyColumn em vez de Column para listas grandes?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Porque é mais fácil de digitar.",
+                                "correta": false,
+                                "feedback": "Não é por isso."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Porque ela economiza memória, carregando apenas o que é visível.",
+                                "correta": true,
+                                "feedback": "Exato! Isso evita que o app fique lento ou trave com 1000 itens."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "ordem": 5,
+            "secao": "Engenharia de Requisitos",
+            "classe_estilo": "devops",
+            "items": [
+                {
+                    "id": "intro-requisitos",
+                    "title": "O que são Requisitos?",
+                    "icone": "fa-solid fa-clipboard-list",
+                    "banner_class": "backend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/requirements-icon.png' alt='Requisitos de Software'></div><div class='card-text'><h2>A Planta do Sistema</h2><p>Requisitos são as <strong>necessidades e condições</strong> que um software deve atender. É a tradução do desejo do cliente para algo que os desenvolvedores consigam construir.</p><p class='mt-10' style='font-style: italic; color: #666;'>Sem requisitos claros, você pode construir um barco quando o cliente precisava de um avião.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Tipos Principais</h2><p>Dividimos os requisitos em dois grandes grupos para facilitar a organização:</p><div class='flow-container' style='display: flex; justify-content: space-around; align-items: stretch; margin: 30px 0; text-align: center; gap: 15px;'> <div style='background: #fff3e0; padding: 15px; border-radius: 15px; flex: 1; border-bottom: 4px solid #ffb74d;'><i class='fa-solid fa-gear' style='font-size: 1.5rem; color: #e67e22;'></i><p style='font-size: 0.8rem; font-weight: bold; margin-top: 5px;'>Funcionais (RF)</p><p style='font-size: 0.7rem;'>O que o sistema <strong>faz</strong> (ex: fazer login, emitir relatório).</p></div> <div style='background: #f3e5f5; padding: 15px; border-radius: 15px; flex: 1; border-bottom: 4px solid #ba68c8;'><i class='fa-solid fa-gauge-high' style='font-size: 1.5rem; color: #9c27b0;'></i><p style='font-size: 0.8rem; font-weight: bold; margin-top: 5px;'>Não Funcionais (RNF)</p><p style='font-size: 0.7rem;'>Como o sistema <strong>é</strong> (ex: segurança, rapidez, cor).</p></div> </div>"
+                        },
+                        {
+                            "html": "<h2>Metáfora da Casa</h2><div class='metaphor-box' style='background: #e8f5e9; border-left: 5px solid #4caf50; padding: 15px; border-radius: 8px;'><p><i class='fa-solid fa-house'></i> <strong>Requisito Funcional:</strong> A casa deve ter 3 quartos e uma garagem.</p><p style='margin-top: 10px;'><i class='fa-solid fa-shield-halved'></i> <strong>Requisito Não Funcional:</strong> As paredes devem resistir a terramotos e a pintura deve ser azul.</p></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Requisitos",
+                        "descricao": "Dizer que 'O sistema deve processar pagamentos em menos de 2 segundos' é um exemplo de:",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Requisito Funcional.",
+                                "correta": false,
+                                "feedback": "Quase! O pagamento é funcional, mas a 'velocidade' é uma característica de qualidade (Não Funcional)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Requisito Não Funcional.",
+                                "correta": true,
+                                "feedback": "Exato! Performance, segurança e usabilidade são Requisitos Não Funcionais."
+                            }
+                        ]
+                    },
                     "item_ordem": 1
+                },
+                {
+                    "id": "historias-usuario",
+                    "title": "User Stories",
+                    "icone": "fa-solid fa-comment-dots",
+                    "banner_class": "logic",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/user-story.png' alt='User Stories'></div><div class='card-text'><h2>Histórias de Usuário</h2><p>No desenvolvimento ágil, escrevemos requisitos do ponto de vista de quem usa o sistema, usando uma fórmula simples:</p><div class='info-box-blue' style='background: #e3f2fd; padding: 15px; border-radius: 12px; font-family: sans-serif; margin-top: 20px;'><strong>Como um</strong> [perfil],<br><strong>Eu desejo</strong> [ação],<br><strong>Para que</strong> [valor/benefício].</div></div></div>"
+                        },
+                        {
+                            "html": "<h2>Exemplo Prático</h2><div class='modern-terminal' style='background: #2d2d2d; color: #fff; padding: 15px; border-radius: 8px; font-family: monospace;'><code>Como um <strong>cliente</strong>,<br>Eu desejo <strong>recuperar minha senha</strong>,<br>Para que eu <strong>não perca acesso às minhas compras</strong>.</code></div><p class='mt-10'>Isso ajuda a equipa a focar no <strong>porquê</strong> estamos construindo a funcionalidade.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Check-up Ágil",
+                        "descricao": "Qual é a principal vantagem de usar User Stories?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Tornar o documento mais longo e difícil de ler.",
+                                "correta": false,
+                                "feedback": "Pelo contrário, as histórias devem ser curtas e simples!"
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Focar na necessidade real do usuário e no valor de negócio.",
+                                "correta": true,
+                                "feedback": "Perfeito! O objetivo é humanizar o requisito técnico."
+                            }
+                        ]
+                    },
+                    "item_ordem": 2
                 }
             ]
         }

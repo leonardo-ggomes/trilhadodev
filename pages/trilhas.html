@@ -25,6 +25,12 @@
         </div>
     </header>
 
+    <div class="filter-container">
+        <div class="filter-scroll" id="filter-options">
+            <button class="filter-btn active" onclick="filtrar('todos')">Todas</button>
+        </div>
+    </div>
+
     <main class="trail-wrapper" id="trail-main">
         <div style="text-align: center; padding: 50px;">
             <i class="fa-solid fa-circle-notch fa-spin fa-3x" style="color: #127894;"></i>
@@ -39,16 +45,29 @@
     </footer>
 
     <script>
+        let todasTrilhasData = []; 
         async function carregarTrilhas() {
             try {
                 const response = await fetch('../data.json');
                 const data = await response.json();
+                todasTrilhasData = data.trilhas;
+
                 const wrapper = document.getElementById('trail-main');
+                const filterOptions = document.getElementById('filter-options');
                 wrapper.innerHTML = '';
 
-                data.trilhas.forEach(trilha => {
+                data.trilhas.forEach((trilha, index) => {
+                    // 1. Criar botão de filtro dinamicamente
+                    const btn = document.createElement('button');
+                    btn.className = 'filter-btn';
+                    btn.innerText = trilha.secao;
+                    btn.onclick = (e) => filtrar(trilha.secao, e.target);
+                    filterOptions.appendChild(btn);
+
+                    // 2. Criar a seção (mesmo código que você já tinha)
                     const section = document.createElement('section');
                     section.className = 'trail-section';
+                    section.setAttribute('data-categoria', trilha.secao); // Para o filtro
 
                     const itemsHTML = trilha.items.map(item => `
                 <div class="node-item">
@@ -64,30 +83,49 @@
                     <h2>${trilha.ordem}. ${trilha.secao}</h2>
                     <p>${trilha.descricao || ''}</p>
                 </div>
-                <div class="snake-container">
-                    ${itemsHTML}
-                </div>
+                <div class="snake-container">${itemsHTML}</div>
             `;
                     wrapper.appendChild(section);
                 });
 
-                // --- LÓGICA DE RESTAURAÇÃO DE SCROLL ---
-                const savedScroll = localStorage.getItem('trailScrollPos');
-                if (savedScroll) {
-                    // Usamos um pequeno timeout para garantir que o DOM foi renderizado e pintado
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: parseInt(savedScroll),
-                            behavior: 'instant' // 'smooth' pode ser estranho ao carregar
-                        });
-                        // Limpa para não rolar sozinho caso ele entre na página pela primeira vez depois
-                        localStorage.removeItem('trailScrollPos');
-                    }, 100);
-                }
+                // Restaurar scroll (seu código original)
+                restaurarScroll();
 
             } catch (error) {
-                console.error("Erro ao carregar trilhas:", error);
-                // ... seu código de erro
+                console.error("Erro ao carregar:", error);
+            }
+        }
+
+        function filtrar(categoria, elemento) {
+            // Atualizar botões ativos
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (elemento) {
+                elemento.classList.add('active');
+            } else {
+                document.querySelector('.filter-btn').classList.add('active');
+            }
+
+            // Filtrar Seções
+            const secoes = document.querySelectorAll('.trail-section');
+            secoes.forEach(secao => {
+                if (categoria === 'todos' || secao.getAttribute('data-categoria') === categoria) {
+                    secao.classList.remove('hidden');
+                } else {
+                    secao.classList.add('hidden');
+                }
+            });
+
+            // Scroll suave para o topo após filtrar
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function restaurarScroll() {
+            const savedScroll = localStorage.getItem('trailScrollPos');
+            if (savedScroll) {
+                setTimeout(() => {
+                    window.scrollTo({ top: parseInt(savedScroll), behavior: 'instant' });
+                    localStorage.removeItem('trailScrollPos');
+                }, 100);
             }
         }
 
