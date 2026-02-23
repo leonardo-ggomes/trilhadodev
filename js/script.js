@@ -1,5 +1,5 @@
 /**
- * Coders - Global Scripts
+ * TrilhaDoDev - Global Scripts
  * Este arquivo gerencia apenas interações globais e componentes comuns.
  * A lógica das aulas agora reside em 'lesson-engine.js'.
  */
@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
+
+    
 
     // 3. Inicialização
     highlightCurrentPage();

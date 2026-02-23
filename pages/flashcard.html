@@ -4,64 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula | Coders</title>
+    <title>Aula | TrilhaDoDev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="lesson-page">
     <div class="container">
-        <header class="navbar">
-            <div class="nav-container">
-                <a href="../index.html" class="logo">Coders<span>.</span></a>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="../index.html">Início</a></li>
-                        <li><a href="trilhas.html" class="active">Trilhas</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                    </ul>
-                </nav>
+        <header class="lesson-nav">
+            <div class="nav-content">
+                <a href="trilhas.html" class="btn-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+                
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-fill"></div>
+                </div>
+
+                <div class="lesson-stats">
+                    <span id="lesson-badge">
+                        <i class="fa-solid fa-layer-group"></i> 
+                        <span class="badge-text">Fundamentos e Lógica</span>
+                    </span>
+                </div>
             </div>
         </header>
 
-        <main class="content-wrapper">
-            <section class="lesson-hero">
-                <div class="lesson-header">
-                    <span class="badge" id="lesson-badge">CARREGANDO...</span>
-                    <h1><span id="lesson-main-title">Título da Aula</span> <i id="lesson-icon" class="fa fa-book-open"
-                            style="color: #007bff;"></i></h1>
-                    <div class="progress-wrapper"
-                        style="width: 100%; background: #e9ecef; height: 8px; border-radius: 20px; margin-top: 15px; overflow: hidden;">
-                        <div id="progress-bar"
-                            style="width: 0%; background: #007bff; height: 100%; transition: 0.4s ease;"></div>
-                    </div>
+        <main class="lesson-layout">
+            <header class="lesson-info">
+                <div class="tech-badge">
+                    <i id="lesson-icon" class="fa-brands fa-js"></i> </div>
+                <div class="text-group">
+                    <h1 id="lesson-main-title">Título da Aula</h1>
+                    <p id="lesson-subtitle">Conceitos fundamentais</p>
                 </div>
-            </section>
+            </header>
 
-            <div id="flashcard-container" style="min-height: 500px; position: relative;">
-                <div id="loading-spinner" style="text-align: center; padding: 100px;">
-                    <i class="fa-solid fa-circle-notch fa-spin fa-3x"></i>
+            <div id="flashcard-container">
+                <div id="loading-spinner">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i>
+                    <p>Preparando sua lição...</p>
                 </div>
-            </div>
-
-            <div class="carousel-controls" style="display: flex; justify-content: space-between; margin-top: 30px;">
-                <button id="prevBtn" class="btn-secondary" style="visibility: hidden;">
-                    <i class="fa-solid fa-chevron-left"></i> Anterior
-                </button>
-                <button id="nextBtn" class="btn-main">
-                    Próximo <i class="fa-solid fa-chevron-right"></i>
-                </button>
             </div>
         </main>
 
-        <footer class="main-footer">
-            <div class="footer-bottom">
-                <p><i class="fa-solid fa-mug-hot"></i> 2026 Coders | Leonardo Garcia</p>
+        <footer class="lesson-footer">
+            <div class="footer-content">
+                <button id="prevBtn" class="btn-back">
+                    Anterior
+                </button>
+                
+                <button id="nextBtn" class="btn-next">
+                    CONTINUAR
+                </button>
             </div>
         </footer>
     </div>
 
     <script src="../js/lesson-engine.js"></script>
 </body>
-
 </html>

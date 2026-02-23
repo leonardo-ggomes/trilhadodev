@@ -6,6 +6,133 @@
             "classe_estilo": "logic",
             "items": [
                 {
+                    "id": "logica-programacao",
+                    "item_ordem": 1,
+                    "title": "Lógica de Programação",
+                    "icone": "fa-solid fa-brain",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/logic_intro.png' alt='Lógica de Programação'></div><div class='card-text'><h2>O que é Lógica?</h2><p>A <strong>Lógica de Programação</strong> é a organização coerente de pensamentos para atingir um objetivo. É a técnica de encadear pensamentos para resolver um problema.</p><ul class='feature-list mt-10'><li><strong>Sequência:</strong> Passos ordenados.</li><li><strong>Instrução:</strong> Comandos claros para a máquina.</li><li><strong>Resultado:</strong> A solução do problema original.</li></ul></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Quem trouxe esse conceito? 📜</h2><p>Embora a lógica exista desde a Grécia Antiga com Aristóteles, a lógica aplicada à computação deve muito a:</p><div class='card-grid-small mt-20'><div class='info-box-white'><h3>Ada Lovelace</h3><p>Considerada a <strong>primeira programadora</strong> do mundo. Criou o primeiro algoritmo para ser processado por uma máquina.</p></div><div class='info-box-white'><h3>George Boole</h3><p>Criador da <strong>Álgebra Booleana</strong> (Verdadeiro ou Falso), que é a base de toda a eletrônica digital e programação.</p></div></div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Lógica no Dia a Dia ☕</h2><p>Você usa lógica o tempo todo, mesmo sem perceber. Quer ver um exemplo? <strong>Fazer um café:</strong></p><div class='terminal mt-10'><ol><li>Pegar a cafeteira.</li><li>Colocar água no reservatório.</li><li>Adicionar o pó no filtro.</li><li>Ligar a máquina.</li><li>Esperar o café ficar pronto.</li></ol></div><p class='mt-10'>Se você inverter a ordem (ligar antes de colocar água), o 'programa' falha!</p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>O Algoritmo 🤖</h2><p>O resultado da sua lógica é o <strong>Algoritmo</strong>. Ele é como uma 'receita de bolo' que o computador segue cegamente.</p><div class='info-box-white mt-20'><h4>Características de um bom algoritmo:</h4><ul class='feature-list'><li><strong>Finito:</strong> Deve ter um fim.</li><li><strong>Definido:</strong> Sem ambiguidades (passos claros).</li><li><strong>Eficaz:</strong> Deve realmente resolver o problema proposto.</li></ul></div>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Pensamento Computacional 🧠</h2><p>Para programar, dividimos os problemas em 4 pilares:</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Pilar</th><th>Ação</th></tr></thead><tbody><tr><td><strong>Decomposição</strong></td><td>Dividir o problemão em probleminhas.</td></tr><tr><td><strong>Padrões</strong></td><td>Identificar o que se repete.</td></tr><tr><td><strong>Abstração</strong></td><td>Focar no que é importante, ignorar o resto.</td></tr><tr><td><strong>Algoritmos</strong></td><td>Criar o passo a passo final.</td></tr></tbody></table></div>"
+                        },
+                        {
+                            "ordem": 6,
+                            "html": "<h2>Lógica vs. Sintaxe 🛠️</h2><p>Muitos iniciantes confundem os dois, mas são coisas bem diferentes:</p><div class='card-grid-small mt-20'><div style='border-left:4px solid #1cb0f6; padding-left:10px;'><h4>Lógica</h4><p>É o <strong>O QUE</strong> fazer. O raciocínio puro. Independe da língua.</p></div><div style='border-left:4px solid #58cc02; padding-left:10px;'><h4>Sintaxe</h4><p>É o <strong>COMO</strong> escrever. As regras da linguagem (JavaScript, Python, etc).</p></div></div>"
+                        },
+                        {
+                            "ordem": 7,
+                            "html": "<div class='card-text'><h2>Por onde começar?</h2><p>Antes de decorar comandos de JavaScript, treine seu cérebro para pensar em passos. Escreva seus processos diários no papel.</p><blockquote class='mt-20'>'Programar não é sobre o que você sabe, é sobre como você consegue descobrir as coisas.'</blockquote></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Introdução",
+                        "descricao": "<p class='font-20'>Se um algoritmo para atravessar a rua não tiver o passo <strong>'Olhar para os dois lados'</strong>, o que acontece?</p>",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "O computador corrige o erro sozinho.",
+                                "correta": false,
+                                "feedback": "Errado. Computadores são obedientes, mas não têm bom senso. Eles farão exatamente o que você mandou."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "O algoritmo possui um erro de lógica (bug).",
+                                "correta": true,
+                                "feedback": "Correto! Um passo essencial foi esquecido, o que torna o processo perigoso ou ineficaz. Isso é um erro de lógica."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "É um erro de sintaxe.",
+                                "correta": false,
+                                "feedback": "Não. Sintaxe é sobre a escrita gramatical do código. Aqui o problema é o raciocínio."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "fluxogramas",
+                    "item_ordem": 2,
+                    "title": "Fluxogramas",
+                    "icone": "fa-solid fa-diagram-project",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/flowchart_intro.png' alt='O que é fluxograma'></div><div class='card-text'><h2>O que é um Fluxograma?</h2><p>Um <strong>fluxograma</strong> é a representação visual de um processo ou algoritmo. Ele utiliza símbolos geométricos para descrever o passo a passo de uma solução.</p><ul class='feature-list mt-10'><li><strong>Clareza:</strong> Facilita o entendimento de processos complexos.</li><li><strong>Padronização:</strong> Usa símbolos mundiais.</li><li><strong>Lógica:</strong> Ajuda a identificar erros antes de escrever o código.</li></ul></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Início e Fim 🏁</h2><p>Todo processo precisa de um ponto de partida e um ponto de encerramento. Para isso, usamos o <strong>Terminal</strong>.</p><div class='info-box-white mt-20' style='display:flex; align-items:center; gap:20px;'><div style='background:#f3f4f6; padding:10px 30px; border-radius:50px; border:2px solid #333; font-weight:800;'>INÍCIO</div><p>Representado por um oval (ou retângulo arredondado), ele indica onde a execução começa e termina.</p></div>"
+                        },
+                        {
+                            "ordem": 3,
+                            "html": "<h2>Entrada e Saída</h2><p>Quando o programa precisa receber dados do usuário ou exibir um resultado, usamos o <strong>Paralelogramo</strong>.</p><div class='card-grid-small mt-20'><div class='info-box-white'><h3>Entrada</h3><p>Ex: Ler a idade do usuário.</p></div><div class='info-box-white'><h3>Saída</h3><p>Ex: Mostrar 'Acesso Permitido'.</p></div></div><p class='mt-10' style='text-align:center;'><i class='fa-solid fa-arrow-down'></i></p>"
+                        },
+                        {
+                            "ordem": 4,
+                            "html": "<h2>Processamento</h2><p>O <strong>Retângulo</strong> é o operário do fluxograma. Ele representa cálculos, atribuições de variáveis ou qualquer ação interna.</p><div class='terminal mt-20' style='text-align:center; font-size:1.2rem; background:#e3f2fd; color:#1cb0f6; border:2px solid #1cb0f6;'>soma = a + b</div><p class='mt-10'>Qualquer manipulação de dados acontece dentro de um bloco de processamento.</p>"
+                        },
+                        {
+                            "ordem": 5,
+                            "html": "<h2>Decisão (O Losango) </h2><p>É aqui que o caminho se divide. O <strong>Losango</strong> representa uma pergunta que só tem duas respostas possíveis: <strong>Sim</strong> ou <strong>Não</strong>.</p><div class='card-grid-small mt-10'><div style='border-left:4px solid #58cc02; padding-left:10px;'><h4>Caminho Verdadeiro</h4><p>Se a condição for atendida.</p></div><div style='border-left:4px solid #ff4b4b; padding-left:10px;'><h4>Caminho Falso</h4><p>Se a condição for ignorada.</p></div></div>"
+                        },
+                        {
+                            "ordem": 6,
+                            "html": "<h2>Setas de Fluxo ⬇</h2><p>As setas são as 'estradas' que conectam os símbolos. Elas determinam a <strong>ordem de execução</strong>.</p><blockquote class='mt-20'><strong>Regra Importante:</strong> O fluxo deve ser sempre lógico e contínuo. Se uma seta sai de um símbolo, ela deve obrigatoriamente chegar em outro (ou no Fim).</blockquote>"
+                        },
+                        {
+                            "ordem": 7,
+                            "html": "<div class='card-text'><h2>Exemplo Prático: Beber Café ☕</h2><p>Como seria o fluxograma?</p><ul class='feature-list'><li><strong>Início</strong></li><li><strong>Processo:</strong> Coar o café.</li><li><strong>Decisão:</strong> Está amargo?</li><li><strong>Se Sim:</strong> Adicionar açúcar (volta para a decisão).</li><li><strong>Se Não:</strong> Beber café.</li><li><strong>Fim</strong></li></ul></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Lógica Visual",
+                        "descricao": "<p class='font-20'>Qual símbolo geométrico deve ser usado em um fluxograma para representar a pergunta: <strong>'O usuário é maior de idade?'</strong></p>",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Retângulo",
+                                "correta": false,
+                                "feedback": "Quase! O retângulo serve para ações e cálculos, não para perguntas."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Paralelogramo",
+                                "correta": false,
+                                "feedback": "O paralelogramo é usado para entrada e saída de dados (leitura e escrita)."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "Losango",
+                                "correta": true,
+                                "feedback": "Exato! O losango representa decisões e desvios condicionais (Sim ou Não)."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "ordem": 2,
+            "secao": "Javascript",
+            "classe_estilo": "tools",
+            "items": [
+                {
                     "id": "variaveis",
                     "item_ordem": 1,
                     "title": "Variáveis",
@@ -42,7 +169,7 @@
                                 "ordem": "B",
                                 "descricao": "let 2nome = 'Ana';",
                                 "correta": true,
-                                "feedback": "🎯 Acertou! Identificadores não podem começar com números em JavaScript."
+                                "feedback": " Acertou! Identificadores não podem começar com números em JavaScript."
                             },
                             {
                                 "ordem": "C",
@@ -52,6 +179,51 @@
                             }
                         ]
                     }
+                },
+                {
+                    "id": "logic-conditionals-intro",
+                    "title": "Estruturas Condicionais",
+                    "icone": "fa-solid fa-code-branch",
+                    "banner_class": "logic",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Lógica If Else'></div><div class='card-text'><h2>O que é If/Else?</h2><p>É uma estrutura que permite ao seu código tomar <strong>decisões</strong>. Ele executa um bloco de comandos <strong>se</strong> uma condição for verdadeira, e outro <strong>caso contrário</strong>.</p><div class='info-box-blue' style='background: #e1f5fe; padding: 10px; border-left: 4px solid #03a9f4; border-radius: 4px; margin-top: 10px;'><p><i class='fa-solid fa-circle-info'></i> Pense nisso como uma bifurcação na estrada: você só pode seguir um caminho por vez!</p></div></div></div>"
+                        },
+                        {
+                            "html": "<h2>Sintaxe Básica</h2><p>A condição fica sempre entre parênteses e o código a ser executado fica protegido por chaves:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 10px;'><code><span style='color: #569cd6;'>if</span> (condicao) { <br>&nbsp;&nbsp;<span style='color: #6a9955;'>// código se for verdadeiro</span> <br>} <span style='color: #569cd6;'>else</span> { <br>&nbsp;&nbsp;<span style='color: #6a9955;'>// código se for falso</span> <br>}</code></div>"
+                        },
+                        {
+                            "html": "<h2>Exemplo: Escolha do Herói</h2><p>O <code>else if</code> nos permite testar várias condições em sequência antes de desistir no <code>else</code>:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin: 10px 0;'><code><span style='color: #569cd6;'>var</span> heroi = <span style='color: #ce9178;'>\"Hulk\"</span>;<br><br><span style='color: #569cd6;'>if</span> (heroi === <span style='color: #ce9178;'>\"Thor\"</span>) {<br>&nbsp;&nbsp;console.log(<span style='color: #ce9178;'>\"Trovão!\"</span>);<br>} <span style='color: #569cd6;'>else if</span> (heroi === <span style='color: #ce9178;'>\"Hulk\"</span>) {<br>&nbsp;&nbsp;console.log(<span style='color: #ce9178;'>\"Esmagar!\"</span>);<br>} <span style='color: #569cd6;'>else</span> {<br>&nbsp;&nbsp;console.log(<span style='color: #ce9178;'>\"Humano comum.\"</span>);<br>}</code></div>"
+                        },
+                        {
+                            "html": "<h2>Operadores Lógicos</h2><p>Para decisões complexas, combinamos condições:</p><ul class='check-list' style='list-style: none; padding-left: 0; margin-top: 15px;'><li><i class='fa-solid fa-link' style='color: #f7df1e;'></i> <code>&&</code> (E): <strong>Tudo</strong> precisa ser verdade.</li><li><i class='fa-solid fa-distribute-spacing-horizontal' style='color: #f7df1e;'></i> <code>||</code> (OU): <strong>Pelo menos um</strong> precisa ser verdade.</li><li><i class='fa-solid fa-circle-exclamation' style='color: #f7df1e;'></i> <code>!</code> (NÃO): Inverte o valor (o que é true vira false).</li></ul>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Lógica",
+                        "descricao": "Qual bloco de código será executado se a condição dentro do 'if' resultar em 'false'?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "O próprio bloco if",
+                                "correta": false,
+                                "feedback": "Não. O bloco 'if' só ganha vida quando a condição é estritamente verdadeira."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "O bloco else",
+                                "correta": true,
+                                "feedback": " Exato! O 'else' é o nosso plano de contingência para qualquer resultado falso."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "Nenhum código será executado",
+                                "correta": false,
+                                "feedback": "Incorreto. Se houver um bloco 'else' definido, ele será executado obrigatoriamente se o 'if' falhar."
+                            }
+                        ]
+                    },
+                    "item_ordem": 2
                 },
                 {
                     "id": "switch",
@@ -85,7 +257,7 @@
                                 "ordem": "B",
                                 "descricao": "Ele executa o próximo caso automaticamente.",
                                 "correta": true,
-                                "feedback": "🎯 Exato! Isso é chamado de 'fall-through' (atravessamento)."
+                                "feedback": " Exato! Isso é chamado de 'fall-through' (atravessamento)."
                             },
                             {
                                 "ordem": "C",
@@ -94,11 +266,57 @@
                                 "feedback": "Errado! Ele continua 'escorregando' para os próximos blocos."
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 3
+                },
+                {
+                    "id": "logica-while",
+                    "title": "While",
+                    "icone": "fa-brands fa-square-js",
+                    "banner_class": "logic",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Programação'></div><div class='card-text'><h2>O que é o While?</h2><p>Em tradução livre, <strong>While</strong> significa \"Enquanto\". Ele cria um laço que repete um bloco de código repetidamente <strong>enquanto</strong> uma condição for verdadeira.</p><div class='info-box-blue'><p><i class='fa-solid fa-circle-info'></i> Pense nele como um guarda de segurança que só deixa o código passar se a senha (condição) estiver correta.</p></div></div></div>"
+                        },
+                        {
+                            "html": "<h2>O Fluxo de Decisão</h2><p>Antes de cada repetição, o computador faz uma checagem:</p><div class='flowchart-mini' style='display: flex; flex-direction: column; gap: 10px; align-items: center; margin: 20px 0;'><div class='p-10 border-blue' style='border: 1px solid #1cb0f6; padding: 10px; border-radius: 5px;'>A condição é Verdadeira?</div><i class='fa-solid fa-arrow-down'></i><div class='p-10' style='background: #e8f5e9; border: 1px solid #2ecc71; padding: 10px; border-radius: 5px;'>Sim: Executa o código e volta ao início</div><i class='fa-solid fa-arrow-down'></i><div class='p-10' style='background: #ffebee; border: 1px solid #e74c3c; padding: 10px; border-radius: 5px;'>Não: Encerra o laço e segue o programa</div></div><p><strong>Atenção:</strong> Se a condição for falsa na primeira vez, o código nunca será executado.</p>"
+                        },
+                        {
+                            "html": "<h2>Sintaxe e Exemplo</h2><div class='card-grid' style='gap: 20px;'><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #6a9955;'>// Estrutura</span><br><span style='color: #c586c0;'>while</span>(condicao) {<br>&nbsp;&nbsp;<span style='color: #ce9178;'>// Repete isto</span><br>}</div><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #6a9955;'>// Contador real</span><br><span style='color: #569cd6;'>let</span> c = 0;<br><span style='color: #c586c0;'>while</span>(c < 3) {<br>&nbsp;&nbsp;console.log(c);<br>&nbsp;&nbsp;c++; <span style='color: #6a9955;'>// Importante!</span><br>}</div></div>"
+                        },
+                        {
+                            "html": "<h2 style='color: #e74c3c;'><i class='fa-solid fa-triangle-exclamation'></i> Perigo: Loop Infinito</h2><p>Se você esquecer de atualizar a variável (como o <code>c++</code>), a condição será sempre verdadeira.</p><div class='warning-box' style='background: #fff5f5; padding: 15px; border-left: 5px solid #e74c3c; margin-top: 15px;'><p>O navegador tentará processar o código para sempre, o que causará o <strong>travamento da aba ou do sistema</strong>.</p></div><div class='mt-10'><a href='https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while' target='_blank' class='btn-secondary' style='display: inline-block; text-decoration: none; padding: 10px 20px; background: #f0f0f0; border-radius: 5px; color: #333;'>Ver documentação MDN</a></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Lógica",
+                        "descricao": "O que acontece se a condição do <code>while</code> for <strong>falsa</strong> logo na primeira verificação?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "O código executa uma vez e para.",
+                                "correta": false,
+                                "feedback": "Incorreto. Diferente do 'do-while', o 'while' checa a condição antes de qualquer execução."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "O código dentro do laço é ignorado.",
+                                "correta": true,
+                                "feedback": " Correto! Se a condição inicial é falsa, o bloco de repetição nem chega a ser aberto."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "O navegador trava (Loop Infinito).",
+                                "correta": false,
+                                "feedback": "Pelo contrário! O navegador trava quando a condição nunca deixa de ser verdadeira."
+                            }
+                        ]
+                    },
+                    "item_ordem": 4
                 },
                 {
                     "id": "logica-for",
-                    "title": "Estrutura For",
+                    "title": "For",
                     "icone": "fa-brands fa-square-js",
                     "banner_class": "logic",
                     "flashcards": [
@@ -126,7 +344,7 @@
                                 "ordem": "B",
                                 "descricao": "3 vezes",
                                 "correta": true,
-                                "feedback": "🎯 Perfeito! O loop conta: 0, 1, 2. Quando chega em 3, a condição (3 < 3) torna-se falsa e ele para."
+                                "feedback": " Perfeito! O loop conta: 0, 1, 2. Quando chega em 3, a condição (3 < 3) torna-se falsa e ele para."
                             },
                             {
                                 "ordem": "C",
@@ -135,11 +353,12 @@
                                 "feedback": "Incorreto. Para aparecer 4 vezes, a condição deveria ser (i <= 3) ou (i < 4)."
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 5
                 },
                 {
                     "id": "logica-do-while",
-                    "title": "Estrutura Do-While",
+                    "title": "Do-While",
                     "icone": "fa-brands fa-square-js",
                     "banner_class": "logic",
                     "flashcards": [
@@ -167,7 +386,7 @@
                                 "ordem": "B",
                                 "descricao": "O código executará exatamente 1 vez.",
                                 "correta": true,
-                                "feedback": "🎯 Exato! Como o 'do' vem antes do teste, ele roda o bloco uma vez e só depois percebe que 10 não é menor que 5."
+                                "feedback": " Exato! Como o 'do' vem antes do teste, ele roda o bloco uma vez e só depois percebe que 10 não é menor que 5."
                             },
                             {
                                 "ordem": "C",
@@ -176,51 +395,633 @@
                                 "feedback": "Não. Como 10 não é menor que 5, a condição será falsa logo no primeiro teste após a execução."
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 6
                 },
                 {
-                    "id": "back-json",
-                    "title": "Entendendo o JSON",
-                    "icone": "fa-solid fa-code",
-                    "banner_class": "back",
+                    "id": "logica-functions",
+                    "title": "Functions",
+                    "icone": "fa-brands fa-square-js",
+                    "banner_class": "logic",
                     "flashcards": [
                         {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Conceito JSON'></div><div class='card-text'><h2>O que é JSON?</h2><p><strong>JavaScript Object Notation</strong> é um formato leve para troca de dados.</p><p>Embora tenha 'JavaScript' no nome, ele é independente de linguagem e usado por quase todas as tecnologias modernas para enviar informações entre servidor e navegador.</p></div></div>"
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Conceito Function'></div><div class='card-text'><h2>O que é uma Função?</h2><p>Uma <strong>Function</strong> é um bloco de código projetado para executar uma tarefa específica. Pense nela como uma 'receita' que você escreve uma vez e pode usar sempre que precisar.</p><ul class='feature-list mt-10' style='list-style: none; padding-left: 0;'><li><i class='fa-solid fa-recycle' style='color: #f7df1e;'></i> <strong>Reutilização:</strong> Escreva uma vez, use várias.</li><li><i class='fa-solid fa-sitemap' style='color: #f7df1e;'></i> <strong>Organização:</strong> Divide problemas grandes em partes menores.</li><li><i class='fa-solid fa-hand-pointer' style='color: #f7df1e;'></i> <strong>Invocação:</strong> Ela só executa quando você a 'chama'.</li></ul></div></div>"
                         },
                         {
-                            "html": "<div class='card-header-icon'><i class='fa-solid fa-bolt' style='color: #f1c40f;'></i></div><h2>Por que usar JSON?</h2><ul class='check-list' style='list-style: none; padding-left: 0;'><li><i class='fa-solid fa-check' style='color: #2ecc71;'></i> <strong>Leve:</strong> Arquivos pequenos que carregam rápido.</li><li><i class='fa-solid fa-check' style='color: #2ecc71;'></i> <strong>Legível:</strong> Fácil para humanos lerem e computadores processarem.</li><li><i class='fa-solid fa-check' style='color: #2ecc71;'></i> <strong>Universal:</strong> Funciona em Python, Java, PHP, Node.js, etc.</li></ul>"
+                            "html": "<h2>Anatomia da Função</h2><p>Para definir uma função, usamos a palavra-chave e um nome seguido de parênteses:</p><div class='terminal mt-20' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #c586c0;'>function</span> <span style='color: #dcdcaa;'>nomeDaFuncao</span>(<span style='color: #9cdcfe;'>parametro1, parametro2</span>) {<br>&nbsp;&nbsp;<span style='color: #6a9955;'>// A lógica fica aqui dentro</span><br>&nbsp;&nbsp;<span style='color: #c586c0;'>return</span> resultado;<br>}</div><div class='info-box-blue mt-10' style='background: #e3f2fd; padding: 10px; border-radius: 8px; border-left: 4px solid #3498db;'><p><i class='fa-solid fa-circle-info' style='color: #3498db;'></i> Os <strong>parâmetros</strong> funcionam como túneis: eles levam dados de fora para dentro da função.</p></div>"
                         },
                         {
-                            "html": "<div class='card-header-icon'><i class='fa-solid fa-brackets-curly' style='color: #3498db;'></i></div><h2>Chave e Valor</h2><p>A estrutura básica do JSON é composta por pares de <strong>\"chave\": \"valor\"</strong> dentro de chaves <code>{ }</code>.</p><div class='info-box-blue' style='background: #e3f2fd; padding: 15px; border-radius: 8px; font-family: monospace; border-left: 4px solid #3498db;'><pre style='margin:0;'>{<br>  \"nome\": \"Leonardo\",<br>  \"idade\": 25<br>}</pre></div><p style='margin-top:10px;'>As chaves devem estar sempre entre <strong>aspas duplas</strong>!</p>"
+                            "html": "<div class='card-grid'><div class='card-text'><h2>A palavra Return</h2><p>O <code>return</code> finaliza a função e envia um valor de volta para quem a chamou.</p><div class='terminal mt-10' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #c586c0;'>function</span> <span style='color: #dcdcaa;'>somar</span>(a, b) {<br>&nbsp;&nbsp;<span style='color: #c586c0;'>return</span> a + b;<br>}<br><br><span style='color: #569cd6;'>let</span> total = <span style='color: #dcdcaa;'>somar</span>(<span style='color: #b5cea8;'>10</span>, <span style='color: #b5cea8;'>5</span>); <span style='color: #6a9955;'>// total guarda 15</span></div></div><div class='card-image' style='text-align: right;'><img src='../public/svg/undraw_speech_to_text_re_8mtf.svg' alt='Return' style='max-width: 150px;'></div></div>"
                         },
                         {
-                            "html": "<h2>Tipos de Dados</h2><p>JSON aceita strings, números, booleanos, arrays e até outros objetos:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><pre style='margin:0;'>{<br>  <span style='color: #9cdcfe;'>\"titulo\"</span>: <span style='color: #ce9178;'>\"O Pequeno Príncipe\"</span>,<br>  <span style='color: #9cdcfe;'>\"ano\"</span>: <span style='color: #b5cea8;'>1943</span>,<br>  <span style='color: #9cdcfe;'>\"eFiccao\"</span>: <span style='color: #569cd6;'>true</span>,<br>  <span style='color: #9cdcfe;'>\"generos\"</span>: [<span style='color: #ce9178;'>\"Novela\"</span>, <span style='color: #ce9178;'>\"Infantil\"</span>]<br>}</pre></div>"
+                            "html": "<h2>Invocando (Chamando)</h2><p>O operador <strong>( )</strong> é o gatilho da mágica. Sem ele, a função é apenas um texto guardado na memória.</p><div class='terminal mt-10' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #6a9955;'>// Apenas referência (não faz nada):</span><br><span style='color: #569cd6;'>let</span> x = minhaFuncao;<br><br><span style='color: #6a9955;'>// Execução real (o código roda):</span><br><span style='color: #569cd6;'>let</span> y = <span style='color: #dcdcaa;'>minhaFuncao</span>();</div>"
                         }
                     ],
                     "quiz": {
-                        "title": "Desafio de Sintaxe",
-                        "descricao": "Qual das opções abaixo representa um formato JSON <strong>válido</strong>?",
+                        "title": "Desafio de Funções",
+                        "descricao": "O que acontece com o código dentro de uma função após a linha do <code>return</code> ser executada?",
                         "opcoes": [
                             {
                                 "ordem": "A",
-                                "descricao": "{ nome: 'Leo' }",
-                                "correta": false,
-                                "feedback": "Incorreto! No JSON, tanto as chaves quanto as strings de valor DEVEM usar aspas duplas (\")."
+                                "descricao": "A função para imediatamente e o restante é ignorado.",
+                                "correta": true,
+                                "feedback": " Exato! O return é o 'ponto final' da função. Ele ejeta a execução para fora com o resultado."
                             },
                             {
                                 "ordem": "B",
-                                "descricao": "{ \"nome\": \"Leo\" }",
-                                "correta": true,
-                                "feedback": "🚀 Perfeito! Chaves e valores de texto com aspas duplas são a regra de ouro do JSON."
+                                "descricao": "O código continua rodando até fechar as chaves { }.",
+                                "correta": false,
+                                "feedback": "Incorreto. Se o processador encontra um return, ele ignora tudo o que estiver abaixo dele dentro daquela função."
                             },
                             {
                                 "ordem": "C",
-                                "descricao": "{ \"nome\" = \"Leo\" }",
+                                "descricao": "O return só funciona se estiver na última linha da função.",
                                 "correta": false,
-                                "feedback": "Ops! O JSON utiliza dois-pontos (:) para separar chave e valor, não o sinal de igual."
+                                "feedback": "Não! Você pode usar o return em qualquer lugar (como dentro de um if) para encerrar a função mais cedo."
+                            }
+                        ]
+                    },
+                    "item_ordem": 7
+                },
+                {
+                    "id": "logic-arrays-intro",
+                    "title": "Arrays",
+                    "icone": "fa-solid fa-layer-group",
+                    "banner_class": "logic",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-text'><h2>O Problema da Escala</h2><p>Imagine que você precisa guardar o nome de 300 filmes. Criar 300 variáveis (<code>filme1, filme2...</code>) seria impossível de gerenciar.</p><div class='terminal mt-10' style='background: #1e1e1e; color: #d4d4d4; padding: 10px; border-radius: 5px;'><code><span style='color: #6a9955;'>// Jeito cansativo:</span><br><span style='color: #c586c0;'>let</span> f1 = <span style='color: #ce9178;'>\"Batman\"</span>;<br><span style='color: #c586c0;'>let</span> f2 = <span style='color: #ce9178;'>\"Barbie\"</span>;</code></div><p class='mt-10'><strong>O Array resolve isso!</strong> Ele é uma lista única que guarda múltiplos valores sob um único nome.</p></div><div class='card-image'><img src='../public/svg/undraw_access_denied_re_awnf.svg' alt='Problema de escala'></div></div>"
+                        },
+                        {
+                            "html": "<h2>Como funciona o Índice?</h2><p>No JavaScript, cada item no Array tem um endereço numérico chamado <strong>índice</strong>. O detalhe crucial: <strong>A contagem começa sempre no ZERO.</strong></p><div class='info-box-white' style='background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-top: 20px;'><p>Para acessar o primeiro item, você usa <code>[0]</code>. Para o segundo, <code>[1]</code>, e assim por diante. É o 'endereço' do dado na memória.</p></div>"
+                        },
+                        {
+                            "html": "<h2>Declarando e Lendo</h2><p>Usamos colchetes <code>[ ]</code> para criar a lista e para acessar os valores nela contidos:</p><div class='terminal mt-20' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px;'><code><span style='color: #c586c0;'>const</span> filmes = [<span style='color: #ce9178;'>\"Batman\"</span>, <span style='color: #ce9178;'>\"Barbie\"</span>];<br><br><span style='color: #6a9955;'>// Lendo o segundo filme:</span><br>console.log(filmes[<span style='color: #b5cea8;'>1</span>]); <span style='color: #6a9955;'>// Saída: \"Barbie\"</span><br><br><span style='color: #6a9955;'>// Alterando o valor:</span><br>filmes[<span style='color: #b5cea8;'>0</span>] = <span style='color: #ce9178;'>\"Spider-Man\"</span>;</code></div>"
+                        },
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/svg/undraw_programming_re_kg9v.svg' alt='Programação de listas'></div><div class='card-text'><h2>A Propriedade .length</h2><p>Como saber quantos itens existem na lista sem contar um por um? Usamos o <code>.length</code>.</p><p class='mt-10'>Se um array tem 3 itens, o <code>length</code> é 3, mas o último índice será sempre <strong>length - 1</strong> (ou seja, 2).</p></div></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio do Índice",
+                        "descricao": "Se eu tenho 'let cores = [\"Azul\", \"Verde\", \"Vermelho\"]', como eu acesso a cor 'Verde'?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "cores[0]",
+                                "correta": false,
+                                "feedback": "Quase! cores[0] retornaria \"Azul\", o primeiro item."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "cores[1]",
+                                "correta": true,
+                                "feedback": "✅ Exato! Como o índice começa em 0, o segundo item (Verde) está na posição 1."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "cores[2]",
+                                "correta": false,
+                                "feedback": "Não. cores[2] retornaria \"Vermelho\", o terceiro item da lista."
+                            }
+                        ]
+                    },
+                    "item_ordem": 8
+                }
+            ]
+        },
+        {
+            "ordem": 3,
+            "secao": "Front-End",
+            "classe_estilo": "front",
+            "items": [
+                {
+                    "id": "projetos",
+                    "title": "O Universo Front-End",
+                    "icone": "fa-brands fa-html5",
+                    "banner_class": "front",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/front-undraw.svg' alt='Desenvolvimento Front-End'></div><div class='card-text'><h2>O que é Front-End?</h2><p>É a parte do código com a qual o usuário interage diretamente. Envolve a construção da interface gráfica, layouts e a interatividade de um site ou aplicativo.</p><p>O desenvolvedor front-end transforma designs estáticos em experiências digitais vivas.</p></div></div>"
+                        },
+                        {
+                            "html": "<div class='card-header-icon'><i class='fa-solid fa-layer-group'></i></div><h2>A Tríade Fundamental</h2><p>Toda interface moderna é construída sobre três pilares:</p><ul class='check-list'><li><i class='fa-brands fa-html5'></i> <strong>HTML:</strong> A estrutura e o conteúdo da página.</li><li><i class='fa-brands fa-css3-alt'></i> <strong>CSS:</strong> O estilo, cores, fontes e posicionamento.</li><li><i class='fa-brands fa-js'></i> <strong>JavaScript:</strong> A lógica e o comportamento dinâmico.</li></ul>"
+                        },
+                        {
+                            "html": "<div class='card-header-icon'><i class='fa-solid fa-pen-nib'></i></div><h2>UX e UI Design</h2><p>Não basta apenas codar, é preciso projetar para pessoas:</p><div class='info-box-blue'><p><strong>UI (User Interface):</strong> O visual. É o que o usuário vê (botões, cores, tipografia).</p><p><strong>UX (User Experience):</strong> O sentimento. É como o usuário se sente ao navegar (facilidade, fluidez).</p></div>"
+                        },
+                        {
+                            "html": "<h2>Dê vida à interface</h2><p>O objetivo principal é oferecer a melhor experiência possível, garantindo acessibilidade e performance em qualquer dispositivo.</p><div class='mt-10 text-center'><a href='../public/pdf/whats-is-frontend.pdf' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none;'>Baixar Guia Front-End <i class='fa-solid fa-cloud-download'></i></a></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Carreira",
+                        "descricao": "Qual tecnologia é responsável por definir o <strong>comportamento e a lógica</strong> de interação em uma página web?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "HTML",
+                                "correta": false,
+                                "feedback": "O HTML cuida apenas da estrutura e do conteúdo bruto."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "CSS",
+                                "correta": false,
+                                "feedback": "O CSS é responsável apenas pela aparência e posicionamento visual."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "JavaScript",
+                                "correta": true,
+                                "feedback": " Exato! O JavaScript é o cérebro que processa as ações e a lógica do usuário."
+                            }
+                        ]
+                    },
+                    "item_ordem": 1
+                },
+                {
+                    "id": "css-flexbox-master",
+                    "title": "CSS Flexbox",
+                    "icone": "fa-brands fa-css3-alt",
+                    "banner_class": "frontend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/front-undraw.svg' alt='Layout Flexível'></div><div class='card-text'><h2>O que é Flexbox?</h2><p>É um sistema de layout <strong>unidimensional</strong> que organiza elementos em linhas ou colunas de forma inteligente.</p><div class='info-box-blue' style='background: #e7f3ff; padding: 10px; border-left: 4px solid #264de4; border-radius: 4px;'><p><i class='fa-solid fa-lightbulb' style='color: #264de4;'></i> A mágica começa ao aplicar <code>display: flex;</code> no elemento pai!</p></div></div></div>"
+                        },
+                        {
+                            "html": "<h2>O Pai e os Filhos</h2><p>O Flexbox trabalha com uma hierarquia direta:</p><div class='concept-grid' style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;'><div style='padding: 10px; border: 1px solid #264de4; border-radius: 8px;'><h3>Flex Container</h3><p>O elemento pai. Define as regras de alinhamento.</p></div><div style='padding: 10px; border: 1px solid #264de4; border-radius: 8px;'><h3>Flex Items</h3><p>Os filhos diretos. Eles se ajustam conforme as ordens do pai.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Entendendo os Eixos</h2><p>O segredo está em dominar os dois eixos invisíveis:</p><ul class='check-list' style='list-style: none; padding-left: 0; margin-top: 15px;'><li><i class='fa-solid fa-arrows-left-right' style='color: #264de4;'></i> <strong>Main Axis:</strong> Eixo principal (onde os itens 'correm').</li><li><i class='fa-solid fa-arrows-up-down' style='color: #264de4;'></i> <strong>Cross Axis:</strong> Eixo perpendicular ao principal.</li></ul>"
+                        },
+                        {
+                            "html": "<h2>Propriedades Essenciais</h2><p>As ferramentas que você mais usará no dia a dia:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin: 15px 0;'><code><span style='color: #9cdcfe;'>justify-content</span>: center; <span style='color: #6a9955;'>/* Eixo Principal */</span><br><span style='color: #9cdcfe;'>align-items</span>: center; <span style='color: #6a9955;'>/* Eixo Transversal */</span><br><span style='color: #9cdcfe;'>gap</span>: <span style='color: #b5cea8;'>20px</span>; <span style='color: #6a9955;'>/* Espaço entre itens */</span></code></div><p class='text-center'>Dica: Pratique com o <strong>Flexbox Froggy</strong> para fixar!</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Layout",
+                        "descricao": "Qual propriedade você usaria para centralizar os itens horizontalmente em uma linha padrão (row)?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "align-items",
+                                "correta": false,
+                                "feedback": "Quase! align-items cuida do eixo transversal (vertical no caso de uma row)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "justify-content",
+                                "correta": true,
+                                "feedback": " Perfeito! No modo padrão (row), o justify-content controla o alinhamento horizontal (Main Axis)."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "flex-wrap",
+                                "correta": false,
+                                "feedback": "Não. flex-wrap define se os itens devem quebrar para a próxima linha ou não."
+                            }
+                        ]
+                    },
+                    "item_ordem": 2
+                },
+                {
+                    "id": "ux-web-accessibility",
+                    "title": "Web Acessibilidade",
+                    "icone": "fa-brands fa-accessible-icon",
+                    "banner_class": "design",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/front-undraw.svg' alt='Inclusão Digital'></div><div class='card-text'><h2>O que é Acessibilidade?</h2><p>É garantir que a Web seja utilizável por <strong>todas as pessoas</strong>, independentemente de suas capacidades físicas ou cognitivas.</p><p>Isso beneficia pessoas cegas, com baixa visão, surdas, com deficiências motoras e até quem tem uma conexão lenta ou braço quebrado temporariamente.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Os 4 Pilares (POUR)</h2><p>O W3C organiza a acessibilidade em quatro princípios fundamentais:</p><ul class='check-list' style='list-style: none; padding-left: 0;'><li style='margin-bottom: 8px;'><i class='fa-solid fa-eye'></i> <strong>Perceptível:</strong> Os usuários devem conseguir perceber a informação (ex: legendas em vídeos).</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-keyboard'></i> <strong>Operável:</strong> A interface não pode exigir interações impossíveis (ex: navegação por teclado).</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-brain'></i> <strong>Compreensível:</strong> O conteúdo e a operação devem ser claros.</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-microchip'></i> <strong>Robusto:</strong> O código deve ser interpretado de forma confiável por tecnologias assistivas.</li></ul>"
+                        },
+                        {
+                            "html": "<h2>Checklist Prático</h2><p>Pequenas mudanças no código geram grandes impactos na inclusão:</p><div class='info-box-blue' style='background: #e1f5fe; border-left: 5px solid #005A9C; padding: 15px; border-radius: 5px; margin-top: 15px;'><p><i class='fa-solid fa-terminal'></i> <strong>HTML Semântico:</strong> Use <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;button&gt;</code> em vez de apenas <code>&lt;div&gt;</code>.</p><p><i class='fa-solid fa-font'></i> <strong>Contraste:</strong> Use ferramentas para verificar se a cor do texto se destaca do fundo.</p><p><i class='fa-solid fa-image'></i> <strong>Atributo Alt:</strong> Descreva imagens para quem usa leitores de tela.</p></div>"
+                        },
+                        {
+                            "html": "<h2>Guia de Implementação</h2><p>A acessibilidade é uma jornada contínua. Comece aplicando o básico em seus projetos e evolua conforme estuda as normas WCAG.</p><div class='mt-10 text-center'><a href='../public/pdf/acessibilidade.pdf' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none; padding: 10px 20px; background: #005A9C; color: white; border-radius: 5px;'>Baixar Material Completo <i class='fa-solid fa-cloud-download'></i></a></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Inclusão",
+                        "descricao": "Qual prática abaixo é fundamental para que leitores de tela identifiquem uma imagem para um usuário cego?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Aumentar a resolução da imagem para 4K.",
+                                "correta": false,
+                                "feedback": "Incorreto. A resolução visual não ajuda quem não pode ver a tela; o leitor de tela precisa de texto."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Utilizar o atributo 'alt' com uma descrição textual.",
+                                "correta": true,
+                                "feedback": " Perfeito! O atributo 'alt' (texto alternativo) é o que o software lê em voz alta para descrever a imagem."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "Colocar a imagem dentro de um link piscante.",
+                                "correta": false,
+                                "feedback": "Pelo contrário! Elementos que piscam podem causar crises convulsivas em pessoas fotossensíveis."
+                            }
+                        ]
+                    },
+                    "item_ordem": 3
+                },
+                {
+                    "id": "window_location",
+                    "title": "Window Location",
+                    "icone": "fa-solid fa-code-branch",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/student.png' alt='URL Concept'></div><div class='card-text'><h2>Anatomia da URL</h2><p>URL é o endereço que identifica um recurso na rede. No JavaScript, o objeto <code>window.location</code> contém todas as informações do endereço atual.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Navegação via Script</h2><p>Podemos forçar o navegador a mudar de página sem que o usuário clique em um link, útil após um login bem-sucedido, por exemplo:</p><div class='terminal'><code>window.location.href = 'painel.html';</code></div><p class='mt-10'>Isso substitui o endereço atual e redireciona o usuário instantaneamente.</p>"
+                        },
+                        {
+                            "html": "<h2>Passando Dados via URL</h2><p>O símbolo <strong>?</strong> inicia a <em>Query String</em>. É assim que passamos informações de uma página para outra.</p><div class='info-box-blue'><p><strong>Exemplo:</strong> <code>produtos.html?id=123</code></p></div><p class='mt-10'>Aqui, estamos dizendo à página de produtos que queremos visualizar especificamente o item 123.</p>"
+                        },
+                        {
+                            "html": "<h2>Capturando o Parâmetro</h2><p>Para ler o que veio depois do <strong>?</strong>, usamos o <code>location.search</code>.</p><div class='terminal'><code>var query = location.search; <br>var cleanId = query.replace('?', '');</code></div><p class='mt-10'>O método <code>replace</code> é usado para remover o ponto de interrogação e deixar apenas o valor puro para sua lógica.</p>"
+                        },
+                        {
+                            "html": "<h2>Por que usar isso?</h2><p>Imagine um site de notícias. Você não cria 1.000 páginas HTML. Você cria uma página <code>noticia.html</code> que carrega o texto baseado no ID que vem pela URL!</p><div class='mt-10 text-center'><a href='https://www.w3schools.com/js/js_window_location.asp' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none;'>Documentação Completa <i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio JavaScript",
+                        "descricao": "<p class='font-20'>Se a URL atual é <code>TrilhaDoDev.com/aula.html?tema=js</code>, o que o comando <code>location.search</code> retornará?</p>",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "TrilhaDoDev.com",
+                                "correta": false,
+                                "feedback": "Ops! <code>TrilhaDoDev.com</code> faz parte do host/hostname, não do search."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "?tema=js",
+                                "correta": true,
+                                "feedback": "Excelente!  O <code>search</code> captura tudo a partir do '?' inclusive."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "js",
+                                "correta": false,
+                                "feedback": "Quase! 'js' é o valor, mas o <code>search</code> traz o pacote completo começando pelo '?'."
+                            }
+                        ]
+                    },
+                    "item_ordem": 4
+                },
+                {
+                    "id": "dom-api-intro",
+                    "title": "Introdução ao DOM",
+                    "icone": "fa-solid fa-sitemap",
+                    "banner_class": "frontend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/student.png' alt='Conceito DOM'></div><div class='card-text'><h2>O que é o DOM?</h2><p>DOM significa <strong>Document Object Model</strong>. É a ponte que permite ao JavaScript 'conversar' com o seu HTML.</p><p>Através dele, podemos alterar textos, cores e até criar novos elementos sem precisar recarregar a página.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>A Árvore de Elementos</h2><p>O navegador transforma seu HTML em uma estrutura hierárquica. Cada tag vira um <strong>nó</strong> (node) na árvore.</p><div class='info-box-blue' style='background: #e3f2fd; padding: 15px; border-radius: 8px; border-left: 5px solid #2196f3; margin-top: 15px;'><p><i class='fa-solid fa-circle-info' style='color: #2196f3;'></i> O objeto raiz de tudo no seu site é o <code>document</code>. Ele é o ponto de partida para qualquer alteração.</p></div>"
+                        },
+                        {
+                            "html": "<h2>Como selecionar?</h2><p>Para o JS agir, ele precisa primeiro <strong>localizar</strong> o alvo. O método mais comum e performático é buscar pelo ID:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 10px;'><code><span style='color: #6a9955;'>// HTML: &lt;h1 id=\"titulo\"&gt;Olá&lt;/h1&gt;</span><br><br><span style='color: #569cd6;'>const</span> h1 = document.getElementById(<span style='color: #ce9178;'>\"titulo\"</span>);</code></div><p style='margin-top: 10px;'>Agora, a variável <code>h1</code> representa o elemento real da sua tela.</p>"
+                        },
+                        {
+                            "html": "<h2>Manipulação em Tempo Real</h2><p>Uma vez selecionado, você pode mudar o conteúdo, o visual ou as classes CSS do elemento:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin: 15px 0;'><code>h1.innerText = <span style='color: #ce9178;'>\"Novo Texto!\"</span>;<br>h1.style.color = <span style='color: #ce9178;'>\"#3498db\"</span>;<br>h1.classList.add(<span style='color: #ce9178;'>\"ativo\"</span>);</code></div>"
+                        },
+                        {
+                            "html": "<h2>Eventos e Interação</h2><p>O DOM permite que o código 'escute' o que o usuário faz (cliques, teclado, scroll) através do <strong>addEventListener</strong>.</p><div style='text-align: center; margin-top: 20px;'><a href='https://www.w3schools.com/js/js_htmldom.asp' target='_blank' class='btn-main' style='background: #f7df1e; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;'>Ver Guia de Métodos <i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Seleção",
+                        "descricao": "Qual método você usaria para selecionar um único elemento que possui o atributo id='botao-enviar'?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "document.querySelector('.botao-enviar')",
+                                "correta": false,
+                                "feedback": "Quase! O ponto (.) indica uma classe. Para IDs no querySelector, usaríamos a hashtag (#)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "document.getElementById('botao-enviar')",
+                                "correta": true,
+                                "feedback": " Correto! Como IDs são únicos por página, o método 'Get Element By ID' é o mais direto e performático."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "document.getElementsByTagName('id')",
+                                "correta": false,
+                                "feedback": "Ops! getElementsByTagName busca por tags como 'div' ou 'h1', não por atributos de ID."
+                            }
+                        ]
+                    },
+                    "item_ordem": 5
+                },
+                {
+                    "id": "react",
+                    "title": "React JS",
+                    "icone": "fa-brands fa-react",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/student.png' alt='React Concept'></div><div class='card-text'><h2>O que é o React?</h2><p>O React é uma biblioteca JavaScript para construir interfaces de usuário. Diferente do JS comum, ele foca na criação de <strong>componentes</strong> reutilizáveis.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Componentização</h2><p>Imagine que cada parte do seu site (botão, menu, card) é um arquivo independente. No React, chamamos isso de componentes.</p><div class='info-box-blue'><p><strong>Vantagem:</strong> Você escreve o código uma vez e o reutiliza em todo o projeto, facilitando muito a manutenção.</p></div>"
+                        },
+                        {
+                            "html": "<h2>O que é JSX?</h2><p>É uma forma de escrever HTML diretamente dentro do JavaScript. Isso torna a criação de interfaces muito mais intuitiva.</p><div class='terminal'><code>function App() { <br>&nbsp; return &lt;h1&gt;Bem-vindo ao React!&lt;/h1&gt;; <br>}</code></div>"
+                        },
+                        {
+                            "html": "<h2>Single Page Application (SPA)</h2><p>O React cria SPAs. Isso significa que, ao navegar, o site não recarrega a página inteira, apenas troca o conteúdo central.</p><p class='mt-10'>Isso proporciona uma experiência muito mais rápida e fluida para o usuário, parecida com um aplicativo de celular.</p>"
+                        },
+                        {
+                            "html": "<h2>Material de Apoio</h2><p>Para dominar o React, é essencial consultar a documentação oficial e praticar com exemplos reais.</p><div class='mt-10 text-center'><a href='https://react.dev/' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none;'>Documentação Oficial <i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio React",
+                        "descricao": "Qual tecnologia o React utiliza para atualizar a tela de forma rápida, alterando apenas o necessário?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Full Page Reload",
+                                "correta": false,
+                                "feedback": "Não! O reload total é justamente o que o React evita para ser mais rápido."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Virtual DOM",
+                                "correta": true,
+                                "feedback": "Excelente!  O Virtual DOM é o segredo da alta performance do React, comparando as mudanças antes de tocar no navegador real."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "CSS Selectors",
+                                "correta": false,
+                                "feedback": "Quase lá! CSS Selectors servem para estilizar, mas a inteligência de atualização vem do Virtual DOM."
+                            }
+                        ]
+                    },
+                    "item_ordem": 6
+                }
+            ]
+        },
+        {
+            "ordem": 4,
+            "secao": "Linguagem C",
+            "classe_estilo": "logic",
+            "items": [
+                {
+                    "id": "intro-c",
+                    "item_ordem": 1,
+                    "title": "História e Conceitos",
+                    "icone": "fa-solid fa-microchip",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='História do C'></div><div class='card-text'><h2>A Mãe das Linguagens Modernas</h2><p>Criada em 1972 por <strong>Dennis Ritchie</strong> nos Laboratórios Bell, a Linguagem C foi desenvolvida para criar o sistema operacional Unix.</p><ul class='feature-list mt-10'><li><strong>Nível Médio:</strong> Combina o poder do Baixo Nível (Hardware) com a facilidade do Alto Nível.</li><li><strong>Performática:</strong> Extremamente rápida e eficiente.</li><li><strong>Portável:</strong> O código pode rodar em diferentes máquinas com poucas mudanças.</li></ul></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Compilação: Como C funciona?</h2><p>Diferente do JavaScript, o C é uma linguagem <strong>Compilada</strong>. O computador não entende o seu código direto.</p><div class='concept-grid mt-10' style='display: grid; grid-template-columns: 1fr 0.2fr 1fr; align-items: center; text-align: center;'><div class='p-10 border-blue' style='border: 1px solid #3498db; border-radius: 5px;'><strong>Código Fonte</strong><br>(arquivo.c)</div><div><i class='fa-solid fa-arrow-right'></i></div><div class='p-10 border-blue' style='border: 1px solid #2ecc71; border-radius: 5px;'><strong>Binário/Executável</strong><br>(Processador entende)</div></div><p class='mt-10'>O <strong>Compilador</strong> (como o GCC) faz essa tradução.</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Introdução",
+                        "descricao": "Qual é a principal função do compilador na linguagem C?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Executar o código linha por linha em tempo real.",
+                                "correta": false,
+                                "feedback": "Isso é o que um interpretador faz (como no JS). O C precisa ser traduzido antes de rodar."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Traduzir o código fonte para linguagem de máquina (binário).",
+                                "correta": true,
+                                "feedback": " Exato! Sem a compilação, o hardware não saberia o que fazer com seu código .c"
                             }
                         ]
                     }
+                },
+                {
+                    "id": "c-vars",
+                    "item_ordem": 2,
+                    "title": "Tipagem e Variáveis",
+                    "icone": "fa-solid fa-box-archive",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<h2>Tipagem Estática</h2><p>Em C, você <strong>DEVE</strong> dizer ao computador o tipo exato de dado que a caixa vai guardar. Isso economiza memória!</p><div class='table-container mt-10'><table class='w-100'><thead><tr><th>Tipo</th><th>Espaço</th><th>Uso</th></tr></thead><tbody><tr><td><code>int</code></td><td>4 bytes</td><td>Números inteiros.</td></tr><tr><td><code>float</code></td><td>4 bytes</td><td>Números decimais.</td></tr><tr><td><code>char</code></td><td>1 byte</td><td>Um único caractere.</td></tr></tbody></table></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Declarando em C</h2><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> idade = <span style='color: #b5cea8;'>25</span>;<br><span style='color: #569cd6;'>float</span> altura = <span style='color: #b5cea8;'>1.75</span>;<br><span style='color: #569cd6;'>char</span> inicial = <span style='color: #ce9178;'>'L'</span>; <span style='color: #6a9955;'>// Aspas simples!</span></div><p class='mt-10'><i class='fa-solid fa-circle-exclamation' style='color: #e74c3c;'></i> No C, esquecer o ponto e vírgula (<code>;</code>) impede o código de compilar!</p>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Tipagem",
+                        "descricao": "Qual destas declarações causaria um erro de compilação em C?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "int pontos = 10;",
+                                "correta": false,
+                                "feedback": "Correto! Tipo int para valor inteiro."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "numero = 5;",
+                                "correta": true,
+                                "feedback": " Acertou! Em C, você é obrigado a declarar o tipo (ex: int numero = 5;)."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "c-arrays",
+                    "item_ordem": 3,
+                    "title": "Vetores",
+                    "icone": "fa-solid fa-list-ol",
+                    "flashcards": [
+                        {
+                            "ordem": 1,
+                            "html": "<div class='card-grid'><div class='card-text'><h2>O que é um Array?</h2><p>É uma lista de variáveis do <strong>mesmo tipo</strong> organizadas em sequência na memória. Imagine um prédio onde cada apartamento tem um número (índice).</p><div class='info-box-blue mt-10'><p>Índices em C sempre começam no <strong>zero (0)</strong>.</p></div></div><div class='card-image'><img src='../public/images/programmer.png' alt='Arrays'></div></div>"
+                        },
+                        {
+                            "ordem": 2,
+                            "html": "<h2>Arrays na Prática</h2><p>Para criar um array, definimos o tipo, o nome e o tamanho entre colchetes:</p><div class='terminal mt-10'><span style='color: #569cd6;'>int</span> notas[<span style='color: #b5cea8;'>4</span>] = {<span style='color: #b5cea8;'>8, 7, 10, 9</span>};<br><br><span style='color: #6a9955;'>// Acessando o primeiro elemento</span><br><span style='color: #569cd6;'>int</span> primeiraNota = notas[<span style='color: #b5cea8;'>0</span>];</div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Arrays",
+                        "descricao": "Se declararmos `int valores[5];`, qual é o índice do último elemento disponível?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "5",
+                                "correta": false,
+                                "feedback": "Cuidado! Se o array tem 5 espaços e começa no 0, os índices são 0, 1, 2, 3 e 4."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "4",
+                                "correta": true,
+                                "feedback": " Perfeito! O último índice é sempre 'tamanho - 1'."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "ordem": 5,
+            "secao": "Back-End",
+            "classe_estilo": "logic",
+            "items": [
+                {
+                    "id": "intro-backend-concept",
+                    "title": "Introdução ao Back-End",
+                    "icone": "fa-solid fa-server",
+                    "banner_class": "backend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Desenvolvimento Back-end'></div><div class='card-text'><h2>O que é o Back-End?</h2><p>Pense no Back-End como o <strong>cérebro</strong> de um site. Enquanto o Front-End cuida da interface visual, o Back-End gerencia a lógica, segurança e o armazenamento de dados.</p><p class='mt-10' style='font-style: italic; color: #666;'>Sem ele, um botão de 'Login' seria apenas um desenho bonito que não valida quem você é.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Como a mágica acontece?</h2><p>Tudo no Back-End funciona através de um ciclo chamado <strong>Request & Response</strong> (Requisição e Resposta):</p><div class='flow-container' style='display: flex; justify-content: space-around; align-items: center; margin: 30px 0; text-align: center; background: #f9f9f9; padding: 20px; border-radius: 15px;'><div><i class='fa-solid fa-laptop-code' style='font-size: 1.5rem; color: #3498db;'></i><p style='font-size: 0.7rem; font-weight: bold;'>1. Cliente solicita</p></div><i class='fa-solid fa-arrow-right-long' style='color: #ccc;'></i><div><i class='fa-solid fa-gears' style='font-size: 1.5rem; color: #e67e22;'></i><p style='font-size: 0.7rem; font-weight: bold;'>2. Servidor processa</p></div><i class='fa-solid fa-arrow-right-long' style='color: #ccc;'></i><div><i class='fa-solid fa-database' style='font-size: 1.5rem; color: #2ecc71;'></i><p style='font-size: 0.7rem; font-weight: bold;'>3. Banco de Dados</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Caixa de Ferramentas</h2><p>Estas são as tecnologias que permitem construir o motor do seu sistema:</p><div class='tech-stack' style='display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px;'><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-node-js' style='color: #68a063;'></i> <span>Node.js</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-python' style='color: #3776ab;'></i> <span>Python</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-php' style='color: #777bb4;'></i> <span>PHP</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-java' style='color: #e76f00;'></i> <span>Java</span></div></div>"
+                        },
+                        {
+                            "html": "<div class='card-grid'><div class='card-text'><h2>Próximos Passos</h2><p>Agora que você entende o conceito, o próximo desafio é entender como os dados são guardados e como o servidor decide o que enviar de volta.</p><div class='mt-10'><a href='../public/pdf/whats-is-backend.pdf' class='btn-main' style='display: inline-block; padding: 10px 20px; text-decoration: none;'><i class='fa-solid fa-file-pdf'></i> Baixar Guia de Back-End</a></div></div><div class='card-image' style='text-align: right;'><i class='fa-solid fa-trophy' style='font-size: 5rem; color: #ffd700;'></i></div></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Check-up Back-End",
+                        "descricao": "Qual das seguintes tarefas é de responsabilidade primordial do Back-End?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Escolher a cor e o tamanho das fontes do site.",
+                                "correta": false,
+                                "feedback": "Isso é responsabilidade do Front-End (CSS)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Validar o login e gerenciar o acesso ao banco de dados.",
+                                "correta": true,
+                                "feedback": " Exato! O Back-End cuida da segurança e do processamento de dados 'atrás das cortinas'."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "Criar animações suaves quando o usuário passa o mouse.",
+                                "correta": false,
+                                "feedback": "Animações visuais são resolvidas no Front-End."
+                            }
+                        ]
+                    },
+                    "item_ordem": 1
+                },
+                {
+                    "id": "back-server-node",
+                    "title": "Conceito de Servidor",
+                    "icone": "fa-solid fa-server",
+                    "banner_class": "back",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Conceito de Servidor'></div><div class='card-text'><h2>O que é um servidor?</h2><p>Um servidor é um software que <strong>escuta</strong> requisições da internet e envia respostas.</p><p>No Node.js, o módulo nativo <code>http</code> é quem faz o trabalho pesado de abrir essa comunicação.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>A estrutura básica</h2><p>Com apenas estas linhas, você coloca um servidor de pé:</p><div class='modern-terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 15px;'><pre style='margin:0;'><code><span style='color: #569cd6;'>const</span> http = require(<span style='color: #ce9178;'>'http'</span>);<br><br>http.createServer((req, res) => {<br> &nbsp;res.write(<span style='color: #ce9178;'>'Ola Mundo!'</span>);<br> &nbsp;res.end();<br>}).listen(<span style='color: #b5cea8;'>8080</span>);</code></pre></div>"
+                        },
+                        {
+                            "html": "<h2>Portas e Localhost</h2><p>O comando <code>.listen(8080)</code> reserva um canal específico no seu computador para o servidor.</p><div class='info-box' style='background: #e3f2fd; padding: 15px; border-radius: 12px; border-left: 5px solid #2196f3; margin-top: 20px;'><p><i class='fa-solid fa-circle-info' style='color: #2196f3;'></i> <strong>Acesse:</strong> Abra seu navegador e digite <code>http://localhost:8080</code> para ver seu código ganhando vida na web.</p></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio de Fluxo",
+                        "descricao": "No código do servidor, o que representam os parâmetros 'req' e 'res'?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Requisição (o que vem do cliente) e Resposta (o que o servidor envia).",
+                                "correta": true,
+                                "feedback": " Exato! Essa é a base do protocolo HTTP: o cliente pede (Request) e o servidor responde (Response)."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Registro e Resultado da execução do código.",
+                                "correta": false,
+                                "feedback": "Não exatamente. Embora pareça lógico, req/res são abreviações técnicas de Request e Response."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "Reiniciar e Sair do processo do servidor.",
+                                "correta": false,
+                                "feedback": "Ops! Para parar o servidor, geralmente usamos Ctrl+C no terminal, não parâmetros no código."
+                            }
+                        ]
+                    },
+                    "item_ordem": 2
+                },
+                {
+                    "id": "arquitetura-cliente-servidor",
+                    "title": "Arquitetura Cliente-Servidor",
+                    "icone": "fa-solid fa-network-wired",
+                    "banner_class": "backend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Desenvolvimento Back-end'></div><div class='card-text'><h2>O Fluxo de Dados</h2><p>A web funciona em um ciclo constante de <strong>Request & Response</strong> (Requisição e Resposta).</p><p>O <strong>Cliente</strong> (seu navegador) inicia a conversa pedindo algo, e o <strong>Servidor</strong> (um computador remoto) processa e entrega o resultado.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>Metáfora do Restaurante</h2><div class='metaphor-box' style='background: #f4f7f9; padding: 20px; border-radius: 10px; margin-top: 15px;'> <p><i class='fa-solid fa-user'></i> <strong>Cliente:</strong> Você sentado à mesa (Navegador).</p> <p><i class='fa-solid fa-envelope'></i> <strong>Requisição:</strong> O pedido feito ao garçom (URL/HTTP Request).</p> <p><i class='fa-solid fa-server'></i> <strong>Servidor:</strong> A cozinha que prepara o prato (Backend/Banco de Dados).</p> </div>"
+                        },
+                        {
+                            "html": "<h2>A Comunicação (HTTP)</h2><p>Para o cliente entender o que aconteceu na cozinha (servidor), usamos códigos de status:</p><div class='info-box-blue' style='background: #e1f5fe; padding: 15px; border-left: 5px solid #03a9f4; border-radius: 4px; margin-top: 15px;'> <p>✅ <strong>200:</strong> OK! O prato está pronto.</p> <p>⚠️ <strong>404:</strong> Not Found! Esse item não existe no menu.</p> <p>🚫 <strong>500:</strong> Server Error! A cozinha pegou fogo (erro interno).</p> </div>"
+                        },
+                        {
+                            "html": "<h2>Conceito de Stateless</h2><p>A maioria das conexões web são <strong>Stateless</strong> (sem estado). O servidor é 'desmemoriado'.</p><blockquote style='border-left: 4px solid #3498db; padding-left: 15px; font-style: italic; margin: 20px 0;'>Cada pedido é tratado como se fosse o primeiro. Para o servidor saber que você é você, o cliente deve enviar um <strong>Token</strong> ou <strong>Cookie</strong> em cada nova requisição.</blockquote>"
+                        },
+                        {
+                            "html": "<h2>Tipos de Servidores</h2><p>Um servidor é definido pelo serviço que ele presta, não pelo hardware:</p><div class='card-grid' style='gap: 10px; margin-top: 20px;'> <div class='benefit-item' style='text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 8px;'><i class='fa-solid fa-database' style='font-size: 1.5rem; color: #3498db;'></i><p><strong>DB Server:</strong> Guarda dados.</p></div> <div class='benefit-item' style='text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 8px;'><i class='fa-solid fa-file-code' style='font-size: 1.5rem; color: #2ecc71;'></i><p><strong>Web Server:</strong> Entrega o site.</p></div> <div class='benefit-item' style='text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 8px;'><i class='fa-solid fa-cloud' style='font-size: 1.5rem; color: #e67e22;'></i><p><strong>API Server:</strong> Entrega JSON.</p></div> </div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Desafio Técnico",
+                        "descricao": "Se o servidor central de uma aplicação cair (ficar offline), o que acontece com os clientes que estão usando o app?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Os navegadores dos clientes tornam-se o novo servidor.",
+                                "correta": false,
+                                "feedback": "Incorreto. Navegadores são clientes; eles não possuem a lógica ou os dados centrais para servir outros."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "O cliente não consegue obter novos dados ou realizar ações que dependam do banco.",
+                                "correta": true,
+                                "feedback": " Exato! Como o processamento e os dados são centralizados no servidor, sem ele, o cliente fica 'isolado'."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "O site continua funcionando perfeitamente, pois os dados ficam salvos no mouse.",
+                                "correta": false,
+                                "feedback": "Definitivamente não! O mouse não armazena dados da aplicação."
+                            }
+                        ]
+                    },
+                    "item_ordem": 3
                 },
                 {
                     "id": "intro-ide",
@@ -264,242 +1065,140 @@
                                 "feedback": "Você até pode, mas seria como usar uma Ferrari para ir à padaria na esquina. Um editor simples bastaria!"
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 4
                 },
                 {
-                    "id": "back-server-node",
-                    "title": "Conceito de Servidor",
-                    "icone": "fa-solid fa-server",
+                    "id": "intro-apis-concept",
+                    "title": "Entendendo APIs",
+                    "icone": "fa-brands fa-node-js",
+                    "banner_class": "backend",
+                    "flashcards": [
+                        {
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='API Concept'></div><div class='card-text'><h2>O que é uma API?</h2><p>API significa <strong>Application Programming Interface</strong>.</p><p>Imagine que o seu app é um controle remoto e o servidor é a TV. A API são os botões: você não precisa saber como a eletrônica funciona por dentro, apenas qual botão apertar para ter o resultado esperado.</p></div></div>"
+                        },
+                        {
+                            "html": "<h2>A Analogia do Garçom</h2><p>No restaurante do desenvolvimento, a comunicação segue um padrão rigoroso:</p><ul class='check-list' style='list-style: none; padding-left: 0;'><li style='margin-bottom: 10px;'><i class='fa-solid fa-user' style='color: #007bff;'></i> <strong>Você (Cliente):</strong> Faz o pedido através da interface (Front-end).</li><li style='margin-bottom: 10px;'><i class='fa-solid fa-bell-concierge' style='color: #e67e22;'></i> <strong>Garçom (API):</strong> Leva seu pedido à cozinha e traz a comida de volta.</li><li style='margin-bottom: 10px;'><i class='fa-solid fa-kitchen-set' style='color: #2ecc71;'></i> <strong>Cozinha (Servidor):</strong> Onde os dados são preparados e a lógica acontece.</li></ul>"
+                        },
+                        {
+                            "html": "<h2>O Ciclo Request & Response</h2><p>Uma API vive em um ciclo constante de pergunta e resposta via protocolo HTTP:</p><div class='info-box-blue' style='background: #e7f3ff; border-left: 5px solid #007bff; padding: 15px; border-radius: 5px; margin-top: 15px;'><p><strong>1. Request:</strong> O app envia dados (ex: usuário e senha).</p><p><strong>2. Response:</strong> O servidor valida e responde (ex: um token de acesso em formato JSON).</p></div>"
+                        },
+                        {
+                            "html": "<h2>Exemplo Prático (Node.js)</h2><p>Criar uma API básica no Node.js significa dizer ao servidor como responder a um pedido específico:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><pre><code><span style='color: #c586c0;'>const</span> http = <span style='color: #dcdcaa;'>require</span>(<span style='color: #ce9178;'>'http'</span>);<br><span style='color: #c586c0;'>const</span> server = http.<span style='color: #dcdcaa;'>createServer</span>((req, res) => {<br>  res.<span style='color: #dcdcaa;'>writeHead</span>(<span style='color: #b5cea8;'>200</span>, { <span style='color: #ce9178;'>'Content-Type'</span>: <span style='color: #ce9178;'>'application/json'</span> });<br>  res.<span style='color: #dcdcaa;'>end</span>(JSON.<span style='color: #dcdcaa;'>stringify</span>({ msg: <span style='color: #ce9178;'>\"Olá, API!\"</span> }));<br>});<br>server.<span style='color: #dcdcaa;'>listen</span>(<span style='color: #b5cea8;'>3000</span>);</code></pre></div>"
+                        }
+                    ],
+                    "quiz": {
+                        "title": "Check-up API",
+                        "descricao": "Qual é a principal função de uma API no contexto Web?",
+                        "opcoes": [
+                            {
+                                "ordem": "A",
+                                "descricao": "Substituir o Banco de Dados para economizar espaço.",
+                                "correta": false,
+                                "feedback": "A API não substitui o banco, ela serve como o mensageiro que acessa os dados para você."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Permitir que diferentes aplicações se comuniquem de forma padronizada.",
+                                "correta": true,
+                                "feedback": "Perfeito!  A API define as regras de como um software pode solicitar dados de outro."
+                            },
+                            {
+                                "ordem": "C",
+                                "descricao": "Criar o design visual e as cores do site.",
+                                "correta": false,
+                                "feedback": "Isso é papel do Front-end (CSS/HTML). A API foca na troca de dados brutos."
+                            }
+                        ]
+                    },
+                    "item_ordem": 5
+                },
+                {
+                    "id": "node-inicio",
+                    "title": "Node.js: O Início",
+                    "icone": "fa-brands fa-node-js",
                     "banner_class": "back",
                     "flashcards": [
                         {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Conceito de Servidor'></div><div class='card-text'><h2>O que é um servidor?</h2><p>Um servidor é um software que <strong>escuta</strong> requisições da internet e envia respostas.</p><p>No Node.js, o módulo nativo <code>http</code> é quem faz o trabalho pesado de abrir essa comunicação.</p></div></div>"
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Nodejs'></div><div class='card-text'><h2>O que é o Node?</h2><p>O Node.js® é um ambiente que permite executar JavaScript <strong>fora do navegador</strong>. Ele é o motor por trás de grandes sistemas como Netflix e LinkedIn.</p><ul class='feature-list' style='margin-top: 15px;'><li><i class='fa-solid fa-bolt'></i> Ultra veloz</li><li><i class='fa-solid fa-microchip'></i> Single Thread</li></ul></div></div>"
                         },
                         {
-                            "html": "<h2>A estrutura básica</h2><p>Com apenas estas linhas, você coloca um servidor de pé:</p><div class='modern-terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 15px;'><pre style='margin:0;'><code><span style='color: #569cd6;'>const</span> http = require(<span style='color: #ce9178;'>'http'</span>);<br><br>http.createServer((req, res) => {<br> &nbsp;res.write(<span style='color: #ce9178;'>'Ola Mundo!'</span>);<br> &nbsp;res.end();<br>}).listen(<span style='color: #b5cea8;'>8080</span>);</code></pre></div>"
+                            "html": "<h2>Instalação</h2><p>Para começar, instale a versão <strong>LTS</strong> (Long Term Support). Após instalar, abra seu terminal e digite:</p><div class='modern-terminal' style='margin: 20px 0;'><div class='terminal-header'><span class='dot red'></span><span class='dot yellow'></span><span class='dot green'></span></div><div class='terminal-body'><code><span class='prompt'>C:\\Users></span> node -v</code></div></div><a href='https://nodejs.org/en' target='_blank' class='btn-primary' style='display: inline-block; text-decoration: none;'><i class='fa-solid fa-download'></i> Ir para Site Oficial</a>"
                         },
                         {
-                            "html": "<h2>Portas e Localhost</h2><p>O comando <code>.listen(8080)</code> reserva um canal específico no seu computador para o servidor.</p><div class='info-box' style='background: #e3f2fd; padding: 15px; border-radius: 12px; border-left: 5px solid #2196f3; margin-top: 20px;'><p><i class='fa-solid fa-circle-info' style='color: #2196f3;'></i> <strong>Acesse:</strong> Abra seu navegador e digite <code>http://localhost:8080</code> para ver seu código ganhando vida na web.</p></div>"
+                            "html": "<div class='card-grid reverse'><div class='card-image'><img src='../public/images/coding.png' alt='Coding'></div><div class='card-text'><h2>Seu primeiro código</h2><p>Crie um arquivo <code>app.js</code> e escreva:</p><div class='code-block' style='background: #2d2d2d; color: #fff; padding: 15px; border-radius: 8px;'><pre><code>console.log(\"Servidor iniciado!\");</code></pre></div><p class='mt-10'>Execute no terminal com: <strong>node app.js</strong></p></div></div>"
                         }
                     ],
                     "quiz": {
-                        "title": "Desafio de Fluxo",
-                        "descricao": "No código do servidor, o que representam os parâmetros 'req' e 'res'?",
+                        "title": "Desafio Node",
+                        "descricao": "Qual é a principal característica que define o Node.js?",
                         "opcoes": [
                             {
                                 "ordem": "A",
-                                "descricao": "Requisição (o que vem do cliente) e Resposta (o que o servidor envia).",
-                                "correta": true,
-                                "feedback": "🎯 Exato! Essa é a base do protocolo HTTP: o cliente pede (Request) e o servidor responde (Response)."
+                                "descricao": "É uma nova linguagem de programação.",
+                                "correta": false,
+                                "feedback": "Não! O Node usa o JavaScript que você já conhece."
                             },
                             {
                                 "ordem": "B",
-                                "descricao": "Registro e Resultado da execução do código.",
-                                "correta": false,
-                                "feedback": "Não exatamente. Embora pareça lógico, req/res são abreviações técnicas de Request e Response."
+                                "descricao": "Um ambiente de execução JS fora do navegador.",
+                                "correta": true,
+                                "feedback": " Exato! Ele permite usar JS no servidor, acessando arquivos e bancos de dados."
                             },
                             {
                                 "ordem": "C",
-                                "descricao": "Reiniciar e Sair do processo do servidor.",
+                                "descricao": "Um framework exclusivo para o Google Chrome.",
                                 "correta": false,
-                                "feedback": "Ops! Para parar o servidor, geralmente usamos Ctrl+C no terminal, não parâmetros no código."
+                                "feedback": "Quase. Ele usa o motor V8 do Chrome, mas roda de forma independente."
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 6
                 },
                 {
-                    "id": "logica-functions",
-                    "title": "JavaScript Functions",
-                    "icone": "fa-brands fa-square-js",
-                    "banner_class": "logic",
+                    "id": "back-json",
+                    "title": "Entendendo o JSON",
+                    "icone": "fa-solid fa-code",
+                    "banner_class": "back",
                     "flashcards": [
                         {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Conceito Function'></div><div class='card-text'><h2>O que é uma Função?</h2><p>Uma <strong>Function</strong> é um bloco de código projetado para executar uma tarefa específica. Pense nela como uma 'receita' que você escreve uma vez e pode usar sempre que precisar.</p><ul class='feature-list mt-10' style='list-style: none; padding-left: 0;'><li><i class='fa-solid fa-recycle' style='color: #f7df1e;'></i> <strong>Reutilização:</strong> Escreva uma vez, use várias.</li><li><i class='fa-solid fa-sitemap' style='color: #f7df1e;'></i> <strong>Organização:</strong> Divide problemas grandes em partes menores.</li><li><i class='fa-solid fa-hand-pointer' style='color: #f7df1e;'></i> <strong>Invocação:</strong> Ela só executa quando você a 'chama'.</li></ul></div></div>"
+                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Conceito JSON'></div><div class='card-text'><h2>O que é JSON?</h2><p><strong>JavaScript Object Notation</strong> é um formato leve para troca de dados.</p><p>Embora tenha 'JavaScript' no nome, ele é independente de linguagem e usado por quase todas as tecnologias modernas para enviar informações entre servidor e navegador.</p></div></div>"
                         },
                         {
-                            "html": "<h2>Anatomia da Função</h2><p>Para definir uma função, usamos a palavra-chave e um nome seguido de parênteses:</p><div class='terminal mt-20' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #c586c0;'>function</span> <span style='color: #dcdcaa;'>nomeDaFuncao</span>(<span style='color: #9cdcfe;'>parametro1, parametro2</span>) {<br>&nbsp;&nbsp;<span style='color: #6a9955;'>// A lógica fica aqui dentro</span><br>&nbsp;&nbsp;<span style='color: #c586c0;'>return</span> resultado;<br>}</div><div class='info-box-blue mt-10' style='background: #e3f2fd; padding: 10px; border-radius: 8px; border-left: 4px solid #3498db;'><p><i class='fa-solid fa-circle-info' style='color: #3498db;'></i> Os <strong>parâmetros</strong> funcionam como túneis: eles levam dados de fora para dentro da função.</p></div>"
+                            "html": "<div class='card-header-icon'><i class='fa-solid fa-bolt' style='color: #f1c40f;'></i></div><h2>Por que usar JSON?</h2><ul class='check-list' style='list-style: none; padding-left: 0;'><li><i class='fa-solid fa-check' style='color: #2ecc71;'></i> <strong>Leve:</strong> Arquivos pequenos que carregam rápido.</li><li><i class='fa-solid fa-check' style='color: #2ecc71;'></i> <strong>Legível:</strong> Fácil para humanos lerem e computadores processarem.</li><li><i class='fa-solid fa-check' style='color: #2ecc71;'></i> <strong>Universal:</strong> Funciona em Python, Java, PHP, Node.js, etc.</li></ul>"
                         },
                         {
-                            "html": "<div class='card-grid'><div class='card-text'><h2>A palavra Return</h2><p>O <code>return</code> finaliza a função e envia um valor de volta para quem a chamou.</p><div class='terminal mt-10' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #c586c0;'>function</span> <span style='color: #dcdcaa;'>somar</span>(a, b) {<br>&nbsp;&nbsp;<span style='color: #c586c0;'>return</span> a + b;<br>}<br><br><span style='color: #569cd6;'>let</span> total = <span style='color: #dcdcaa;'>somar</span>(<span style='color: #b5cea8;'>10</span>, <span style='color: #b5cea8;'>5</span>); <span style='color: #6a9955;'>// total guarda 15</span></div></div><div class='card-image' style='text-align: right;'><img src='../public/svg/undraw_speech_to_text_re_8mtf.svg' alt='Return' style='max-width: 150px;'></div></div>"
+                            "html": "<div class='card-header-icon'><i class='fa-solid fa-brackets-curly' style='color: #3498db;'></i></div><h2>Chave e Valor</h2><p>A estrutura básica do JSON é composta por pares de <strong>\"chave\": \"valor\"</strong> dentro de chaves <code>{ }</code>.</p><div class='info-box-blue' style='background: #e3f2fd; padding: 15px; border-radius: 8px; font-family: monospace; border-left: 4px solid #3498db;'><pre style='margin:0;'>{<br>  \"nome\": \"Leonardo\",<br>  \"idade\": 25<br>}</pre></div><p style='margin-top:10px;'>As chaves devem estar sempre entre <strong>aspas duplas</strong>!</p>"
                         },
                         {
-                            "html": "<h2>Invocando (Chamando)</h2><p>O operador <strong>( )</strong> é o gatilho da mágica. Sem ele, a função é apenas um texto guardado na memória.</p><div class='terminal mt-10' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #6a9955;'>// Apenas referência (não faz nada):</span><br><span style='color: #569cd6;'>let</span> x = minhaFuncao;<br><br><span style='color: #6a9955;'>// Execução real (o código roda):</span><br><span style='color: #569cd6;'>let</span> y = <span style='color: #dcdcaa;'>minhaFuncao</span>();</div>"
+                            "html": "<h2>Tipos de Dados</h2><p>JSON aceita strings, números, booleanos, arrays e até outros objetos:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><pre style='margin:0;'>{<br>  <span style='color: #9cdcfe;'>\"titulo\"</span>: <span style='color: #ce9178;'>\"O Pequeno Príncipe\"</span>,<br>  <span style='color: #9cdcfe;'>\"ano\"</span>: <span style='color: #b5cea8;'>1943</span>,<br>  <span style='color: #9cdcfe;'>\"eFiccao\"</span>: <span style='color: #569cd6;'>true</span>,<br>  <span style='color: #9cdcfe;'>\"generos\"</span>: [<span style='color: #ce9178;'>\"Novela\"</span>, <span style='color: #ce9178;'>\"Infantil\"</span>]<br>}</pre></div>"
                         }
                     ],
                     "quiz": {
-                        "title": "Desafio de Funções",
-                        "descricao": "O que acontece com o código dentro de uma função após a linha do <code>return</code> ser executada?",
+                        "title": "Desafio de Sintaxe",
+                        "descricao": "Qual das opções abaixo representa um formato JSON <strong>válido</strong>?",
                         "opcoes": [
                             {
                                 "ordem": "A",
-                                "descricao": "A função para imediatamente e o restante é ignorado.",
-                                "correta": true,
-                                "feedback": "🎯 Exato! O return é o 'ponto final' da função. Ele ejeta a execução para fora com o resultado."
+                                "descricao": "{ nome: 'Leo' }",
+                                "correta": false,
+                                "feedback": "Incorreto! No JSON, tanto as chaves quanto as strings de valor DEVEM usar aspas duplas (\")."
                             },
                             {
                                 "ordem": "B",
-                                "descricao": "O código continua rodando até fechar as chaves { }.",
-                                "correta": false,
-                                "feedback": "Incorreto. Se o processador encontra um return, ele ignora tudo o que estiver abaixo dele dentro daquela função."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "O return só funciona se estiver na última linha da função.",
-                                "correta": false,
-                                "feedback": "Não! Você pode usar o return em qualquer lugar (como dentro de um if) para encerrar a função mais cedo."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "ordem": 2,
-            "secao": "Javascript",
-            "classe_estilo": "tools",
-            "items": [
-                {
-                    "id": "window_location",
-                    "title": "Window Location",
-                    "icone": "fa-solid fa-code-branch",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/student.png' alt='URL Concept'></div><div class='card-text'><h2>Anatomia da URL</h2><p>URL é o endereço que identifica um recurso na rede. No JavaScript, o objeto <code>window.location</code> contém todas as informações do endereço atual.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Navegação via Script</h2><p>Podemos forçar o navegador a mudar de página sem que o usuário clique em um link, útil após um login bem-sucedido, por exemplo:</p><div class='terminal'><code>window.location.href = 'painel.html';</code></div><p class='mt-10'>Isso substitui o endereço atual e redireciona o usuário instantaneamente.</p>"
-                        },
-                        {
-                            "html": "<h2>Passando Dados via URL</h2><p>O símbolo <strong>?</strong> inicia a <em>Query String</em>. É assim que passamos informações de uma página para outra.</p><div class='info-box-blue'><p><strong>Exemplo:</strong> <code>produtos.html?id=123</code></p></div><p class='mt-10'>Aqui, estamos dizendo à página de produtos que queremos visualizar especificamente o item 123.</p>"
-                        },
-                        {
-                            "html": "<h2>Capturando o Parâmetro</h2><p>Para ler o que veio depois do <strong>?</strong>, usamos o <code>location.search</code>.</p><div class='terminal'><code>var query = location.search; <br>var cleanId = query.replace('?', '');</code></div><p class='mt-10'>O método <code>replace</code> é usado para remover o ponto de interrogação e deixar apenas o valor puro para sua lógica.</p>"
-                        },
-                        {
-                            "html": "<h2>Por que usar isso?</h2><p>Imagine um site de notícias. Você não cria 1.000 páginas HTML. Você cria uma página <code>noticia.html</code> que carrega o texto baseado no ID que vem pela URL!</p><div class='mt-10 text-center'><a href='https://www.w3schools.com/js/js_window_location.asp' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none;'>Documentação Completa <i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio JavaScript",
-                        "descricao": "<p class='font-20'>Se a URL atual é <code>coders.com/aula.html?tema=js</code>, o que o comando <code>location.search</code> retornará?</p>",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "coders.com",
-                                "correta": false,
-                                "feedback": "Ops! <code>coders.com</code> faz parte do host/hostname, não do search."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "?tema=js",
+                                "descricao": "{ \"nome\": \"Leo\" }",
                                 "correta": true,
-                                "feedback": "Excelente! 🎯 O <code>search</code> captura tudo a partir do '?' inclusive."
+                                "feedback": " Perfeito! Chaves e valores de texto com aspas duplas são a regra de ouro do JSON."
                             },
                             {
                                 "ordem": "C",
-                                "descricao": "js",
+                                "descricao": "{ \"nome\" = \"Leo\" }",
                                 "correta": false,
-                                "feedback": "Quase! 'js' é o valor, mas o <code>search</code> traz o pacote completo começando pelo '?'."
+                                "feedback": "Ops! O JSON utiliza dois-pontos (:) para separar chave e valor, não o sinal de igual."
                             }
                         ]
-                    }
-                }
-            ]
-        },
-        {
-            "ordem": 3,
-            "secao": "Front-End",
-            "classe_estilo": "front",
-            "items": [
-                {
-                    "id": "react",
-                    "title": "React JS",
-                    "icone": "fa-brands fa-react",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/student.png' alt='React Concept'></div><div class='card-text'><h2>O que é o React?</h2><p>O React é uma biblioteca JavaScript para construir interfaces de usuário. Diferente do JS comum, ele foca na criação de <strong>componentes</strong> reutilizáveis.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Componentização</h2><p>Imagine que cada parte do seu site (botão, menu, card) é um arquivo independente. No React, chamamos isso de componentes.</p><div class='info-box-blue'><p><strong>Vantagem:</strong> Você escreve o código uma vez e o reutiliza em todo o projeto, facilitando muito a manutenção.</p></div>"
-                        },
-                        {
-                            "html": "<h2>O que é JSX?</h2><p>É uma forma de escrever HTML diretamente dentro do JavaScript. Isso torna a criação de interfaces muito mais intuitiva.</p><div class='terminal'><code>function App() { <br>&nbsp; return &lt;h1&gt;Bem-vindo ao React!&lt;/h1&gt;; <br>}</code></div>"
-                        },
-                        {
-                            "html": "<h2>Single Page Application (SPA)</h2><p>O React cria SPAs. Isso significa que, ao navegar, o site não recarrega a página inteira, apenas troca o conteúdo central.</p><p class='mt-10'>Isso proporciona uma experiência muito mais rápida e fluida para o usuário, parecida com um aplicativo de celular.</p>"
-                        },
-                        {
-                            "html": "<h2>Material de Apoio</h2><p>Para dominar o React, é essencial consultar a documentação oficial e praticar com exemplos reais.</p><div class='mt-10 text-center'><a href='https://react.dev/' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none;'>Documentação Oficial <i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio React",
-                        "descricao": "Qual tecnologia o React utiliza para atualizar a tela de forma rápida, alterando apenas o necessário?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "Full Page Reload",
-                                "correta": false,
-                                "feedback": "Não! O reload total é justamente o que o React evita para ser mais rápido."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "Virtual DOM",
-                                "correta": true,
-                                "feedback": "Excelente! 🎯 O Virtual DOM é o segredo da alta performance do React, comparando as mudanças antes de tocar no navegador real."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "CSS Selectors",
-                                "correta": false,
-                                "feedback": "Quase lá! CSS Selectors servem para estilizar, mas a inteligência de atualização vem do Virtual DOM."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "projetos",
-                    "title": "O Universo Front-End",
-                    "icone": "fa-brands fa-html5",
-                    "banner_class": "front",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/front-undraw.svg' alt='Desenvolvimento Front-End'></div><div class='card-text'><h2>O que é Front-End?</h2><p>É a parte do código com a qual o usuário interage diretamente. Envolve a construção da interface gráfica, layouts e a interatividade de um site ou aplicativo.</p><p>O desenvolvedor front-end transforma designs estáticos em experiências digitais vivas.</p></div></div>"
-                        },
-                        {
-                            "html": "<div class='card-header-icon'><i class='fa-solid fa-layer-group'></i></div><h2>A Tríade Fundamental</h2><p>Toda interface moderna é construída sobre três pilares:</p><ul class='check-list'><li><i class='fa-brands fa-html5'></i> <strong>HTML:</strong> A estrutura e o conteúdo da página.</li><li><i class='fa-brands fa-css3-alt'></i> <strong>CSS:</strong> O estilo, cores, fontes e posicionamento.</li><li><i class='fa-brands fa-js'></i> <strong>JavaScript:</strong> A lógica e o comportamento dinâmico.</li></ul>"
-                        },
-                        {
-                            "html": "<div class='card-header-icon'><i class='fa-solid fa-pen-nib'></i></div><h2>UX e UI Design</h2><p>Não basta apenas codar, é preciso projetar para pessoas:</p><div class='info-box-blue'><p><strong>UI (User Interface):</strong> O visual. É o que o usuário vê (botões, cores, tipografia).</p><p><strong>UX (User Experience):</strong> O sentimento. É como o usuário se sente ao navegar (facilidade, fluidez).</p></div>"
-                        },
-                        {
-                            "html": "<h2>Dê vida à interface</h2><p>O objetivo principal é oferecer a melhor experiência possível, garantindo acessibilidade e performance em qualquer dispositivo.</p><div class='mt-10 text-center'><a href='../public/pdf/whats-is-frontend.pdf' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none;'>Baixar Guia Front-End <i class='fa-solid fa-cloud-download'></i></a></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Carreira",
-                        "descricao": "Qual tecnologia é responsável por definir o <strong>comportamento e a lógica</strong> de interação em uma página web?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "HTML",
-                                "correta": false,
-                                "feedback": "O HTML cuida apenas da estrutura e do conteúdo bruto."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "CSS",
-                                "correta": false,
-                                "feedback": "O CSS é responsável apenas pela aparência e posicionamento visual."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "JavaScript",
-                                "correta": true,
-                                "feedback": "🎯 Exato! O JavaScript é o cérebro que processa as ações e a lógica do usuário."
-                            }
-                        ]
-                    }
+                    },
+                    "item_ordem": 7
                 },
                 {
                     "id": "npm",
@@ -537,7 +1236,7 @@
                                 "ordem": "B",
                                 "descricao": "package.json",
                                 "correta": true,
-                                "feedback": "🎯 Certinho! O package.json é a nossa 'lista de compras' do projeto."
+                                "feedback": " Certinho! O package.json é a nossa 'lista de compras' do projeto."
                             },
                             {
                                 "ordem": "C",
@@ -546,48 +1245,8 @@
                                 "feedback": "Não. O index.html cuida da estrutura da página, não das bibliotecas do Node."
                             }
                         ]
-                    }
-                },
-                {
-                    "id": "node-inicio",
-                    "title": "Node.js: O Início",
-                    "icone": "fa-brands fa-node-js",
-                    "banner_class": "back",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Nodejs'></div><div class='card-text'><h2>O que é o Node?</h2><p>O Node.js® é um ambiente que permite executar JavaScript <strong>fora do navegador</strong>. Ele é o motor por trás de grandes sistemas como Netflix e LinkedIn.</p><ul class='feature-list' style='margin-top: 15px;'><li><i class='fa-solid fa-bolt'></i> Ultra veloz</li><li><i class='fa-solid fa-microchip'></i> Single Thread</li></ul></div></div>"
-                        },
-                        {
-                            "html": "<h2>Instalação</h2><p>Para começar, instale a versão <strong>LTS</strong> (Long Term Support). Após instalar, abra seu terminal e digite:</p><div class='modern-terminal' style='margin: 20px 0;'><div class='terminal-header'><span class='dot red'></span><span class='dot yellow'></span><span class='dot green'></span></div><div class='terminal-body'><code><span class='prompt'>C:\\Users></span> node -v</code></div></div><a href='https://nodejs.org/en' target='_blank' class='btn-primary' style='display: inline-block; text-decoration: none;'><i class='fa-solid fa-download'></i> Ir para Site Oficial</a>"
-                        },
-                        {
-                            "html": "<div class='card-grid reverse'><div class='card-image'><img src='../public/images/coding.png' alt='Coding'></div><div class='card-text'><h2>Seu primeiro código</h2><p>Crie um arquivo <code>app.js</code> e escreva:</p><div class='code-block' style='background: #2d2d2d; color: #fff; padding: 15px; border-radius: 8px;'><pre><code>console.log(\"Servidor iniciado!\");</code></pre></div><p class='mt-10'>Execute no terminal com: <strong>node app.js</strong></p></div></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio Node",
-                        "descricao": "Qual é a principal característica que define o Node.js?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "É uma nova linguagem de programação.",
-                                "correta": false,
-                                "feedback": "Não! O Node usa o JavaScript que você já conhece."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "Um ambiente de execução JS fora do navegador.",
-                                "correta": true,
-                                "feedback": "🎯 Exato! Ele permite usar JS no servidor, acessando arquivos e bancos de dados."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "Um framework exclusivo para o Google Chrome.",
-                                "correta": false,
-                                "feedback": "Quase. Ele usa o motor V8 do Chrome, mas roda de forma independente."
-                            }
-                        ]
-                    }
+                    },
+                    "item_ordem": 8
                 },
                 {
                     "id": "arquitetura-mvc",
@@ -634,54 +1293,11 @@
                                 "ordem": "C",
                                 "descricao": "Controller",
                                 "correta": true,
-                                "feedback": "🎯 Exato! O Controller é o 'cérebro operacional' que recebe a ação e decide o próximo passo."
+                                "feedback": " Exato! O Controller é o 'cérebro operacional' que recebe a ação e decide o próximo passo."
                             }
                         ]
-                    }
-                },
-                {
-                    "id": "logica-while",
-                    "title": "Estrutura While",
-                    "icone": "fa-brands fa-square-js",
-                    "banner_class": "logic",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Programação'></div><div class='card-text'><h2>O que é o While?</h2><p>Em tradução livre, <strong>While</strong> significa \"Enquanto\". Ele cria um laço que repete um bloco de código repetidamente <strong>enquanto</strong> uma condição for verdadeira.</p><div class='info-box-blue'><p><i class='fa-solid fa-circle-info'></i> Pense nele como um guarda de segurança que só deixa o código passar se a senha (condição) estiver correta.</p></div></div></div>"
-                        },
-                        {
-                            "html": "<h2>O Fluxo de Decisão</h2><p>Antes de cada repetição, o computador faz uma checagem:</p><div class='flowchart-mini' style='display: flex; flex-direction: column; gap: 10px; align-items: center; margin: 20px 0;'><div class='p-10 border-blue' style='border: 1px solid #1cb0f6; padding: 10px; border-radius: 5px;'>A condição é Verdadeira?</div><i class='fa-solid fa-arrow-down'></i><div class='p-10' style='background: #e8f5e9; border: 1px solid #2ecc71; padding: 10px; border-radius: 5px;'>Sim: Executa o código e volta ao início</div><i class='fa-solid fa-arrow-down'></i><div class='p-10' style='background: #ffebee; border: 1px solid #e74c3c; padding: 10px; border-radius: 5px;'>Não: Encerra o laço e segue o programa</div></div><p><strong>Atenção:</strong> Se a condição for falsa na primeira vez, o código nunca será executado.</p>"
-                        },
-                        {
-                            "html": "<h2>Sintaxe e Exemplo</h2><div class='card-grid' style='gap: 20px;'><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #6a9955;'>// Estrutura</span><br><span style='color: #c586c0;'>while</span>(condicao) {<br>&nbsp;&nbsp;<span style='color: #ce9178;'>// Repete isto</span><br>}</div><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><span style='color: #6a9955;'>// Contador real</span><br><span style='color: #569cd6;'>let</span> c = 0;<br><span style='color: #c586c0;'>while</span>(c < 3) {<br>&nbsp;&nbsp;console.log(c);<br>&nbsp;&nbsp;c++; <span style='color: #6a9955;'>// Importante!</span><br>}</div></div>"
-                        },
-                        {
-                            "html": "<h2 style='color: #e74c3c;'><i class='fa-solid fa-triangle-exclamation'></i> Perigo: Loop Infinito</h2><p>Se você esquecer de atualizar a variável (como o <code>c++</code>), a condição será sempre verdadeira.</p><div class='warning-box' style='background: #fff5f5; padding: 15px; border-left: 5px solid #e74c3c; margin-top: 15px;'><p>O navegador tentará processar o código para sempre, o que causará o <strong>travamento da aba ou do sistema</strong>.</p></div><div class='mt-10'><a href='https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while' target='_blank' class='btn-secondary' style='display: inline-block; text-decoration: none; padding: 10px 20px; background: #f0f0f0; border-radius: 5px; color: #333;'>Ver documentação MDN</a></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Lógica",
-                        "descricao": "O que acontece se a condição do <code>while</code> for <strong>falsa</strong> logo na primeira verificação?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "O código executa uma vez e para.",
-                                "correta": false,
-                                "feedback": "Incorreto. Diferente do 'do-while', o 'while' checa a condição antes de qualquer execução."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "O código dentro do laço é ignorado.",
-                                "correta": true,
-                                "feedback": "🎯 Correto! Se a condição inicial é falsa, o bloco de repetição nem chega a ser aberto."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "O navegador trava (Loop Infinito).",
-                                "correta": false,
-                                "feedback": "Pelo contrário! O navegador trava quando a condição nunca deixa de ser verdadeira."
-                            }
-                        ]
-                    }
+                    },
+                    "item_ordem": 9
                 },
                 {
                     "id": "git-github",
@@ -719,7 +1335,7 @@
                                 "ordem": "B",
                                 "descricao": "$ git push",
                                 "correta": true,
-                                "feedback": "🚀 Perfeito! Push (empurrar) envia seu trabalho local para o repositório remoto."
+                                "feedback": " Perfeito! Push (empurrar) envia seu trabalho local para o repositório remoto."
                             },
                             {
                                 "ordem": "C",
@@ -728,98 +1344,8 @@
                                 "feedback": "O init serve apenas para começar um novo repositório do zero."
                             }
                         ]
-                    }
-                },
-                {
-                    "id": "css-flexbox-master",
-                    "title": "CSS Flexbox",
-                    "icone": "fa-brands fa-css3-alt",
-                    "banner_class": "frontend",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/front-undraw.svg' alt='Layout Flexível'></div><div class='card-text'><h2>O que é Flexbox?</h2><p>É um sistema de layout <strong>unidimensional</strong> que organiza elementos em linhas ou colunas de forma inteligente.</p><div class='info-box-blue' style='background: #e7f3ff; padding: 10px; border-left: 4px solid #264de4; border-radius: 4px;'><p><i class='fa-solid fa-lightbulb' style='color: #264de4;'></i> A mágica começa ao aplicar <code>display: flex;</code> no elemento pai!</p></div></div></div>"
-                        },
-                        {
-                            "html": "<h2>O Pai e os Filhos</h2><p>O Flexbox trabalha com uma hierarquia direta:</p><div class='concept-grid' style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;'><div style='padding: 10px; border: 1px solid #264de4; border-radius: 8px;'><h3>Flex Container</h3><p>O elemento pai. Define as regras de alinhamento.</p></div><div style='padding: 10px; border: 1px solid #264de4; border-radius: 8px;'><h3>Flex Items</h3><p>Os filhos diretos. Eles se ajustam conforme as ordens do pai.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Entendendo os Eixos</h2><p>O segredo está em dominar os dois eixos invisíveis:</p><ul class='check-list' style='list-style: none; padding-left: 0; margin-top: 15px;'><li><i class='fa-solid fa-arrows-left-right' style='color: #264de4;'></i> <strong>Main Axis:</strong> Eixo principal (onde os itens 'correm').</li><li><i class='fa-solid fa-arrows-up-down' style='color: #264de4;'></i> <strong>Cross Axis:</strong> Eixo perpendicular ao principal.</li></ul>"
-                        },
-                        {
-                            "html": "<h2>Propriedades Essenciais</h2><p>As ferramentas que você mais usará no dia a dia:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin: 15px 0;'><code><span style='color: #9cdcfe;'>justify-content</span>: center; <span style='color: #6a9955;'>/* Eixo Principal */</span><br><span style='color: #9cdcfe;'>align-items</span>: center; <span style='color: #6a9955;'>/* Eixo Transversal */</span><br><span style='color: #9cdcfe;'>gap</span>: <span style='color: #b5cea8;'>20px</span>; <span style='color: #6a9955;'>/* Espaço entre itens */</span></code></div><p class='text-center'>Dica: Pratique com o <strong>Flexbox Froggy</strong> para fixar!</p>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Layout",
-                        "descricao": "Qual propriedade você usaria para centralizar os itens horizontalmente em uma linha padrão (row)?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "align-items",
-                                "correta": false,
-                                "feedback": "Quase! align-items cuida do eixo transversal (vertical no caso de uma row)."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "justify-content",
-                                "correta": true,
-                                "feedback": "🎯 Perfeito! No modo padrão (row), o justify-content controla o alinhamento horizontal (Main Axis)."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "flex-wrap",
-                                "correta": false,
-                                "feedback": "Não. flex-wrap define se os itens devem quebrar para a próxima linha ou não."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "dom-api-intro",
-                    "title": "Introdução ao DOM",
-                    "icone": "fa-solid fa-sitemap",
-                    "banner_class": "frontend",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/student.png' alt='Conceito DOM'></div><div class='card-text'><h2>O que é o DOM?</h2><p>DOM significa <strong>Document Object Model</strong>. É a ponte que permite ao JavaScript 'conversar' com o seu HTML.</p><p>Através dele, podemos alterar textos, cores e até criar novos elementos sem precisar recarregar a página.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>A Árvore de Elementos</h2><p>O navegador transforma seu HTML em uma estrutura hierárquica. Cada tag vira um <strong>nó</strong> (node) na árvore.</p><div class='info-box-blue' style='background: #e3f2fd; padding: 15px; border-radius: 8px; border-left: 5px solid #2196f3; margin-top: 15px;'><p><i class='fa-solid fa-circle-info' style='color: #2196f3;'></i> O objeto raiz de tudo no seu site é o <code>document</code>. Ele é o ponto de partida para qualquer alteração.</p></div>"
-                        },
-                        {
-                            "html": "<h2>Como selecionar?</h2><p>Para o JS agir, ele precisa primeiro <strong>localizar</strong> o alvo. O método mais comum e performático é buscar pelo ID:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 10px;'><code><span style='color: #6a9955;'>// HTML: &lt;h1 id=\"titulo\"&gt;Olá&lt;/h1&gt;</span><br><br><span style='color: #569cd6;'>const</span> h1 = document.getElementById(<span style='color: #ce9178;'>\"titulo\"</span>);</code></div><p style='margin-top: 10px;'>Agora, a variável <code>h1</code> representa o elemento real da sua tela.</p>"
-                        },
-                        {
-                            "html": "<h2>Manipulação em Tempo Real</h2><p>Uma vez selecionado, você pode mudar o conteúdo, o visual ou as classes CSS do elemento:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin: 15px 0;'><code>h1.innerText = <span style='color: #ce9178;'>\"Novo Texto!\"</span>;<br>h1.style.color = <span style='color: #ce9178;'>\"#3498db\"</span>;<br>h1.classList.add(<span style='color: #ce9178;'>\"ativo\"</span>);</code></div>"
-                        },
-                        {
-                            "html": "<h2>Eventos e Interação</h2><p>O DOM permite que o código 'escute' o que o usuário faz (cliques, teclado, scroll) através do <strong>addEventListener</strong>.</p><div style='text-align: center; margin-top: 20px;'><a href='https://www.w3schools.com/js/js_htmldom.asp' target='_blank' class='btn-main' style='background: #f7df1e; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;'>Ver Guia de Métodos <i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Seleção",
-                        "descricao": "Qual método você usaria para selecionar um único elemento que possui o atributo id='botao-enviar'?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "document.querySelector('.botao-enviar')",
-                                "correta": false,
-                                "feedback": "Quase! O ponto (.) indica uma classe. Para IDs no querySelector, usaríamos a hashtag (#)."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "document.getElementById('botao-enviar')",
-                                "correta": true,
-                                "feedback": "🎯 Correto! Como IDs são únicos por página, o método 'Get Element By ID' é o mais direto e performático."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "document.getElementsByTagName('id')",
-                                "correta": false,
-                                "feedback": "Ops! getElementsByTagName busca por tags como 'div' ou 'h1', não por atributos de ID."
-                            }
-                        ]
-                    }
+                    },
+                    "item_ordem": 10
                 },
                 {
                     "id": "debug-process-tech",
@@ -854,7 +1380,7 @@
                                 "ordem": "B",
                                 "descricao": "Breakpoint",
                                 "correta": true,
-                                "feedback": "🎯 Exato! O Breakpoint é o 'freio de mão' do desenvolvedor, permitindo analisar tudo com calma."
+                                "feedback": " Exato! O Breakpoint é o 'freio de mão' do desenvolvedor, permitindo analisar tudo com calma."
                             },
                             {
                                 "ordem": "C",
@@ -863,52 +1389,16 @@
                                 "feedback": "O Watch serve para monitorar valores, mas ele precisa de um Breakpoint para que você possa ver a pausa."
                             }
                         ]
-                    }
-                },
-                {
-                    "id": "logic-conditionals-intro",
-                    "title": "Estruturas Condicionais",
-                    "icone": "fa-solid fa-code-branch",
-                    "banner_class": "logic",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Lógica If Else'></div><div class='card-text'><h2>O que é If/Else?</h2><p>É uma estrutura que permite ao seu código tomar <strong>decisões</strong>. Ele executa um bloco de comandos <strong>se</strong> uma condição for verdadeira, e outro <strong>caso contrário</strong>.</p><div class='info-box-blue' style='background: #e1f5fe; padding: 10px; border-left: 4px solid #03a9f4; border-radius: 4px; margin-top: 10px;'><p><i class='fa-solid fa-circle-info'></i> Pense nisso como uma bifurcação na estrada: você só pode seguir um caminho por vez!</p></div></div></div>"
-                        },
-                        {
-                            "html": "<h2>Sintaxe Básica</h2><p>A condição fica sempre entre parênteses e o código a ser executado fica protegido por chaves:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 10px;'><code><span style='color: #569cd6;'>if</span> (condicao) { <br>&nbsp;&nbsp;<span style='color: #6a9955;'>// código se for verdadeiro</span> <br>} <span style='color: #569cd6;'>else</span> { <br>&nbsp;&nbsp;<span style='color: #6a9955;'>// código se for falso</span> <br>}</code></div>"
-                        },
-                        {
-                            "html": "<h2>Exemplo: Escolha do Herói</h2><p>O <code>else if</code> nos permite testar várias condições em sequência antes de desistir no <code>else</code>:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace; margin: 10px 0;'><code><span style='color: #569cd6;'>var</span> heroi = <span style='color: #ce9178;'>\"Hulk\"</span>;<br><br><span style='color: #569cd6;'>if</span> (heroi === <span style='color: #ce9178;'>\"Thor\"</span>) {<br>&nbsp;&nbsp;console.log(<span style='color: #ce9178;'>\"Trovão!\"</span>);<br>} <span style='color: #569cd6;'>else if</span> (heroi === <span style='color: #ce9178;'>\"Hulk\"</span>) {<br>&nbsp;&nbsp;console.log(<span style='color: #ce9178;'>\"Esmagar!\"</span>);<br>} <span style='color: #569cd6;'>else</span> {<br>&nbsp;&nbsp;console.log(<span style='color: #ce9178;'>\"Humano comum.\"</span>);<br>}</code></div>"
-                        },
-                        {
-                            "html": "<h2>Operadores Lógicos</h2><p>Para decisões complexas, combinamos condições:</p><ul class='check-list' style='list-style: none; padding-left: 0; margin-top: 15px;'><li><i class='fa-solid fa-link' style='color: #f7df1e;'></i> <code>&&</code> (E): <strong>Tudo</strong> precisa ser verdade.</li><li><i class='fa-solid fa-distribute-spacing-horizontal' style='color: #f7df1e;'></i> <code>||</code> (OU): <strong>Pelo menos um</strong> precisa ser verdade.</li><li><i class='fa-solid fa-circle-exclamation' style='color: #f7df1e;'></i> <code>!</code> (NÃO): Inverte o valor (o que é true vira false).</li></ul>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Lógica",
-                        "descricao": "Qual bloco de código será executado se a condição dentro do 'if' resultar em 'false'?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "O próprio bloco if",
-                                "correta": false,
-                                "feedback": "Não. O bloco 'if' só ganha vida quando a condição é estritamente verdadeira."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "O bloco else",
-                                "correta": true,
-                                "feedback": "🎯 Exato! O 'else' é o nosso plano de contingência para qualquer resultado falso."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "Nenhum código será executado",
-                                "correta": false,
-                                "feedback": "Incorreto. Se houver um bloco 'else' definido, ele será executado obrigatoriamente se o 'if' falhar."
-                            }
-                        ]
-                    }
-                },
+                    },
+                    "item_ordem": 11
+                }
+            ]
+        },
+        {
+            "ordem": 6,
+            "secao": "Banco de Dados",
+            "classe_estilo": "logic",
+            "items": [
                 {
                     "id": "relational-database-intro",
                     "title": "Banco de Dados Relacional",
@@ -945,7 +1435,7 @@
                                 "ordem": "B",
                                 "descricao": "Identificar de forma única cada registro.",
                                 "correta": true,
-                                "feedback": "🎯 Exato! A Chave Primária garante que você nunca confunda dois registros, mesmo que eles tenham nomes idênticos."
+                                "feedback": " Exato! A Chave Primária garante que você nunca confunda dois registros, mesmo que eles tenham nomes idênticos."
                             },
                             {
                                 "ordem": "C",
@@ -954,230 +1444,8 @@
                                 "feedback": "Nada a ver! A performance de rede é um fator externo ao modelo de dados da tabela."
                             }
                         ]
-                    }
-                },
-                {
-                    "id": "intro-backend-concept",
-                    "title": "Introdução ao Back-End",
-                    "icone": "fa-solid fa-server",
-                    "banner_class": "backend",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Desenvolvimento Back-end'></div><div class='card-text'><h2>O que é o Back-End?</h2><p>Pense no Back-End como o <strong>cérebro</strong> de um site. Enquanto o Front-End cuida da interface visual, o Back-End gerencia a lógica, segurança e o armazenamento de dados.</p><p class='mt-10' style='font-style: italic; color: #666;'>Sem ele, um botão de 'Login' seria apenas um desenho bonito que não valida quem você é.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Como a mágica acontece?</h2><p>Tudo no Back-End funciona através de um ciclo chamado <strong>Request & Response</strong> (Requisição e Resposta):</p><div class='flow-container' style='display: flex; justify-content: space-around; align-items: center; margin: 30px 0; text-align: center; background: #f9f9f9; padding: 20px; border-radius: 15px;'><div><i class='fa-solid fa-laptop-code' style='font-size: 1.5rem; color: #3498db;'></i><p style='font-size: 0.7rem; font-weight: bold;'>1. Cliente solicita</p></div><i class='fa-solid fa-arrow-right-long' style='color: #ccc;'></i><div><i class='fa-solid fa-gears' style='font-size: 1.5rem; color: #e67e22;'></i><p style='font-size: 0.7rem; font-weight: bold;'>2. Servidor processa</p></div><i class='fa-solid fa-arrow-right-long' style='color: #ccc;'></i><div><i class='fa-solid fa-database' style='font-size: 1.5rem; color: #2ecc71;'></i><p style='font-size: 0.7rem; font-weight: bold;'>3. Banco de Dados</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Caixa de Ferramentas</h2><p>Estas são as tecnologias que permitem construir o motor do seu sistema:</p><div class='tech-stack' style='display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px;'><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-node-js' style='color: #68a063;'></i> <span>Node.js</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-python' style='color: #3776ab;'></i> <span>Python</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-php' style='color: #777bb4;'></i> <span>PHP</span></div><div class='tech-item' style='border: 1px solid #eee; padding: 10px; border-radius: 10px; display: flex; align-items: center; gap: 10px;'><i class='fa-brands fa-java' style='color: #e76f00;'></i> <span>Java</span></div></div>"
-                        },
-                        {
-                            "html": "<div class='card-grid'><div class='card-text'><h2>Próximos Passos</h2><p>Agora que você entende o conceito, o próximo desafio é entender como os dados são guardados e como o servidor decide o que enviar de volta.</p><div class='mt-10'><a href='../public/pdf/whats-is-backend.pdf' class='btn-main' style='display: inline-block; padding: 10px 20px; text-decoration: none;'><i class='fa-solid fa-file-pdf'></i> Baixar Guia de Back-End</a></div></div><div class='card-image' style='text-align: right;'><i class='fa-solid fa-trophy' style='font-size: 5rem; color: #ffd700;'></i></div></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Check-up Back-End",
-                        "descricao": "Qual das seguintes tarefas é de responsabilidade primordial do Back-End?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "Escolher a cor e o tamanho das fontes do site.",
-                                "correta": false,
-                                "feedback": "Isso é responsabilidade do Front-End (CSS)."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "Validar o login e gerenciar o acesso ao banco de dados.",
-                                "correta": true,
-                                "feedback": "🎯 Exato! O Back-End cuida da segurança e do processamento de dados 'atrás das cortinas'."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "Criar animações suaves quando o usuário passa o mouse.",
-                                "correta": false,
-                                "feedback": "Animações visuais são resolvidas no Front-End."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "logic-arrays-intro",
-                    "title": "JavaScript Arrays",
-                    "icone": "fa-solid fa-layer-group",
-                    "banner_class": "logic",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-text'><h2>O Problema da Escala</h2><p>Imagine que você precisa guardar o nome de 300 filmes. Criar 300 variáveis (<code>filme1, filme2...</code>) seria impossível de gerenciar.</p><div class='terminal mt-10' style='background: #1e1e1e; color: #d4d4d4; padding: 10px; border-radius: 5px;'><code><span style='color: #6a9955;'>// Jeito cansativo:</span><br><span style='color: #c586c0;'>let</span> f1 = <span style='color: #ce9178;'>\"Batman\"</span>;<br><span style='color: #c586c0;'>let</span> f2 = <span style='color: #ce9178;'>\"Barbie\"</span>;</code></div><p class='mt-10'><strong>O Array resolve isso!</strong> Ele é uma lista única que guarda múltiplos valores sob um único nome.</p></div><div class='card-image'><img src='../public/svg/undraw_access_denied_re_awnf.svg' alt='Problema de escala'></div></div>"
-                        },
-                        {
-                            "html": "<h2>Como funciona o Índice?</h2><p>No JavaScript, cada item no Array tem um endereço numérico chamado <strong>índice</strong>. O detalhe crucial: <strong>A contagem começa sempre no ZERO.</strong></p><div class='info-box-white' style='background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-top: 20px;'><p>Para acessar o primeiro item, você usa <code>[0]</code>. Para o segundo, <code>[1]</code>, e assim por diante. É o 'endereço' do dado na memória.</p></div>"
-                        },
-                        {
-                            "html": "<h2>Declarando e Lendo</h2><p>Usamos colchetes <code>[ ]</code> para criar a lista e para acessar os valores nela contidos:</p><div class='terminal mt-20' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px;'><code><span style='color: #c586c0;'>const</span> filmes = [<span style='color: #ce9178;'>\"Batman\"</span>, <span style='color: #ce9178;'>\"Barbie\"</span>];<br><br><span style='color: #6a9955;'>// Lendo o segundo filme:</span><br>console.log(filmes[<span style='color: #b5cea8;'>1</span>]); <span style='color: #6a9955;'>// Saída: \"Barbie\"</span><br><br><span style='color: #6a9955;'>// Alterando o valor:</span><br>filmes[<span style='color: #b5cea8;'>0</span>] = <span style='color: #ce9178;'>\"Spider-Man\"</span>;</code></div>"
-                        },
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/svg/undraw_programming_re_kg9v.svg' alt='Programação de listas'></div><div class='card-text'><h2>A Propriedade .length</h2><p>Como saber quantos itens existem na lista sem contar um por um? Usamos o <code>.length</code>.</p><p class='mt-10'>Se um array tem 3 itens, o <code>length</code> é 3, mas o último índice será sempre <strong>length - 1</strong> (ou seja, 2).</p></div></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio do Índice",
-                        "descricao": "Se eu tenho 'let cores = [\"Azul\", \"Verde\", \"Vermelho\"]', como eu acesso a cor 'Verde'?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "cores[0]",
-                                "correta": false,
-                                "feedback": "Quase! cores[0] retornaria \"Azul\", o primeiro item."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "cores[1]",
-                                "correta": true,
-                                "feedback": "✅ Exato! Como o índice começa em 0, o segundo item (Verde) está na posição 1."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "cores[2]",
-                                "correta": false,
-                                "feedback": "Não. cores[2] retornaria \"Vermelho\", o terceiro item da lista."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "arquitetura-cliente-servidor",
-                    "title": "Arquitetura Cliente-Servidor",
-                    "icone": "fa-solid fa-network-wired",
-                    "banner_class": "backend",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='Desenvolvimento Back-end'></div><div class='card-text'><h2>O Fluxo de Dados</h2><p>A web funciona em um ciclo constante de <strong>Request & Response</strong> (Requisição e Resposta).</p><p>O <strong>Cliente</strong> (seu navegador) inicia a conversa pedindo algo, e o <strong>Servidor</strong> (um computador remoto) processa e entrega o resultado.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Metáfora do Restaurante</h2><div class='metaphor-box' style='background: #f4f7f9; padding: 20px; border-radius: 10px; margin-top: 15px;'> <p><i class='fa-solid fa-user'></i> <strong>Cliente:</strong> Você sentado à mesa (Navegador).</p> <p><i class='fa-solid fa-envelope'></i> <strong>Requisição:</strong> O pedido feito ao garçom (URL/HTTP Request).</p> <p><i class='fa-solid fa-server'></i> <strong>Servidor:</strong> A cozinha que prepara o prato (Backend/Banco de Dados).</p> </div>"
-                        },
-                        {
-                            "html": "<h2>A Comunicação (HTTP)</h2><p>Para o cliente entender o que aconteceu na cozinha (servidor), usamos códigos de status:</p><div class='info-box-blue' style='background: #e1f5fe; padding: 15px; border-left: 5px solid #03a9f4; border-radius: 4px; margin-top: 15px;'> <p>✅ <strong>200:</strong> OK! O prato está pronto.</p> <p>⚠️ <strong>404:</strong> Not Found! Esse item não existe no menu.</p> <p>🚫 <strong>500:</strong> Server Error! A cozinha pegou fogo (erro interno).</p> </div>"
-                        },
-                        {
-                            "html": "<h2>Conceito de Stateless</h2><p>A maioria das conexões web são <strong>Stateless</strong> (sem estado). O servidor é 'desmemoriado'.</p><blockquote style='border-left: 4px solid #3498db; padding-left: 15px; font-style: italic; margin: 20px 0;'>Cada pedido é tratado como se fosse o primeiro. Para o servidor saber que você é você, o cliente deve enviar um <strong>Token</strong> ou <strong>Cookie</strong> em cada nova requisição.</blockquote>"
-                        },
-                        {
-                            "html": "<h2>Tipos de Servidores</h2><p>Um servidor é definido pelo serviço que ele presta, não pelo hardware:</p><div class='card-grid' style='gap: 10px; margin-top: 20px;'> <div class='benefit-item' style='text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 8px;'><i class='fa-solid fa-database' style='font-size: 1.5rem; color: #3498db;'></i><p><strong>DB Server:</strong> Guarda dados.</p></div> <div class='benefit-item' style='text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 8px;'><i class='fa-solid fa-file-code' style='font-size: 1.5rem; color: #2ecc71;'></i><p><strong>Web Server:</strong> Entrega o site.</p></div> <div class='benefit-item' style='text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 8px;'><i class='fa-solid fa-cloud' style='font-size: 1.5rem; color: #e67e22;'></i><p><strong>API Server:</strong> Entrega JSON.</p></div> </div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio Técnico",
-                        "descricao": "Se o servidor central de uma aplicação cair (ficar offline), o que acontece com os clientes que estão usando o app?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "Os navegadores dos clientes tornam-se o novo servidor.",
-                                "correta": false,
-                                "feedback": "Incorreto. Navegadores são clientes; eles não possuem a lógica ou os dados centrais para servir outros."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "O cliente não consegue obter novos dados ou realizar ações que dependam do banco.",
-                                "correta": true,
-                                "feedback": "🎯 Exato! Como o processamento e os dados são centralizados no servidor, sem ele, o cliente fica 'isolado'."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "O site continua funcionando perfeitamente, pois os dados ficam salvos no mouse.",
-                                "correta": false,
-                                "feedback": "Definitivamente não! O mouse não armazena dados da aplicação."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "intro-apis-concept",
-                    "title": "Entendendo APIs",
-                    "icone": "fa-brands fa-node-js",
-                    "banner_class": "backend",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/laptop.png' alt='API Concept'></div><div class='card-text'><h2>O que é uma API?</h2><p>API significa <strong>Application Programming Interface</strong>.</p><p>Imagine que o seu app é um controle remoto e o servidor é a TV. A API são os botões: você não precisa saber como a eletrônica funciona por dentro, apenas qual botão apertar para ter o resultado esperado.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>A Analogia do Garçom</h2><p>No restaurante do desenvolvimento, a comunicação segue um padrão rigoroso:</p><ul class='check-list' style='list-style: none; padding-left: 0;'><li style='margin-bottom: 10px;'><i class='fa-solid fa-user' style='color: #007bff;'></i> <strong>Você (Cliente):</strong> Faz o pedido através da interface (Front-end).</li><li style='margin-bottom: 10px;'><i class='fa-solid fa-bell-concierge' style='color: #e67e22;'></i> <strong>Garçom (API):</strong> Leva seu pedido à cozinha e traz a comida de volta.</li><li style='margin-bottom: 10px;'><i class='fa-solid fa-kitchen-set' style='color: #2ecc71;'></i> <strong>Cozinha (Servidor):</strong> Onde os dados são preparados e a lógica acontece.</li></ul>"
-                        },
-                        {
-                            "html": "<h2>O Ciclo Request & Response</h2><p>Uma API vive em um ciclo constante de pergunta e resposta via protocolo HTTP:</p><div class='info-box-blue' style='background: #e7f3ff; border-left: 5px solid #007bff; padding: 15px; border-radius: 5px; margin-top: 15px;'><p><strong>1. Request:</strong> O app envia dados (ex: usuário e senha).</p><p><strong>2. Response:</strong> O servidor valida e responde (ex: um token de acesso em formato JSON).</p></div>"
-                        },
-                        {
-                            "html": "<h2>Exemplo Prático (Node.js)</h2><p>Criar uma API básica no Node.js significa dizer ao servidor como responder a um pedido específico:</p><div class='terminal' style='background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: monospace;'><pre><code><span style='color: #c586c0;'>const</span> http = <span style='color: #dcdcaa;'>require</span>(<span style='color: #ce9178;'>'http'</span>);<br><span style='color: #c586c0;'>const</span> server = http.<span style='color: #dcdcaa;'>createServer</span>((req, res) => {<br>  res.<span style='color: #dcdcaa;'>writeHead</span>(<span style='color: #b5cea8;'>200</span>, { <span style='color: #ce9178;'>'Content-Type'</span>: <span style='color: #ce9178;'>'application/json'</span> });<br>  res.<span style='color: #dcdcaa;'>end</span>(JSON.<span style='color: #dcdcaa;'>stringify</span>({ msg: <span style='color: #ce9178;'>\"Olá, API!\"</span> }));<br>});<br>server.<span style='color: #dcdcaa;'>listen</span>(<span style='color: #b5cea8;'>3000</span>);</code></pre></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Check-up API",
-                        "descricao": "Qual é a principal função de uma API no contexto Web?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "Substituir o Banco de Dados para economizar espaço.",
-                                "correta": false,
-                                "feedback": "A API não substitui o banco, ela serve como o mensageiro que acessa os dados para você."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "Permitir que diferentes aplicações se comuniquem de forma padronizada.",
-                                "correta": true,
-                                "feedback": "Perfeito! 🎯 A API define as regras de como um software pode solicitar dados de outro."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "Criar o design visual e as cores do site.",
-                                "correta": false,
-                                "feedback": "Isso é papel do Front-end (CSS/HTML). A API foca na troca de dados brutos."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "ux-web-accessibility",
-                    "title": "Web Acessibilidade",
-                    "icone": "fa-brands fa-accessible-icon",
-                    "banner_class": "design",
-                    "flashcards": [
-                        {
-                            "html": "<div class='card-grid'><div class='card-image'><img src='../public/images/front-undraw.svg' alt='Inclusão Digital'></div><div class='card-text'><h2>O que é Acessibilidade?</h2><p>É garantir que a Web seja utilizável por <strong>todas as pessoas</strong>, independentemente de suas capacidades físicas ou cognitivas.</p><p>Isso beneficia pessoas cegas, com baixa visão, surdas, com deficiências motoras e até quem tem uma conexão lenta ou braço quebrado temporariamente.</p></div></div>"
-                        },
-                        {
-                            "html": "<h2>Os 4 Pilares (POUR)</h2><p>O W3C organiza a acessibilidade em quatro princípios fundamentais:</p><ul class='check-list' style='list-style: none; padding-left: 0;'><li style='margin-bottom: 8px;'><i class='fa-solid fa-eye'></i> <strong>Perceptível:</strong> Os usuários devem conseguir perceber a informação (ex: legendas em vídeos).</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-keyboard'></i> <strong>Operável:</strong> A interface não pode exigir interações impossíveis (ex: navegação por teclado).</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-brain'></i> <strong>Compreensível:</strong> O conteúdo e a operação devem ser claros.</li><li style='margin-bottom: 8px;'><i class='fa-solid fa-microchip'></i> <strong>Robusto:</strong> O código deve ser interpretado de forma confiável por tecnologias assistivas.</li></ul>"
-                        },
-                        {
-                            "html": "<h2>Checklist Prático</h2><p>Pequenas mudanças no código geram grandes impactos na inclusão:</p><div class='info-box-blue' style='background: #e1f5fe; border-left: 5px solid #005A9C; padding: 15px; border-radius: 5px; margin-top: 15px;'><p><i class='fa-solid fa-terminal'></i> <strong>HTML Semântico:</strong> Use <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;button&gt;</code> em vez de apenas <code>&lt;div&gt;</code>.</p><p><i class='fa-solid fa-font'></i> <strong>Contraste:</strong> Use ferramentas para verificar se a cor do texto se destaca do fundo.</p><p><i class='fa-solid fa-image'></i> <strong>Atributo Alt:</strong> Descreva imagens para quem usa leitores de tela.</p></div>"
-                        },
-                        {
-                            "html": "<h2>Guia de Implementação</h2><p>A acessibilidade é uma jornada contínua. Comece aplicando o básico em seus projetos e evolua conforme estuda as normas WCAG.</p><div class='mt-10 text-center'><a href='../public/pdf/acessibilidade.pdf' target='_blank' class='btn-main' style='display: inline-block; text-decoration: none; padding: 10px 20px; background: #005A9C; color: white; border-radius: 5px;'>Baixar Material Completo <i class='fa-solid fa-cloud-download'></i></a></div>"
-                        }
-                    ],
-                    "quiz": {
-                        "title": "Desafio de Inclusão",
-                        "descricao": "Qual prática abaixo é fundamental para que leitores de tela identifiquem uma imagem para um usuário cego?",
-                        "opcoes": [
-                            {
-                                "ordem": "A",
-                                "descricao": "Aumentar a resolução da imagem para 4K.",
-                                "correta": false,
-                                "feedback": "Incorreto. A resolução visual não ajuda quem não pode ver a tela; o leitor de tela precisa de texto."
-                            },
-                            {
-                                "ordem": "B",
-                                "descricao": "Utilizar o atributo 'alt' com uma descrição textual.",
-                                "correta": true,
-                                "feedback": "🎯 Perfeito! O atributo 'alt' (texto alternativo) é o que o software lê em voz alta para descrever a imagem."
-                            },
-                            {
-                                "ordem": "C",
-                                "descricao": "Colocar a imagem dentro de um link piscante.",
-                                "correta": false,
-                                "feedback": "Pelo contrário! Elementos que piscam podem causar crises convulsivas em pessoas fotossensíveis."
-                            }
-                        ]
-                    }
+                    },
+                    "item_ordem": 1
                 }
             ]
         }

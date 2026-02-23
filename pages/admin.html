@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TrilhaDoDev Studio - Editor de Trilha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/studio.css">
+</head>
+<body class="trail-page">
+    <div class="admin-controls">
+        <h2 style="margin:0; color:var(--text-dark);">Studio</h2>
+        <input type="file" id="json-upload" hidden accept=".json">
+        <button onclick="document.getElementById('json-upload').click()" class="btn-main" style="background:#58cc02">Abrir JSON</button>
+        <button onclick="addNewSection()" class="btn-main" style="background:#1cb0f6"> + Nova Seção</button>
+        <button onclick="exportarJSON()" class="btn-main" style="background:#af46ff; margin-left: auto;">Baixar data.json</button>
+    </div>
+
+    <div id="editor-container">
+        <div style="text-align: center; color: #999; margin-top: 100px;">
+            <i class="fa-solid fa-folder-open fa-4x"></i>
+            <p>Carregue o arquivo para começar a editar ou crie uma nova seção.</p>
+        </div>
+    </div>
+
+    <script src="../js/admin-logic.js"></script>
+</body>
+</html>

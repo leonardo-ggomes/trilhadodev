@@ -1,0 +1,110 @@
+:root {
+    --admin-bg: #f0f2f5;
+}
+
+body {
+    background: var(--admin-bg);
+}
+
+.admin-controls {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#editor-container {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.edit-section {
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.items-drop-zone {
+    min-height: 80px;
+    background: #fafafa;
+    border: 2px dashed #eee;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.draggable-item {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.draggable-item:active {
+    cursor: grabbing;
+}
+
+.btn-danger {
+    color: #ff4b4b;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.btn-danger:hover {
+    transform: scale(1.2);
+}
+
+.add-section-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-add {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Helpers de Drag */
+.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
+.drag-over-zone {
+    border-color: var(--secondary) !important;
+    background: #e3f2fd !important;
+}

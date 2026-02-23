@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trilhas de Conhecimento | Coders</title>
+    <title>Trilhas de Conhecimento | TrilhaDoDev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body class="trail-page">
 
     <header class="navbar">
         <div class="nav-container">
-            <a href="../index.html" class="logo">Coders<span>.</span></a>
+            <a href="../index.html" class="logo">TrilhaDoDev<span>.</span></a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Início</a></li>
@@ -32,56 +34,75 @@
 
     <footer class="main-footer">
         <div class="footer-bottom">
-            <p><i class="fa-solid fa-mug-hot"></i> 2026 Coders | Leonardo Garcia</p>
+            <p><i class="fa-solid fa-mug-hot"></i> 2026 TrilhaDoDev | Leonardo Garcia</p>
         </div>
     </footer>
 
     <script>
         async function carregarTrilhas() {
             try {
-                // Certifique-se que o caminho do data.json está correto
-                const response = await fetch('../data.json'); 
+                const response = await fetch('../data.json');
                 const data = await response.json();
                 const wrapper = document.getElementById('trail-main');
-                wrapper.innerHTML = ''; // Limpa o carregando
+                wrapper.innerHTML = '';
 
                 data.trilhas.forEach(trilha => {
                     const section = document.createElement('section');
                     section.className = 'trail-section';
-                    
-                    // Lógica para renderizar os itens da trilha
+
                     const itemsHTML = trilha.items.map(item => `
-                        <div class="node-item">
-                            <a href="flashcard.html?track=${item.id}" class="node-btn active">
-                                <i class="fa-solid ${item.icone || 'fa-code'}"></i>
-                            </a>
-                            <span class="node-label">${item.title}</span>
-                        </div>
-                    `).join('');
+                <div class="node-item">
+                    <a href="flashcard.html?track=${item.id}" class="node-btn active" onclick="saveScrollPos()">
+                        <i class="fa-solid ${item.icone || 'fa-code'}"></i>
+                    </a>
+                    <span class="node-label">${item.title}</span>
+                </div>
+            `).join('');
 
                     section.innerHTML = `
-                        <div class="section-banner ${trilha.classe_estilo || 'logic'}">
-                            <h2>${trilha.ordem}. ${trilha.secao}</h2>
-                            <p>${trilha.descricao || ''}</p>
-                        </div>
-                        <div class="snake-container">
-                            ${itemsHTML}
-                        </div>
-                    `;
+                <div class="section-banner ${trilha.classe_estilo || 'logic'}">
+                    <h2>${trilha.ordem}. ${trilha.secao}</h2>
+                    <p>${trilha.descricao || ''}</p>
+                </div>
+                <div class="snake-container">
+                    ${itemsHTML}
+                </div>
+            `;
                     wrapper.appendChild(section);
                 });
+
+                // --- LÓGICA DE RESTAURAÇÃO DE SCROLL ---
+                const savedScroll = localStorage.getItem('trailScrollPos');
+                if (savedScroll) {
+                    // Usamos um pequeno timeout para garantir que o DOM foi renderizado e pintado
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: parseInt(savedScroll),
+                            behavior: 'instant' // 'smooth' pode ser estranho ao carregar
+                        });
+                        // Limpa para não rolar sozinho caso ele entre na página pela primeira vez depois
+                        localStorage.removeItem('trailScrollPos');
+                    }, 100);
+                }
+
             } catch (error) {
                 console.error("Erro ao carregar trilhas:", error);
-                document.getElementById('trail-main').innerHTML = `
-                    <div style="text-align: center; color: red; padding: 50px;">
-                        <i class="fa-solid fa-triangle-exclamation fa-2x"></i>
-                        <p>Erro ao carregar as trilhas. Verifique o console.</p>
-                    </div>`;
+                // ... seu código de erro
             }
         }
 
-        // Inicia a função ao carregar a página
+        // Função para salvar a posição antes de navegar
+        function saveScrollPos() {
+            localStorage.setItem('trailScrollPos', window.scrollY);
+        }
+
+        // Também salvamos se o usuário usar o botão de voltar do navegador
+        window.onbeforeunload = function () {
+            localStorage.setItem('trailScrollPos', window.scrollY);
+        };
+
         window.onload = carregarTrilhas;
     </script>
 </body>
+
 </html>

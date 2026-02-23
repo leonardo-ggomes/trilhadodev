@@ -1,5 +1,5 @@
 /**
- * Coders - Lesson Engine
+ * TrilhaDoDev - Lesson Engine
  * Gerencia o carregamento de dados e interações dos Flashcards/Quiz
  */
 
@@ -32,7 +32,7 @@ async function initTemplate() {
             aulaData = aulaAtiva;
             renderAula(aulaAtiva, secaoTitulo);
         } else {
-            document.getElementById('flashcard-container').innerHTML = 
+            document.getElementById('flashcard-container').innerHTML =
                 `<div class='error-msg'><h2>Aula não encontrada.</h2><a href='trilhas.html'>Voltar para trilhas</a></div>`;
         }
     } catch (error) {
@@ -50,7 +50,7 @@ function renderAula(aula, secaoTitulo) {
     const badge = document.getElementById('lesson-badge');
     if (badge) badge.innerText = secaoTitulo.toUpperCase();
     document.getElementById('lesson-main-title').innerText = aula.title;
-    
+
     const icon = document.getElementById('lesson-icon');
     if (icon && aula.icone) icon.className = aula.icone;
 
@@ -95,7 +95,7 @@ function renderAula(aula, secaoTitulo) {
 
 function updateProgress() {
     const steps = document.querySelectorAll('.step-card');
-    
+
     steps.forEach((step, i) => {
         step.style.display = (i === currentStep) ? 'block' : 'none';
         if (i === currentStep) step.classList.add('active');
@@ -109,7 +109,7 @@ function updateProgress() {
     // Botões
     document.getElementById('prevBtn').style.visibility = (currentStep === 0) ? 'hidden' : 'visible';
     const nextBtn = document.getElementById('nextBtn');
-    
+
     if (currentStep === totalSteps - 1) {
         nextBtn.innerHTML = 'Finalizar Aula <i class="fa-solid fa-flag-checkered"></i>';
         nextBtn.classList.add('btn-finish');
@@ -125,23 +125,38 @@ function handleQuizAnswer(btn) {
     const feedbackDisplay = document.getElementById('quiz-feedback');
     const allButtons = document.querySelectorAll('.btn-quiz-option');
 
-    allButtons.forEach(b => b.style.pointerEvents = 'none');
-    feedbackDisplay.innerHTML = feedbackText;
+    // Desabilita cliques para evitar múltiplas tentativas simultâneas
+    allButtons.forEach(b => {
+        b.classList.remove('selected', 'wrong', 'correct');
+        b.style.pointerEvents = 'none';
+    });
+
+    // Mostra o feedback com estilo moderno
+    feedbackDisplay.innerHTML = `
+        <div class="feedback-content ${isCorrect ? 'is-correct' : 'is-wrong'}">
+            <div class="feedback-icon">
+                <i class="fa-solid ${isCorrect ? 'fa-circle-check' : 'fa-circle-xmark'}"></i>
+            </div>
+            <div class="feedback-text">
+                <strong>${isCorrect ? 'Muito bem!' : 'Quase lá...'}</strong>
+                <p>${feedbackText}</p>
+            </div>
+        </div>
+    `;
+
     feedbackDisplay.style.display = 'block';
+    feedbackDisplay.classList.add('animate-pop');
 
     if (isCorrect) {
-        btn.style.backgroundColor = "#2ecc71";
-        btn.style.color = "white";
-        feedbackDisplay.style.color = "#2ecc71";
-        setTimeout(() => document.getElementById('nextBtn').click(), 2500);
+        btn.classList.add('correct');
     } else {
-        btn.style.backgroundColor = "#e74c3c";
-        btn.style.color = "white";
-        feedbackDisplay.style.color = "#e74c3c";
+        btn.classList.add('wrong');
+        // Permite tentar novamente após 2 segundos
         setTimeout(() => {
-            btn.style.backgroundColor = ""; btn.style.color = "";
+            feedbackDisplay.classList.remove('animate-pop');
+            feedbackDisplay.style.display = 'none';
             allButtons.forEach(b => b.style.pointerEvents = 'auto');
-        }, 2000);
+        }, 2500);
     }
 }
 
