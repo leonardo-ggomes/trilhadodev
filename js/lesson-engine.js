@@ -125,13 +125,12 @@ function handleQuizAnswer(btn) {
     const feedbackDisplay = document.getElementById('quiz-feedback');
     const allButtons = document.querySelectorAll('.btn-quiz-option');
 
-    // Desabilita cliques para evitar múltiplas tentativas simultâneas
+    // 1. Limpeza inicial e bloqueio de cliques
     allButtons.forEach(b => {
-        b.classList.remove('selected', 'wrong', 'correct');
         b.style.pointerEvents = 'none';
     });
 
-    // Mostra o feedback com estilo moderno
+    // 2. Mostra o feedback
     feedbackDisplay.innerHTML = `
         <div class="feedback-content ${isCorrect ? 'is-correct' : 'is-wrong'}">
             <div class="feedback-icon">
@@ -149,17 +148,24 @@ function handleQuizAnswer(btn) {
 
     if (isCorrect) {
         btn.classList.add('correct');
+        // No acerto, geralmente mantemos desabilitado ou avançamos
     } else {
         btn.classList.add('wrong');
-        // Permite tentar novamente após 2 segundos
+        
+        // 3. Reset inteligente após erro
         setTimeout(() => {
             feedbackDisplay.classList.remove('animate-pop');
             feedbackDisplay.style.display = 'none';
-            allButtons.forEach(b => b.style.pointerEvents = 'auto');
+            
+            allButtons.forEach(b => {
+                // Remove a cor de erro para o usuário tentar novamente
+                b.classList.remove('wrong'); 
+                // Libera os cliques novamente
+                b.style.pointerEvents = 'auto';
+            });
         }, 2500);
     }
 }
-
 // Event Listeners dos Controles
 document.getElementById('nextBtn').addEventListener('click', () => {
     if (currentStep < totalSteps - 1) {

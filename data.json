@@ -1901,26 +1901,22 @@
                     }
                 },
                 {
-                    "id": "android-studio-intro",
-                    "item_ordem": 2,
+                    "id": "aula-1772193854778",
                     "title": "Android Studio",
-                    "icone": "fa-solid fa-laptop-code",
+                    "icone": "fa-solid fa-code",
+                    "banner_class": "logic",
                     "flashcards": [
                         {
-                            "ordem": 1,
-                            "html": "<h2>Novo Projeto</h2><p>Ao abrir, escolha <strong>Empty Compose Activity</strong>. É o template moderno que já configura tudo para o Compose.</p>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772193309539\" data-type=\"title\" data-was-editable=\"true\"><h2>Novo Projeto</h2><div><br></div></h1><div class=\"card-grid drop-zone-nested\" data-id=\"comp_1772193313954\" data-type=\"grid\" style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 15px; min-height: 120px;\"> <div class=\"edit-wrapper\"> <div class=\"card-image animate-pop\" data-id=\"comp_1772193384181\" data-type=\"image\"> <img src=\"https://developer.android.com/static/studio/images/preview/android-studio-cloud/new-project.png\" onclick=\"const url = prompt('Cole a URL da imagem:'); if(url) this.src=url;\" style=\"width: 100%;border-radius:10px;\"> </div> </div><div class=\"edit-wrapper\"> <div class=\"card-text animate-pop\" data-id=\"comp_1772193387563\" data-type=\"paragraph\"> <p data-was-editable=\"true\">Ao abrir, escolha&nbsp;<strong>Empty Compose Activity</strong>. É o template moderno que já configura tudo para o Compose.</p> </div> </div></div>"
                         },
                         {
-                            "ordem": 2,
-                            "html": "<h2>A Interface</h2><ul class='feature-list'><li><strong>Project Panel (Esquerda):</strong> Onde ficam seus arquivos .kt.</li><li><strong>Editor (Centro):</strong> Onde a mágica do código acontece.</li><li><strong>Preview (Direita):</strong> Onde você vê o design em tempo real.</li></ul>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772193465854\" data-type=\"title\" data-was-editable=\"true\"><h2>A Interface</h2><div><br></div><ul class=\"feature-list\" style=\"padding-left: 0px; font-size: medium; font-weight: 400;\"></ul></h1><div class=\"card-grid drop-zone-nested\" data-id=\"comp_1772193475319\" data-type=\"grid\" style=\"display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; min-height: 120px;\"> <div class=\"edit-wrapper\"> <div class=\"card-text animate-pop\" data-id=\"comp_1772193488774\" data-type=\"paragraph\"> <p data-was-editable=\"true\"><ul class=\"feature-list\" style=\"padding-left: 0px;\"><li style=\"color: rgb(107, 114, 128);\"><strong>Project Panel (Esquerda):</strong>&nbsp;Onde ficam seus arquivos .kt.</li></ul></p> </div> </div><div class=\"edit-wrapper\"> <div class=\"card-text animate-pop\" data-id=\"comp_1772193490161\" data-type=\"paragraph\"> <p data-was-editable=\"true\"><ul class=\"feature-list\" style=\"padding-left: 0px;\"><li style=\"color: rgb(107, 114, 128);\"><strong>Editor (Centro):</strong>&nbsp;Onde a mágica do código acontece.</li></ul></p> </div> </div><div class=\"edit-wrapper\"> <div class=\"card-text animate-pop\" data-id=\"comp_1772193491722\" data-type=\"paragraph\"> <p data-was-editable=\"true\"><ul class=\"feature-list\" style=\"padding-left: 0px;\"><li style=\"color: rgb(107, 114, 128);\"><strong>Preview (Direita):</strong>&nbsp;Onde você vê o design em tempo real.</li></ul></p> </div> </div></div>"
                         },
                         {
-                            "ordem": 3,
-                            "html": "<h2>Onde Clicar?</h2><p>Se o design não aparecer, procure pelo botão <strong>Split</strong> ou <strong>Design</strong> no canto superior direito do editor.</p>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772193530276\" data-type=\"title\" data-was-editable=\"true\"><h2>Onde Clicar?</h2></h1><div class=\"info-box-blue\" data-id=\"comp_1772193537485\" data-type=\"info\"> <div class=\"info-icon\"><i class=\"fa-solid fa-circle-info\"></i></div> <div class=\"info-content\" data-prop=\"content\" data-was-editable=\"true\">Se o design não aparecer, procure pelo botão&nbsp;<strong>Split</strong>&nbsp;ou&nbsp;<strong>Design</strong>&nbsp;no canto superior direito do editor.</div> </div>"
                         },
                         {
-                            "ordem": 4,
-                            "html": "<h2>Rodando o App</h2><p>O ícone de 'Play' verde no topo compila e instala o app no seu emulador ou celular real.</p>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772193565270\" data-type=\"title\" data-was-editable=\"true\"><h2>Rodando o App</h2><div><br></div></h1><div class=\"card-grid drop-zone-nested\" data-id=\"comp_1772193625494\" data-type=\"grid\" style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 15px; min-height: 120px;\"> <div class=\"edit-wrapper\"> <div class=\"tech-badge animate-pop\" data-id=\"comp_1772193635618\" data-type=\"badge\" style=\"display:inline-flex; gap: 8px; align-items: center;\"> <i class=\"fa-solid fa-play\" style=\"color: rgb(88, 204, 2);\" data-prop=\"icon\"></i> <span data-was-editable=\"true\"><br></span> </div> </div><div class=\"edit-wrapper\"> <div class=\"card-text animate-pop\" data-id=\"comp_1772193638467\" data-type=\"paragraph\"> <p data-was-editable=\"true\">O ícone de '<span style=\"color: rgb(88, 204, 2); font-weight: bold;\">Play</span>' verde no topo compila e instala o app no seu emulador ou celular real.</p> </div> </div></div>"
                         }
                     ],
                     "quiz": {
@@ -1931,7 +1927,7 @@
                                 "ordem": "A",
                                 "descricao": "Empty View Activity (XML)",
                                 "correta": false,
-                                "feedback": "Esse é o modo antigo."
+                                "feedback": "Ops! Esse é o modo antigo."
                             },
                             {
                                 "ordem": "B",
@@ -1940,29 +1936,26 @@
                                 "feedback": "Exato! Ele já vem pronto para o Jetpack Compose."
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 1
                 },
                 {
-                    "id": "compose-intro",
-                    "item_ordem": 3,
+                    "id": "aula-1772201612747",
                     "title": "Compose",
-                    "icone": "fa-solid fa-wand-magic-sparkles",
+                    "icone": "fa-solid fa-code",
+                    "banner_class": "logic",
                     "flashcards": [
                         {
-                            "ordem": 1,
-                            "html": "<h2>UI Declarativa</h2><p>Você não 'monta' a tela passo a passo. Você <strong>descreve</strong> como ela deve ser. Se os dados mudam, a tela se atualiza sozinha.</p>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772201271333\" data-type=\"title\" data-was-editable=\"true\"><h2>UI Declarativa</h2></h1><div class=\"card-grid drop-zone-nested\" data-id=\"comp_1772201279779\" data-type=\"grid\" style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 15px; min-height: 120px;\"> <div class=\"edit-wrapper\"> <div class=\"card-image animate-pop\" data-id=\"comp_1772201282224\" data-type=\"image\"> <img src=\"data:image/png;base64,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\" onclick=\"const url = prompt('Cole a URL da imagem:'); if(url) this.src=url;\" style=\"width: 50%;\"> </div> </div><div class=\"edit-wrapper\"> <div class=\"card-text animate-pop\" data-id=\"comp_1772201324700\" data-type=\"paragraph\"> <p data-was-editable=\"true\">Você não 'monta' a tela passo a passo. Você&nbsp;<strong>descreve</strong>&nbsp;como ela deve ser. Se os dados mudam, a tela se atualiza sozinha.</p> </div> </div></div>"
                         },
                         {
-                            "ordem": 2,
-                            "html": "<h2>@Composable</h2><p>Essa anotação diz ao Kotlin: 'Esta função agora é um componente visual'.</p><div class='terminal'>@Composable<br>fun MeuTexto() { ... }</div>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772201345351\" data-type=\"title\" data-was-editable=\"true\"><h2>@Composable</h2></h1><p class=\"lesson-subtitle\" data-id=\"comp_1772201365613\" data-type=\"subtitle\" data-was-editable=\"true\"><p>Essa anotação diz ao Kotlin: 'Esta função agora é um componente visual'.</p><div><br></div></p><div class=\"modern-terminal\" data-id=\"comp_1772201376233\" data-type=\"terminal\"> <div class=\"terminal-header\"> <span class=\"dot red\"></span><span class=\"dot yellow\"></span><span class=\"dot green\"></span> </div> <div class=\"terminal-body\" data-prop=\"content\" data-was-editable=\"true\"><span style=\"color: rgb(88, 204, 2); font-family: Nunito, sans-serif;\">@Composable</span><br style=\"font-family: Nunito, sans-serif;\"><span style=\"font-family: Nunito, sans-serif;\"><span style=\"color: rgb(28, 176, 246);\">fun </span><span style=\"color: rgb(255, 75, 75);\">MeuTexto() { ... }</span></span></div> </div>"
                         },
                         {
-                            "ordem": 3,
-                            "html": "<h2>Função Text()</h2><p>É o componente básico para exibir texto. Substitui o antigo TextView.</p><div class='terminal'>Text(text = <span style='color:#ce9178;'>\"Olá, Compose!\"</span>)</div>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772201440716\" data-type=\"title\" data-was-editable=\"true\"><h2>Função Text()</h2></h1><p class=\"lesson-subtitle\" data-id=\"comp_1772201448561\" data-type=\"subtitle\" data-was-editable=\"true\"><p>É o componente básico para exibir texto. Substitui o antigo TextView.</p></p><div class=\"\" data-id=\"comp_1772201474367\" data-type=\"code-inline\" style=\"margin: 10px 0;\"> <code class=\"code-block\" style=\"display:inline-block\" data-was-editable=\"true\"><span style=\"font-family: Nunito, sans-serif;\">Text(text =&nbsp;</span><span style=\"font-family: Nunito, sans-serif; color: rgb(206, 145, 120);\">\"Olá, Compose!\"</span><span style=\"font-family: Nunito, sans-serif;\">)</span></code> </div>"
                         },
                         {
-                            "ordem": 4,
-                            "html": "<h2>Preview</h2><p>Use <code>@Preview</code> acima de uma função para visualizá-la sem precisar ligar o emulador. Economiza muito tempo!</p>"
+                            "html": "<h1 class=\"lesson-main-title\" data-id=\"comp_1772201490776\" data-type=\"title\" data-was-editable=\"true\"><h2>Preview</h2><div><br></div></h1><div class=\"card-text\" data-id=\"comp_1772201510516\" data-type=\"paragraph\"> <p data-was-editable=\"true\">Use<span style=\"color: rgb(88, 204, 2);\">&nbsp;<code>@Preview</code></span>&nbsp;acima de uma função para visualizá-la sem precisar ligar o emulador. Economiza muito tempo!</p> </div>"
                         }
                     ],
                     "quiz": {
@@ -1971,18 +1964,19 @@
                         "opcoes": [
                             {
                                 "ordem": "A",
-                                "descricao": "Para acelerar o processamento do banco de dados.",
-                                "correta": false,
-                                "feedback": "Nada a ver com banco de dados!"
-                            },
-                            {
-                                "ordem": "B",
                                 "descricao": "Para transformar uma função comum em um componente de interface.",
                                 "correta": true,
                                 "feedback": "Correto! Sem ela, você não consegue desenhar nada na tela."
+                            },
+                            {
+                                "ordem": "B",
+                                "descricao": "Para acelerar o processamento no banco de dados.",
+                                "correta": false,
+                                "feedback": "Nada a ver com banco de dados!"
                             }
                         ]
-                    }
+                    },
+                    "item_ordem": 1
                 },
                 {
                     "id": "compose-layouts",

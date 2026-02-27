@@ -1076,3 +1076,15 @@ body {
 .trail-section.hidden {
     display: none;
 }
+
+.btn-quiz-option.wrong {
+    animation: shake 0.4s ease-in-out;
+    border-color: #ff4b4b !important;
+    background-color: #ffefef !important;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
